@@ -1,0 +1,229 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "36e7880ad738b9990b50",
+  "position": {
+    "x": 640,
+    "y": 128,
+    "z": 9000,
+    "height": 272,
+    "width": 592,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                    }
+                  },
+                  "Property": "CASE_NUMBER"
+                }
+              },
+              "queryRef": "BI_SV_SALES_TO_INSTALL_DTL.CASE_NUMBER"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                    }
+                  },
+                  "Property": "WORK_ORDER_NUMBER"
+                }
+              },
+              "queryRef": "BI_SV_SALES_TO_INSTALL_DTL.WORK_ORDER_NUMBER"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                    }
+                  },
+                  "Property": "ACTIVITY_TYPE"
+                }
+              },
+              "queryRef": "BI_SV_SALES_TO_INSTALL_DTL.ACTIVITY_TYPE"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                        }
+                      },
+                      "Property": "Response Time"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(BI_SV_SALES_TO_INSTALL_DTL.Response Time)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                    }
+                  },
+                  "Property": "Fail Printer"
+                }
+              },
+              "queryRef": "BI_SV_SALES_TO_INSTALL_DTL.Fail Printer"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filterfa2685f5d04a5611b505",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+              }
+            },
+            "Property": "CASE_NUMBER"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SV_SALES_TO_INSTALL_DTL",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "b"
+                              }
+                            },
+                            "Property": "CASE_NUMBER"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

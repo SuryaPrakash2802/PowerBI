@@ -1,0 +1,392 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "c52cd2da03ce55feee4f",
+  "position": {
+    "x": 0,
+    "y": 111.74603174603175,
+    "z": 1000,
+    "height": 360.17316017316017,
+    "width": 1280,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                    }
+                  },
+                  "Property": "work_order_number"
+                }
+              },
+              "queryRef": "BI_SV_SALES_TO_INSTALL_DTL.work_order_number",
+              "nativeQueryRef": "Work order number",
+              "displayName": "Work order number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                    }
+                  },
+                  "Property": "serial_number"
+                }
+              },
+              "queryRef": "BI_SV_SALES_TO_INSTALL_DTL.serial_number",
+              "nativeQueryRef": "Serial number",
+              "displayName": "Serial number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                    }
+                  },
+                  "Property": "closed_on_date"
+                }
+              },
+              "queryRef": "BI_SV_SALES_TO_INSTALL_DTL.closed_on_date",
+              "nativeQueryRef": "Closed on",
+              "displayName": "Closed on",
+              "format": "dd MMMM yyyy"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                    }
+                  },
+                  "Property": "woh_owner_name"
+                }
+              },
+              "queryRef": "BI_SV_SALES_TO_INSTALL_DTL.woh_owner_name",
+              "nativeQueryRef": "Engineer",
+              "displayName": "Engineer"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                    }
+                  },
+                  "Property": "purpose_of_visit"
+                }
+              },
+              "queryRef": "BI_SV_SALES_TO_INSTALL_DTL.purpose_of_visit",
+              "nativeQueryRef": "Purpose of visit",
+              "displayName": "Purpose of visit"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                    }
+                  },
+                  "Property": "activity_type"
+                }
+              },
+              "queryRef": "BI_SV_SALES_TO_INSTALL_DTL.activity_type",
+              "nativeQueryRef": "Activity type",
+              "displayName": "Activity type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                    }
+                  },
+                  "Property": "work_description"
+                }
+              },
+              "queryRef": "BI_SV_SALES_TO_INSTALL_DTL.work_description",
+              "nativeQueryRef": "Work description",
+              "displayName": "Work description"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+                  }
+                },
+                "Property": "closed_on_date"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "602.840966209715D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BI_SV_SALES_TO_INSTALL_DTL.work_description"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "121.23289202868017D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BI_SV_SALES_TO_INSTALL_DTL.purpose_of_visit"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BoldHeader'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Field Service Work Order overview'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "25fb8af84096bc6cd4b7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+              }
+            },
+            "Property": "serial_number"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SV_SALES_TO_INSTALL_DTL",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "b"
+                              }
+                            },
+                            "Property": "serial_number"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "7d9264cc2cc63bd66097",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SV_SALES_TO_INSTALL_DTL"
+              }
+            },
+            "Property": "work_description"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SV_SALES_TO_INSTALL_DTL",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "b"
+                              }
+                            },
+                            "Property": "work_description"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

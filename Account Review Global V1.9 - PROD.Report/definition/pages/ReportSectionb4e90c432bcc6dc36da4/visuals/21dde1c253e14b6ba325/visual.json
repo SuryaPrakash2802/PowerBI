@@ -1,0 +1,320 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "21dde1c253e14b6ba325",
+  "position": {
+    "x": 0,
+    "y": 471.91919191919192,
+    "z": 8000,
+    "height": 248.42712842712845,
+    "width": 1280,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_CASE"
+                    }
+                  },
+                  "Property": "ClosedDate"
+                }
+              },
+              "queryRef": "BI_SF_CASE.ClosedDate",
+              "nativeQueryRef": "Closed at",
+              "displayName": "Closed at",
+              "format": "dd MMMM yyyy"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_CASE"
+                    }
+                  },
+                  "Property": "Web_Contact_Name__c"
+                }
+              },
+              "queryRef": "BI_SF_CASE.Web_Contact_Name__c",
+              "nativeQueryRef": "Contact name",
+              "displayName": "Contact name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_CASE"
+                    }
+                  },
+                  "Property": "case_owner"
+                }
+              },
+              "queryRef": "BI_SF_CASE.case_owner",
+              "nativeQueryRef": "Case owner",
+              "displayName": "Case owner"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_CASE"
+                    }
+                  },
+                  "Property": "Subject"
+                }
+              },
+              "queryRef": "BI_SF_CASE.Subject",
+              "nativeQueryRef": "Subject"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_CASE"
+                    }
+                  },
+                  "Property": "Remote fix"
+                }
+              },
+              "queryRef": "BI_SF_CASE.Remote fix",
+              "nativeQueryRef": "Remote fix"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_CASE"
+                    }
+                  },
+                  "Property": "Phone_Fix_Resolution__c"
+                }
+              },
+              "queryRef": "BI_SF_CASE.Phone_Fix_Resolution__c",
+              "nativeQueryRef": "Remote fix resolution",
+              "displayName": "Remote fix resolution"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "517.3114941499184D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BI_SF_CASE.Subject"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "310.94314947921123D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BI_SF_CASE.Phone_Fix_Resolution__c"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Remote Technical Support overview'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BoldHeader'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "df05d767c2d652583936",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_CASE"
+              }
+            },
+            "Property": "Phone_Fix__c"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_CASE",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "Phone_Fix__c"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "b9a42331c56443e7bd4c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_CASE"
+              }
+            },
+            "Property": "ClosedDate"
+          }
+        },
+        "type": "RelativeDate",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_CASE",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Between": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "b"
+                        }
+                      },
+                      "Property": "ClosedDate"
+                    }
+                  },
+                  "LowerBound": {
+                    "DateSpan": {
+                      "Expression": {
+                        "DateAdd": {
+                          "Expression": {
+                            "DateAdd": {
+                              "Expression": {
+                                "Now": {}
+                              },
+                              "Amount": 1,
+                              "TimeUnit": 0
+                            }
+                          },
+                          "Amount": -12,
+                          "TimeUnit": 2
+                        }
+                      },
+                      "TimeUnit": 0
+                    }
+                  },
+                  "UpperBound": {
+                    "DateSpan": {
+                      "Expression": {
+                        "Now": {}
+                      },
+                      "TimeUnit": 0
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

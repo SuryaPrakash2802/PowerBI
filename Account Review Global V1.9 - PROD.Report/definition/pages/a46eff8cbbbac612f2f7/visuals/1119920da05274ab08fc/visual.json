@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "1119920da05274ab08fc",
+  "position": {
+    "x": 6.2068965517241379,
+    "y": 128.57142857142858,
+    "z": 24000,
+    "height": 49.6551724137931,
+    "width": 1264.4334975369459,
+    "tabOrder": 24000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Select both the 'Domino Cloud Account Name' and 'Salesforce Account Name' to tailor the data for your Account, and select the specific 'Site' you are interested in if more than one Account exists. ",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "9pt",
+                      "color": "#33627d"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "If no printers are connected to Domino Cloud on the Account or Site you are interested in, the Account Name will not be listed on the Domino Cloud Account Name filter - the Cloud data will default to all Accounts when not selected.",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "9pt",
+                      "color": "#33627d"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
