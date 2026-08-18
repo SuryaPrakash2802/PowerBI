@@ -1,9 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/2.0.0/schema.json",
-  "version": "4.0",
-  "datasetReference": {
-    "byConnection": {
-      "connectionString": "Data Source=powerbi://api.powerbi.com/v1.0/57ad0b87-a463-4ff8-9496-e198bc92f64c/AMI;initial catalog=\"Account Review Global V1.9 - PROD\";access mode=readonly;integrated security=ClaimsToken;semanticmodelid=1c6b1e03-0938-487d-8fd0-b56e2e1654f4"
-    }
-  }
-}
