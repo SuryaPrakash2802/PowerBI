@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "46ba76a483c7cb998ce6",
   "position": {
     "x": 304.44771723122238,
@@ -157,7 +157,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Domino Cloud connected install base'"
+                  "Value": "'Domino Cloud connected install base system'"
                 }
               }
             },
@@ -180,5 +180,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3a3408da929dc37b458c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measures Table"
+              }
+            },
+            "Property": "Cloud connected install base"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

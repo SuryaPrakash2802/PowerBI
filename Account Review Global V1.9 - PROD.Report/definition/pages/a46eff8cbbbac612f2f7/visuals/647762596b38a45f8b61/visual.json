@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "647762596b38a45f8b61",
   "position": {
     "x": 625.1231527093596,
@@ -265,6 +265,20 @@
         },
         "type": "Categorical",
         "howCreated": "User"
+      },
+      {
+        "name": "684f8505f317591c9b00",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measures Table"
+              }
+            },
+            "Property": "Total onsite repairs"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
