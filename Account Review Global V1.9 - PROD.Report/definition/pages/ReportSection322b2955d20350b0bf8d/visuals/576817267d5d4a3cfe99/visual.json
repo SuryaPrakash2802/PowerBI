@@ -1,0 +1,673 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "576817267d5d4a3cfe99",
+  "position": {
+    "x": 640,
+    "y": 346.32034632034635,
+    "z": 7000,
+    "height": 360.17316017316017,
+    "width": 626.14718614718618,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_INSTALLED_PRODUCT"
+                    }
+                  },
+                  "Property": "Unique_Printer_Serial_nr__c"
+                }
+              },
+              "queryRef": "BI_SF_INSTALLED_PRODUCT.Unique_Printer_Serial_nr__c",
+              "nativeQueryRef": "Serial number",
+              "displayName": "Serial number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_INSTALLED_PRODUCT"
+                    }
+                  },
+                  "Property": "SVMXC__Date_Installed__c"
+                }
+              },
+              "queryRef": "BI_SF_INSTALLED_PRODUCT.SVMXC__Date_Installed__c",
+              "nativeQueryRef": "Date installed",
+              "displayName": "Date installed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_INSTALLED_PRODUCT"
+                    }
+                  },
+                  "Property": "Product_Technology__c"
+                }
+              },
+              "queryRef": "BI_SF_INSTALLED_PRODUCT.Product_Technology__c",
+              "nativeQueryRef": "Technology",
+              "displayName": "Technology"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SF_INSTALLED_PRODUCT"
+                        }
+                      },
+                      "Property": "Age__c"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(BI_SF_INSTALLED_PRODUCT.Age__c)",
+              "nativeQueryRef": "Age",
+              "displayName": "Age",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_INSTALLED_PRODUCT"
+                    }
+                  },
+                  "Property": "Printer_Family__c"
+                }
+              },
+              "queryRef": "BI_SF_INSTALLED_PRODUCT.Printer_Family__c",
+              "nativeQueryRef": "Printer family",
+              "displayName": "Printer family"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_INSTALLED_PRODUCT"
+                    }
+                  },
+                  "Property": "Warranty_Status"
+                }
+              },
+              "queryRef": "BI_SF_INSTALLED_PRODUCT.Warranty_Status",
+              "nativeQueryRef": "Warranty date",
+              "displayName": "Warranty date"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SF_INSTALLED_PRODUCT"
+                  }
+                },
+                "Property": "Warranty_Status"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "145.325914036612D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BI_SF_INSTALLED_PRODUCT.Unique_Printer_Serial_nr__c"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "125.07719434351282D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BI_SF_INSTALLED_PRODUCT.SVMXC__Date_Installed__c"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "92.31290353440397D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BI_SF_INSTALLED_PRODUCT.Printer_Family__c"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113.92352018644074D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BI_SF_INSTALLED_PRODUCT.Product_Technology__c"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'All Orders CY'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BoldHeader'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "34ba400e91def9c9e5c3",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_SERVICE_MAINT_CONTRACT"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "8e52543274b20ad2e699",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_SERVICE_MAINT_CONTRACT"
+              }
+            },
+            "Property": "SVMXC__Start_Date__c"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "02ffb59cdb5ed3816847",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "Unique_Printer_Serial_nr__c"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dd4a0cf219c79f06c737",
+        "ordinal": 3,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "SVMXC__Date_Installed__c"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7c9be59992f79664d812",
+        "ordinal": 4,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "is_Active__c"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_INSTALLED_PRODUCT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "is_Active__c"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "aab46b6f1d188b2722cb",
+        "ordinal": 5,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "isPrinter__c"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_INSTALLED_PRODUCT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "isPrinter__c"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "9dd6fec0ae47acfd8a84",
+        "ordinal": 6,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "isInstalledBase__c"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_INSTALLED_PRODUCT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "isInstalledBase__c"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "78fd40befbf52a2df11c",
+        "ordinal": 7,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "Product_Technology__c"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3d7a4e5b686c97cce62b",
+        "ordinal": 8,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "Printer_Family__c"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_INSTALLED_PRODUCT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "b"
+                              }
+                            },
+                            "Property": "Printer_Family__c"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Cloud'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "aa3804fffc5ec6591fee",
+        "ordinal": 9,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "Contract_Name"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_INSTALLED_PRODUCT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "Contract_Name"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
+      },
+      {
+        "name": "4d4a498caa47d9cb5445",
+        "ordinal": 10,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "Warranty_Status"
+          }
+        },
+        "type": "Categorical"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}

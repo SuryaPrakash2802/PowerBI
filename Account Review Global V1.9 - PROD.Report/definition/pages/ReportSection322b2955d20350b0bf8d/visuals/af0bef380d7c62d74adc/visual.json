@@ -1,0 +1,620 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "af0bef380d7c62d74adc",
+  "position": {
+    "x": 13.852813852813853,
+    "y": 346.32034632034635,
+    "z": 4000,
+    "height": 360.17316017316017,
+    "width": 626.14718614718618,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_INSTALLED_PRODUCT"
+                    }
+                  },
+                  "Property": "Contract_Name"
+                }
+              },
+              "queryRef": "BI_SF_INSTALLED_PRODUCT.Contract_Name",
+              "nativeQueryRef": "Contract_Name",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_INSTALLED_PRODUCT"
+                    }
+                  },
+                  "Property": "Unique_Printer_Serial_nr__c"
+                }
+              },
+              "queryRef": "BI_SF_INSTALLED_PRODUCT.Unique_Printer_Serial_nr__c",
+              "nativeQueryRef": "Serial number",
+              "active": true,
+              "displayName": "Serial number"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SF_INSTALLED_PRODUCT"
+                        }
+                      },
+                      "Property": "Contract_Type__c"
+                    }
+                  },
+                  "Function": 4
+                }
+              },
+              "queryRef": "Min(BI_SF_INSTALLED_PRODUCT.Contract_Type__c)",
+              "nativeQueryRef": "Contract type",
+              "displayName": "Contract type"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SF_INSTALLED_PRODUCT"
+                        }
+                      },
+                      "Property": "Contract_Start_Date"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(BI_SF_INSTALLED_PRODUCT.Contract_Start_Date)",
+              "nativeQueryRef": "Start date",
+              "displayName": "Start date",
+              "format": "dd MMMM yyyy"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SF_INSTALLED_PRODUCT"
+                        }
+                      },
+                      "Property": "Contract_End_Date"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(BI_SF_INSTALLED_PRODUCT.Contract_End_Date)",
+              "nativeQueryRef": "End date",
+              "displayName": "End date",
+              "format": "dd MMMM yyyy"
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "BI_SF_INSTALLED_PRODUCT.Contract_Name"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_INSTALLED_PRODUCT"
+                    }
+                  },
+                  "Property": "Contract_Name"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "BI_SF_INSTALLED_PRODUCT.Unique_Printer_Serial_nr__c"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'UK DUK  SGX1003C'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'UK DUK UKR-30334-5'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "222.04758776439985D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "BI_SF_INSTALLED_PRODUCT.Contract_Name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "131.5749530545957D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(BI_SF_INSTALLED_PRODUCT.Contract_Start_Date)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "123.67371948548721D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(BI_SF_INSTALLED_PRODUCT.Contract_End_Date)"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "bandedRowHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'All Orders CY'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BoldHeader'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b37bbbbace0cae57a311",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "Contract_Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3044b09b66b355e95cdc",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "Unique_Printer_Serial_nr__c"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6bb318e9fb11b105bf36",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "is_Active__c"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_INSTALLED_PRODUCT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "is_Active__c"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "ac227fc0b2491333e773",
+        "ordinal": 3,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SF_INSTALLED_PRODUCT"
+                  }
+                },
+                "Property": "Contract_Start_Date"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "361d313dacb286d8321d",
+        "ordinal": 4,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SF_INSTALLED_PRODUCT"
+                  }
+                },
+                "Property": "Contract_End_Date"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ee671ef17635ad3950be",
+        "ordinal": 5,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "Contract_Active_Flag"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_INSTALLED_PRODUCT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "Contract_Active_Flag"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
+      },
+      {
+        "name": "f5676ca9bc2eb57e13f1",
+        "ordinal": 6,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "isInstalledBase__c"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_INSTALLED_PRODUCT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "isInstalledBase__c"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}

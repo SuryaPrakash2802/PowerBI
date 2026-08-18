@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "448ce679c964d0d5db91",
+  "position": {
+    "x": 283.27868852459017,
+    "y": 0.95380029806259325,
+    "z": 12000,
+    "height": 94.426229508196727,
+    "width": 329.06110283159467,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_ACCOUNT"
+                    }
+                  },
+                  "Property": "Domino_Sub__c"
+                }
+              },
+              "queryRef": "BI_SF_ACCOUNT.Domino_Sub__c",
+              "nativeQueryRef": "Channel",
+              "active": true,
+              "displayName": "Channel"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "syncGroup": {
+      "groupName": "Domino_Sub__c",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

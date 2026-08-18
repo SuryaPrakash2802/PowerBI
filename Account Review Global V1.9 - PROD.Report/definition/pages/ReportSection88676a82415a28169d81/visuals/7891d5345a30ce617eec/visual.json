@@ -1,0 +1,598 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "7891d5345a30ce617eec",
+  "position": {
+    "x": 648.25214899713467,
+    "y": 120.11461318051576,
+    "z": 12001,
+    "height": 284.24068767908312,
+    "width": 608.8252148997135,
+    "tabOrder": 12001
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SF_INSTALLED_PRODUCT"
+                        }
+                      },
+                      "Hierarchy": "Installation Date Hierarchy"
+                    }
+                  },
+                  "Level": "Install year"
+                }
+              },
+              "queryRef": "BI_SF_INSTALLED_PRODUCT.Installation Date Hierarchy.Install year",
+              "nativeQueryRef": "Installation Date Hierarchy Install year",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SF_INSTALLED_PRODUCT"
+                        }
+                      },
+                      "Hierarchy": "Installation Date Hierarchy"
+                    }
+                  },
+                  "Level": "Install Month"
+                }
+              },
+              "queryRef": "BI_SF_INSTALLED_PRODUCT.Installation Date Hierarchy.Install Month",
+              "nativeQueryRef": "Installation Date Hierarchy Install Month",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SF_INSTALLED_PRODUCT"
+                        }
+                      },
+                      "Hierarchy": "Installation Date Hierarchy"
+                    }
+                  },
+                  "Level": "SVMXC__Date_Installed__c"
+                }
+              },
+              "queryRef": "BI_SF_INSTALLED_PRODUCT.Installation Date Hierarchy.SVMXC__Date_Installed__c",
+              "nativeQueryRef": "Installation Date Hierarchy SVMXC__Date_Installed__c",
+              "active": false
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_INSTALLED_PRODUCT"
+                    }
+                  },
+                  "Property": "Product_Family__c"
+                }
+              },
+              "queryRef": "BI_SF_INSTALLED_PRODUCT.Product_Family__c",
+              "nativeQueryRef": "Product_Family__c"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures Table"
+                    }
+                  },
+                  "Property": "Installation Count"
+                }
+              },
+              "queryRef": "Measures Table.Installation Count",
+              "nativeQueryRef": "Installation Count"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "BI_SF_INSTALLED_PRODUCT"
+                          }
+                        },
+                        "Property": "Product_Family__c"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'V-Series'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "BI_SF_INSTALLED_PRODUCT"
+                          }
+                        },
+                        "Property": "Product_Family__c"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'D-Series'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "BI_SF_INSTALLED_PRODUCT"
+                          }
+                        },
+                        "Property": "Product_Family__c"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Cx-Series'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            },
+            "concatenateLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Installation Year for Active Domino Equipment'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7259344d057ad3e43029",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SF_INSTALLED_PRODUCT"
+                  }
+                },
+                "Hierarchy": "Installation Date Hierarchy"
+              }
+            },
+            "Level": "SVMXC__Date_Installed__c"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_INSTALLED_PRODUCT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "b"
+                              }
+                            },
+                            "Property": "SVMXC__Date_Installed__c"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              },
+              "Annotations": {
+                "filterExpressionMetadata": {
+                  "expressions": [
+                    {
+                      "HierarchyLevel": {
+                        "Expression": {
+                          "Hierarchy": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "BI_SF_INSTALLED_PRODUCT"
+                              }
+                            },
+                            "Hierarchy": "Installation Date Hierarchy"
+                          }
+                        },
+                        "Level": "SVMXC__Date_Installed__c"
+                      }
+                    }
+                  ],
+                  "decomposedIdentities": {
+                    "values": [
+                      [
+                        {
+                          "0": [
+                            {
+                              "Literal": {
+                                "Value": "null"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    ],
+                    "columns": [
+                      {
+                        "value": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "BI_SF_INSTALLED_PRODUCT"
+                              }
+                            },
+                            "Property": "SVMXC__Date_Installed__c"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "valueMap": [
+                    {
+                      "0": "(Blank)"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "614bb1fc75200ec4074c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "is_Active__c"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_INSTALLED_PRODUCT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "is_Active__c"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "d79c27463bb0002c1854",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measures Table"
+              }
+            },
+            "Property": "Installation Count"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b8029e6e5011e1401906",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "BI_SF_INSTALLED_PRODUCT"
+              }
+            },
+            "Property": "Product_Family__c"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e4df96b8b3a2692380c1",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SF_INSTALLED_PRODUCT"
+                  }
+                },
+                "Hierarchy": "Installation Date Hierarchy"
+              }
+            },
+            "Level": "Install year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4e77959c8da4b2cdb6c6",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SF_INSTALLED_PRODUCT"
+                  }
+                },
+                "Hierarchy": "Installation Date Hierarchy"
+              }
+            },
+            "Level": "Install Month"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
