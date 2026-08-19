@@ -1,0 +1,33 @@
+role 'Channel-wise access'
+	modelPermission: read
+
+	tablePermission Dim_Channel =
+			VAR upn =
+			    LOWER ( USERPRINCIPALNAME() )
+			RETURN
+			    SWITCH (
+			        TRUE(),
+			
+			        CONTAINSSTRING ( upn, "@domino-uk.com" ),
+			            Dim_Channel[ChannelName] = "Domino UK",
+			
+			        CONTAINSSTRING ( upn, "@domino-na.com" ),
+			            Dim_Channel[ChannelName] IN {
+			                "Domino US",
+			                "Domino CA"
+			            },
+			
+			        CONTAINSSTRING ( upn, "@domino-marquage.com" ),
+			            Dim_Channel[ChannelName] = "Domino FR",
+			
+			        CONTAINSSTRING ( upn, "@dominobenelux.com" ),
+			            Dim_Channel[ChannelName] IN {
+			                "Domino BE/LUX",
+			                "Domino NL"
+			            },
+			
+			        FALSE()
+			    )
+
+	annotation PBI_Id = 0c1df0b1359d41a89dfdb5216b9ef672
+

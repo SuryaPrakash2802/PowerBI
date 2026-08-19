@@ -1,0 +1,151 @@
+table ods_sf_printer_fault_code
+	lineageTag: 5c3f0bf1-4fc8-48f9-9f0d-f8676c522677
+
+	column Id
+		dataType: string
+		lineageTag: faf9442e-c8c5-42bb-80e9-86d1c9ee7d65
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column OwnerId
+		dataType: string
+		lineageTag: 5db58bf6-ac2a-4ae3-8f40-ac6ca678291f
+		summarizeBy: none
+		sourceColumn: OwnerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDeleted
+		dataType: int64
+		formatString: 0
+		lineageTag: f01e4f63-bb69-4b47-a8fc-5c7e33fc406a
+		summarizeBy: sum
+		sourceColumn: IsDeleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 0692ecef-9177-47b7-8a6a-701e3120abce
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyIsoCode
+		dataType: string
+		lineageTag: ab61e60a-5907-4f0f-b101-02ae451beb3f
+		summarizeBy: none
+		sourceColumn: CurrencyIsoCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1330f758-67f6-4a9d-9f34-cbed43baa3b7
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedById
+		dataType: string
+		lineageTag: efef816c-5cb7-445b-8db6-36321afdcf28
+		summarizeBy: none
+		sourceColumn: CreatedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2687719a-63bb-42a4-b267-0414d8ee452d
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedById
+		dataType: string
+		lineageTag: ee8a47aa-64c6-4a6b-ac7d-133018efb6d6
+		summarizeBy: none
+		sourceColumn: LastModifiedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column SystemModstamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 86105a33-7dc9-4c1b-9e24-d190ae49745b
+		summarizeBy: none
+		sourceColumn: SystemModstamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastViewedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e755d896-1d96-4999-a470-1f3029104a81
+		summarizeBy: none
+		sourceColumn: LastViewedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastReferencedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d59f72e8-1ba0-4521-8d01-729a37632a05
+		summarizeBy: none
+		sourceColumn: LastReferencedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Alert_Description_Translate__c
+		dataType: string
+		lineageTag: 2cc22a65-6fe1-4504-8a06-8bd608ea914d
+		summarizeBy: none
+		sourceColumn: Alert_Description_Translate__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Alert__c
+		dataType: string
+		lineageTag: 148a1336-79dd-4ff5-82fa-67831b427da4
+		summarizeBy: none
+		sourceColumn: Alert__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Printer_Family__c
+		dataType: string
+		lineageTag: bf263fbc-b16a-43d9-8a3b-aae0d66c7172
+		summarizeBy: none
+		sourceColumn: Printer_Family__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Printer_Fault_Code__c
+		dataType: string
+		lineageTag: 0767c398-b5f7-4e3c-8fe9-134e78c48acf
+		summarizeBy: none
+		sourceColumn: Printer_Fault_Code__c
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ods_sf_printer_fault_code = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("azwemisqldcoe.0f9aff9ccbfc.database.windows.net"),
+				    DCOE = Source{[Name="DCOE"]}[Data],
+				    dbo_ods_sf_printer_fault_code = DCOE{[Schema="dbo",Item="ods_sf_printer_fault_code"]}[Data]
+				in
+				    dbo_ods_sf_printer_fault_code
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

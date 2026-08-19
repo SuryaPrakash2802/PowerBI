@@ -1,0 +1,426 @@
+table 'Measures Table'
+	lineageTag: a4ec75a9-6cbe-4c97-9fba-2149a4dc288e
+
+	measure 'Rolling 12M NPS %' = ```
+			
+			VAR EndDateKey = CALCULATE( MAX ( SurveyFeedback[DateKey] ), REMOVEFILTERS( 'DIM_DATE' ) )
+			VAR EndDate = LOOKUPVALUE( DIM_DATE[Date], DIM_DATE[DateKey], EndDateKey )
+			RETURN
+			IF( 
+			    ISBLANK( EndDate ),
+			    BLANK(),
+			    CALCULATE( [NPS%], REMOVEFILTERS( 'DIM_DATE' ), DATESINPERIOD( 'DIM_DATE'[Date], EndDate, -12, MONTH )
+			    )
+			)
+			```
+		lineageTag: 0a3ea14e-771b-4e49-8b76-d95157959921
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Uptime Percentage' = ```
+			
+			    DIVIDE(
+			        SUM ( BI_SVTLY_PRINTER_STATES[ALEKS_available_hours] ),
+			        SUM ( BI_SVTLY_PRINTER_STATES[ALEKS_available_plus_fault]),
+			        0
+			    )
+			```
+		lineageTag: f6f3a1de-d90d-4650-94a7-62cf83cf1bcd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Uptime Percentage of Printers Connected 12M Atleast' = ```
+			
+			CALCULATE( [Uptime Percentage], FILTER( 'BI_SVTLY_THINGS', BI_SVTLY_THINGS[ACTIVATIONDATE] <= EDATE( TODAY(), -12 ) 
+			        && BI_SVTLY_THINGS[LATESTMETRICVALUETIMESTAMP] >= EDATE( TODAY(), -6 )) ) --has received telemetry data in the last 6 months
+			```
+		lineageTag: 40592758-e084-4f6f-974c-587bf902269b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'KMS Fix % (Last 12 Months)' =
+			
+			VAR EndDate =
+			    MIN (
+			        MAX ( 'DIM_DATE'[Date] ),
+			        TODAY ()
+			    )
+			RETURN
+			    CALCULATE (
+			        [kms %],
+			        DATESINPERIOD ( 'DIM_DATE'[Date], EndDate, -12, MONTH )
+			    )
+		lineageTag: 2878be09-bb4a-4ee6-86d8-1be18e16f108
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'NPS (Last 12 Months)' =
+			
+			VAR EndDate =
+			    MIN (
+			        MAX ( 'DIM_DATE'[Date] ),
+			        TODAY ()
+			    )
+			RETURN
+			    CALCULATE (
+			        [NPS%],
+			        DATESINPERIOD ( 'DIM_DATE'[Date], EndDate, -12, MONTH )
+			    ) * 100
+		lineageTag: ec24023c-cc1f-4839-ac5e-c860baec9471
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AR Fix % (Last 12 Months)' =
+			
+			VAR EndDate =
+			    MIN (
+			        MAX ( 'DIM_DATE'[Date] ),
+			        TODAY ()
+			    )
+			RETURN
+			    CALCULATE (
+			        [AR %],
+			        DATESINPERIOD ( 'DIM_DATE'[Date], EndDate, -12, MONTH )
+			    )
+		lineageTag: 123ba44a-85d5-4fb2-8b42-907148caf6f5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cloud Fix % (Last 12 Months)' =
+			
+			VAR EndDate =
+			    MIN (
+			        MAX ( 'DIM_DATE'[Date] ),
+			        TODAY ()
+			    )
+			RETURN
+			    CALCULATE (
+			        [Cloud %],
+			        DATESINPERIOD ( 'DIM_DATE'[Date], EndDate, -12, MONTH )
+			    )
+		lineageTag: f33983f2-c514-4efe-b90d-fe0760126754
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Uptime Percentage in last 12M' =
+			
+			CALCULATE(
+			    [Uptime Percentage],
+			    REMOVEFILTERS('DIM_DATE'),
+			    'DIM_DATE'[Date] >= EDATE(TODAY(), -12)
+			)
+		lineageTag: 00723754-8f0f-4684-9085-e668c295608c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Downtime per Printer' =
+			
+			VAR downtime = SUM ( BI_SVTLY_ALERTS_HISTORY[DURATION_HRS] )
+			VAR printer_count = CALCULATE( COUNT ( BI_SVTLY_THINGS[ID] ), FILTER( BI_SVTLY_THINGS, BI_SVTLY_THINGS[LATESTMETRICVALUETIMESTAMP] >= EDATE( TODAY(), -12 ) ) ) -- normalised printer count for only printers active in last year
+			RETURN DIVIDE( downtime, printer_count )
+		lineageTag: 6d566dc1-4a2b-4d6c-9110-457a14483d1f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Customer complaints closed in last 12M' = ```
+			
+			VAR startDate = EDATE(TODAY(), -12)
+			RETURN
+			CALCULATE(
+			    COUNT(BI_SF_CASE[Id]),
+			    FILTER(
+			        BI_SF_CASE,
+			        BI_SF_CASE[ClosedDate] >= startDate &&
+			        BI_SF_CASE[ClosedDate] <= TODAY() &&
+			        BI_SF_CASE[Complaint__c] = "Yes" &&      
+			        NOT ISBLANK(BI_SF_CASE[Origin]) &&
+			        BI_SF_CASE[Origin] <> "" &&
+			        NOT (
+			            BI_SF_CASE[Origin] IN {
+			                "Customer Satisfaction Survey",
+			                "Face-to-Face",
+			                "Fax",
+			                "Internal",
+			                "Salesrep",
+			                "Technician",
+			                "Web"
+			            }
+			        )
+			
+			    )
+			)
+			```
+		formatString: 0
+		lineageTag: 3f1f035b-bf79-427b-8bd9-ddcace293234
+
+	measure 'Open Customer complaints' = ```
+			
+			CALCULATE(
+			    COUNT(BI_SF_CASE[Id]),
+			    FILTER(
+			        BI_SF_CASE,
+			        BI_SF_CASE[IsClosed] = 0 &&
+			        BI_SF_CASE[Complaint__c] = "Yes" &&      
+			        NOT ISBLANK(BI_SF_CASE[Origin]) &&
+			        BI_SF_CASE[Origin] <> "" &&
+			        NOT (
+			            BI_SF_CASE[Origin] IN {
+			                "Customer Satisfaction Survey",
+			                "Face-to-Face",
+			                "Fax",
+			                "Internal",
+			                "Salesrep",
+			                "Technician",
+			                "Web"
+			            }
+			        )
+			    )
+			)
+			```
+		formatString: 0
+		lineageTag: 9c473435-dc9c-4d7b-be07-71cfbf8938ec
+
+	measure Banner = "To be added soon!"
+		lineageTag: 8b7fe886-c6a0-4cf8-b6f9-b6adea46e67b
+
+	measure 'Percent of Active IB on Contract' =
+			
+			VAR Numerator = CALCULATE(
+			                    COUNTROWS( 'BI_SF_INSTALLED_PRODUCT'),
+			                    KEEPFILTERS( 'BI_SF_INSTALLED_PRODUCT'[is_Active__c] = 1 ),
+			                    KEEPFILTERS( 'BI_SF_INSTALLED_PRODUCT'[Contract_Active_Flag] = 1 ),
+			                    KEEPFILTERS( 'BI_SF_INSTALLED_PRODUCT'[isPrinter__c] = 1 ),
+			                    KEEPFILTERS( 'BI_SF_INSTALLED_PRODUCT'[isInstalledBase__c] = 1 ),
+			                    KEEPFILTERS( BI_SF_INSTALLED_PRODUCT[Product_Family__c] <> "Cloud" ),
+			                    KEEPFILTERS( LEN ( TRIM ( 'BI_SF_INSTALLED_PRODUCT'[SVMXC__Service_Contract__c] & "" ) ) > 0 )
+			)
+			VAR Denominator = CALCULATE(
+			                    COUNTROWS(BI_SF_INSTALLED_PRODUCT),
+			                    KEEPFILTERS(BI_SF_INSTALLED_PRODUCT[is_Active__c] = 1),
+			                    KEEPFILTERS(BI_SF_INSTALLED_PRODUCT[isPrinter__c] = 1),
+			                    KEEPFILTERS(BI_SF_INSTALLED_PRODUCT[isInstalledBase__c] = 1),
+			                    KEEPFILTERS( BI_SF_INSTALLED_PRODUCT[Product_Family__c] <> "Cloud" )
+			)
+			RETURN
+			    DIVIDE( Numerator, Denominator )
+		lineageTag: e4a719a8-6652-4859-bdab-48ed10f9e88d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Active install base count' = ```
+			
+			CALCULATE(
+			            COUNTROWS( 'BI_SF_INSTALLED_PRODUCT'),
+			            KEEPFILTERS( 'BI_SF_INSTALLED_PRODUCT'[is_Active__c] = 1 ),
+			            KEEPFILTERS( 'BI_SF_INSTALLED_PRODUCT'[isPrinter__c] = 1 ),
+			            KEEPFILTERS( 'BI_SF_INSTALLED_PRODUCT'[isInstalledBase__c] = 1 ),
+			            
+			            KEEPFILTERS(
+			                NOT (
+			                    'BI_SF_INSTALLED_PRODUCT'[Product_Family__c] IN {"Cloud", "Editor"}
+			                )
+			
+			))
+			```
+		formatString: 0
+		lineageTag: 41d69672-75f8-4d6f-b152-29efeee065f2
+
+	measure 'Active install base on Contract' =
+			
+			CALCULATE( [Active install base count], 'BI_SF_INSTALLED_PRODUCT'[Contract_Active_Flag] = 1 )
+		formatString: 0
+		lineageTag: b21d766a-51d5-4ffe-9335-0fd3dbfeeb47
+
+	measure 'Cloud connected install base' = CALCULATE( [Active install base count], BI_SF_INSTALLED_PRODUCT[Cloud_Connect_Status__c] = "Cloud Connected" )
+		formatString: 0
+		lineageTag: 6f0d0e29-1189-43a6-ae31-239c01df5477
+
+	measure 'Repair hours' =
+			CALCULATE( DIVIDE(SUM(BI_SV_SALES_TO_INSTALL_DTL[line_qty]), 4)
+			                                    ,BI_SV_SALES_TO_INSTALL_DTL[line_type] = "Labor"
+			                                    ,BI_SV_SALES_TO_INSTALL_DTL[activity_type] = "Printer: Repair")
+		lineageTag: 9d89b264-43c5-4ad7-97bf-53f858ae45e8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Spares = CALCULATE( SUM(BI_SV_SALES_TO_INSTALL_DTL[line_qty]), BI_SV_SALES_TO_INSTALL_DTL[line_type] = "Parts" )
+		formatString: 0
+		lineageTag: 5cff21f7-ab1a-405f-9170-1274c3434d92
+
+	measure 'Total onsite repairs' = ```
+			CALCULATE( COUNT(BI_SV_SALES_TO_INSTALL_DTL[wol_name]), 
+			                                        BI_SV_SALES_TO_INSTALL_DTL[activity_type] = "Printer: Repair"
+			                                         ,BI_SV_SALES_TO_INSTALL_DTL[line_type] = "Printer")
+			```
+		formatString: 0
+		lineageTag: 0db5c7c6-39b7-41cc-88c6-109708ea0b45
+
+	measure 'Total Onsite Repairs Visual' =
+			
+			IF(
+			    [Asset Belongs To Selected Account] = 1,
+			    COALESCE([Total onsite repairs], 0),
+			    BLANK()
+			)
+		formatString: 0
+		lineageTag: 35f0133c-d88e-4373-9014-281f7c9b2a86
+
+	measure 'Asset Belongs To Selected Account' =
+			
+			VAR RowAssetAccountID =
+			    SELECTEDVALUE(BI_SF_INSTALLED_PRODUCT[SVMXC__Company__c])
+			
+			VAR SelectedAccountIDs =
+			    VALUES(BI_SF_ACCOUNT[Id])
+			
+			VAR AccountFilterActive =
+			    ISCROSSFILTERED(BI_SF_ACCOUNT[Id])
+			        || ISCROSSFILTERED(BI_SF_ACCOUNT[Name])
+			
+			RETURN
+			IF(
+			    NOT AccountFilterActive,
+			    1,
+			    IF(
+			        NOT ISBLANK(RowAssetAccountID)
+			            && CONTAINS(
+			                SelectedAccountIDs,
+			                BI_SF_ACCOUNT[Id],
+			                RowAssetAccountID
+			            ),
+			        1,
+			        0
+			    )
+			)
+		formatString: 0
+		lineageTag: 0abb7809-a6ed-4bcd-8868-245cf53cd8f4
+
+	measure 'Spares visual' =
+			
+			IF(
+			    [Asset Belongs To Selected Account] = 1,
+			    COALESCE([Spares], 0),
+			    BLANK()
+			)
+		lineageTag: 43a43c48-7eeb-4b4c-b017-e11a69fd2afb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Repair hours visual' =
+			
+			IF(
+			    [Asset Belongs To Selected Account] = 1,
+			    COALESCE([Repair hours], 0),
+			    BLANK()
+			)
+		lineageTag: 405b290d-458f-40d9-bc98-f6ee403819a7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Support Cases Count' = ```
+			
+			CALCULATE(
+			    COUNTROWS(BI_SF_CASE),
+			    BI_SF_CASE[Type] = "Service Max",
+			    NOT ISBLANK(BI_SF_CASE[Request_Type__c]), 
+			    BI_SF_CASE[Phone_Fix_Resolution__c] <> "No THD Support required"
+			)
+			```
+		formatString: 0
+		lineageTag: f8854dc9-8189-49b1-900b-76922af862ec
+
+	measure 'Remotely Fixed Support Cases Count' =
+			
+			CALCULATE(
+			    COUNTROWS(BI_SF_CASE),
+			    BI_SF_CASE[Type] = "Service Max",
+			    NOT ISBLANK(BI_SF_CASE[Request_Type__c]),
+			    BI_SF_CASE[Phone_Fix__c] = 1,
+			    NOT ISBLANK(BI_SF_CASE[Phone_Fix_Resolution__c]),
+			    BI_SF_CASE[Phone_Fix_Resolution__c] <> "No THD Support required",
+			    ISBLANK(BI_SF_CASE[Work_Order_Number_del__c])
+			)
+		formatString: 0
+		lineageTag: 9afb2e3c-0c43-4734-8315-ec30ffc5d2a0
+
+	measure 'Non remote support cases' = [Total Support Cases Count] - [Remotely Fixed Support Cases Count]
+		formatString: 0
+		lineageTag: 9f49871c-a5ce-4b41-ab4e-bfc9e9d6afea
+
+	measure 'Remote Fix % (Last 12 Months)' =
+			
+			VAR StartDate =
+			    EDATE (
+			        DATE ( YEAR ( TODAY () ), MONTH ( TODAY () ), 1 ),
+			        -12
+			    )
+			VAR EndDate =
+			    MIN (
+			        MAX ( 'DIM_DATE'[Date] ),
+			        TODAY ()
+			    )
+			RETURN
+			    CALCULATE (
+			        [RemoteFix percent],
+			        DATESBETWEEN (
+			            'DIM_DATE'[Date],
+			            StartDate,
+			            EndDate
+			        )
+			    )
+		lineageTag: bd41f9ef-b1ba-4db4-a1cc-169aa6256071
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Installation Count' =
+			
+			COUNTROWS ( BI_SF_INSTALLED_PRODUCT )
+		formatString: 0
+		lineageTag: 7233e158-99cb-40f9-a4a6-4c08aa6d41c9
+
+	measure 'Show Alerts Table' =
+			
+			IF (
+			    ISFILTERED ( BI_SVTLY_THINGS[CUSTOMER_NAME] ),
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 3ee3a16c-3e12-4ff0-aef5-c595643122d3
+
+	measure 'FTFR % (Last 24 Months)' =
+			
+			VAR EndDate =
+			    MIN (
+			        MAX ( 'DIM_DATE'[Date] ),
+			        TODAY ()
+			    )
+			RETURN
+			    CALCULATE (
+			        [FTFR %],
+			        DATESINPERIOD ( 'DIM_DATE'[Date], EndDate, -24, MONTH )
+			    )
+		lineageTag: 1a1b71d7-4bbf-406a-adb7-b0964e010c80
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dummy
+		dataType: int64
+		formatString: 0
+		lineageTag: c7372819-221a-4986-86f1-9829bed801ee
+		summarizeBy: sum
+		sourceColumn: Dummy
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Measures Table' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlSKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Dummy = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Dummy", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

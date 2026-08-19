@@ -1,0 +1,774 @@
+table BI_SF_CASE
+	lineageTag: 02cb506f-0d5b-4f1f-8f1b-8d9e7ba92b22
+
+	measure 'Non-phone Fix Case Count' = CALCULATE(COUNT(BI_SF_CASE[CaseNumber]), BI_SF_CASE[Phone_Fix__c] = 0)
+		formatString: 0
+		lineageTag: fe25f32e-13fb-4a37-bba6-b8bab09cc480
+
+	column Id
+		dataType: string
+		lineageTag: b957f67d-5dad-4bbf-bc0a-6242ea2eedb3
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column CaseNumber
+		dataType: string
+		lineageTag: eb835f7b-58db-4f8c-9a54-d26e6f0c925b
+		summarizeBy: none
+		sourceColumn: CaseNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountId
+		dataType: string
+		lineageTag: 84e42d7c-63eb-4884-809c-a215bf64a383
+		summarizeBy: none
+		sourceColumn: AccountId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: c80c4155-78c5-466a-9796-9ab8ebf520f9
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: b9351c5e-c140-444c-8773-6ec59a383eac
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reason
+		dataType: string
+		lineageTag: d0524be1-9831-474a-9291-8e948ae726a6
+		summarizeBy: none
+		sourceColumn: Reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column Origin
+		dataType: string
+		lineageTag: e950f31f-2191-4f62-a025-0beb2f90b0c1
+		summarizeBy: none
+		sourceColumn: Origin
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subject
+		dataType: string
+		lineageTag: 550e344f-8ee3-4475-b31e-efd35e944a15
+		summarizeBy: none
+		sourceColumn: Subject
+
+		annotation SummarizationSetBy = Automatic
+
+	column Priority
+		dataType: string
+		lineageTag: 6a900473-cc44-4606-897e-291abdaa12b6
+		summarizeBy: none
+		sourceColumn: Priority
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: cf70e5da-1847-4063-acc5-49a59b7f4ed9
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsClosed
+		dataType: int64
+		formatString: 0
+		lineageTag: 56348402-e637-4992-bd47-9df8f76e9a7a
+		summarizeBy: sum
+		sourceColumn: IsClosed
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClosedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ce5583bd-163c-41e1-bade-f6c9616642fd
+		summarizeBy: none
+		sourceColumn: ClosedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Local_Complaint__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 43cb5081-f4b6-46d1-9dd0-cdf6f1953f3a
+		summarizeBy: sum
+		sourceColumn: Local_Complaint__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Group_Complaint__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 0bbe72d9-601e-46c6-8a1c-81239c146798
+		summarizeBy: sum
+		sourceColumn: Group_Complaint__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Account_Domino_Sub__c
+		dataType: string
+		lineageTag: de4f46a8-dd35-431e-8678-2d296f078c04
+		summarizeBy: none
+		sourceColumn: Account_Domino_Sub__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order_no__c
+		dataType: string
+		lineageTag: 062decd5-e88c-4b1e-826e-6e962cc43188
+		summarizeBy: none
+		sourceColumn: Order_no__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Corrective_Action__c
+		dataType: string
+		lineageTag: 75af24fc-19db-4420-9f80-052b68bcbb13
+		summarizeBy: none
+		sourceColumn: Corrective_Action__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Preventive_Action__c
+		dataType: string
+		lineageTag: 265e5c56-5c83-4bb5-b032-1c7155866e8d
+		summarizeBy: none
+		sourceColumn: Preventive_Action__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Department__c
+		dataType: string
+		lineageTag: 2d737fd1-24dc-4ab0-8dbe-556e6961ab5a
+		summarizeBy: none
+		sourceColumn: Department__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Auto_Entitlement_Status__c
+		dataType: string
+		lineageTag: ce21fe86-652a-48e3-ac03-68a9095a1a9f
+		summarizeBy: none
+		sourceColumn: SVMXC__Auto_Entitlement_Status__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Billing_Type__c
+		dataType: string
+		lineageTag: 0be28719-99e3-4f9e-9ed4-43a4ec79ebbd
+		summarizeBy: none
+		sourceColumn: SVMXC__Billing_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Component__c
+		dataType: string
+		lineageTag: 02cf4ff6-4146-4e3f-9ac6-075473f61848
+		summarizeBy: none
+		sourceColumn: SVMXC__Component__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Entitlement_Type__c
+		dataType: string
+		lineageTag: 8a4d7064-92c9-49f1-9d8f-db66fbcb5a1a
+		summarizeBy: none
+		sourceColumn: SVMXC__Entitlement_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__SLA_Terms__c
+		dataType: string
+		lineageTag: cf160e37-f5ff-4a1d-a687-a497c8b42478
+		summarizeBy: none
+		sourceColumn: SVMXC__SLA_Terms__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Scheduled_Date__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: da0a8966-3019-4168-97de-e233b0aadc55
+		summarizeBy: none
+		sourceColumn: SVMXC__Scheduled_Date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Service_Contract__c
+		dataType: string
+		lineageTag: 7a6cc99f-1370-40c7-bb17-795794d25116
+		summarizeBy: none
+		sourceColumn: SVMXC__Service_Contract__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Site__c
+		dataType: string
+		lineageTag: 75855769-ba77-466d-a3f4-68d6cf7e518f
+		summarizeBy: none
+		sourceColumn: SVMXC__Site__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Warranty__c
+		dataType: string
+		lineageTag: 6ae2c052-20f4-4018-9665-a75ab23066fe
+		summarizeBy: none
+		sourceColumn: SVMXC__Warranty__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Account_Customer_Category__c
+		dataType: string
+		lineageTag: 6d4a080f-e9f0-44d9-9a4b-81d57a328f49
+		summarizeBy: none
+		sourceColumn: Account_Customer_Category__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Case_technology__c
+		dataType: string
+		lineageTag: 53d005cc-727a-49ea-b307-487a9910c205
+		summarizeBy: none
+		sourceColumn: Case_technology__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Close_To_Onsite_SLA_Expiry__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 651e3bd3-8c1c-4956-98f1-3c4496ad572c
+		summarizeBy: sum
+		sourceColumn: Close_To_Onsite_SLA_Expiry__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Close_To_Resolution_SLA_Expiry__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 398eae9c-64b7-49be-84c4-dbce3b6dea58
+		summarizeBy: sum
+		sourceColumn: Close_To_Resolution_SLA_Expiry__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Close_To_Restoration_SLA_Expiry__c
+		dataType: int64
+		formatString: 0
+		lineageTag: ca80fc7c-cb6b-49f8-8214-2d71f0744689
+		summarizeBy: sum
+		sourceColumn: Close_To_Restoration_SLA_Expiry__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Master_Case_Number__c
+		dataType: string
+		lineageTag: 43d1bec6-1aa3-40a0-a834-6fd97e79aa3f
+		summarizeBy: none
+		sourceColumn: Master_Case_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Oracle_Sales_Number__c
+		dataType: string
+		lineageTag: 826bfc08-d8cf-4118-a33c-cf44633cd339
+		summarizeBy: none
+		sourceColumn: Oracle_Sales_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column PO_Number__c
+		dataType: string
+		lineageTag: 374dd639-b301-4aa3-9cb0-bfaafb2d396e
+		summarizeBy: none
+		sourceColumn: PO_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Request_Type__c
+		dataType: string
+		lineageTag: 2aeec104-a9ef-4b47-8c5c-51e8a595d139
+		summarizeBy: none
+		sourceColumn: Request_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type__c
+		dataType: string
+		lineageTag: 1867413b-f904-480e-9ac1-be4357c6291f
+		summarizeBy: none
+		sourceColumn: Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Domino_Setting__c
+		dataType: string
+		lineageTag: 5e96faa4-06a5-463f-8a9e-2004886887d0
+		summarizeBy: none
+		sourceColumn: Domino_Setting__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone_Fix__c
+		dataType: int64
+		lineageTag: 3b3d3e5f-150f-4dcb-aba8-c4cbbccac6b7
+		summarizeBy: sum
+		sourceColumn: Phone_Fix__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Part_Number__c
+		dataType: string
+		lineageTag: 9b60c0b3-2862-4d98-a39c-40969baeab26
+		summarizeBy: none
+		sourceColumn: Part_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone_Fix_Resolution__c
+		dataType: string
+		lineageTag: 2086d4f4-1895-4784-8501-d18cd91ca755
+		summarizeBy: none
+		sourceColumn: Phone_Fix_Resolution__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Oracle_Ship_To__c
+		dataType: string
+		lineageTag: afd9e62d-fa78-46fb-a503-06b9cd57c8ea
+		summarizeBy: none
+		sourceColumn: Oracle_Ship_To__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Assigned_Queue__c
+		dataType: string
+		lineageTag: d85a0df2-7237-442a-8abe-7439f7c22abb
+		summarizeBy: none
+		sourceColumn: Assigned_Queue__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column BuyDomino_Account_User__c
+		dataType: string
+		lineageTag: cd83e39d-54e6-4e88-b608-5ed670cce935
+		summarizeBy: none
+		sourceColumn: BuyDomino_Account_User__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Customer_Resolution__c
+		dataType: string
+		lineageTag: dbc1cec3-17cd-4ad5-9da4-ec45c18c4133
+		summarizeBy: none
+		sourceColumn: Customer_Resolution__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Re_opened_Case__c
+		dataType: int64
+		formatString: 0
+		lineageTag: f8ff2868-3cad-4b21-a8ee-95a5dbcf8fc5
+		summarizeBy: sum
+		sourceColumn: Re_opened_Case__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column h_Case_Resolution_Violated__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 721b3193-38c9-4e98-838c-a2629bdcf777
+		summarizeBy: sum
+		sourceColumn: h_Case_Resolution_Violated__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column h_Initial_Response_Violated__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c800f9c-46af-466c-8541-6c1a31a6fbc5
+		summarizeBy: sum
+		sourceColumn: h_Initial_Response_Violated__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Account_ISO_Country__c
+		dataType: string
+		lineageTag: 20aad5c8-9b9d-49ad-baee-c42620e1b30c
+		summarizeBy: none
+		sourceColumn: Account_ISO_Country__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Account_Owner__c
+		dataType: string
+		lineageTag: 45ae697c-1af9-4558-98ab-4fec49915b13
+		summarizeBy: none
+		sourceColumn: Account_Owner__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Case_Reason__c
+		dataType: string
+		lineageTag: 3bd37ee8-837d-4461-978f-707d02d47608
+		summarizeBy: none
+		sourceColumn: Case_Reason__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contact_Language__c
+		dataType: string
+		lineageTag: b249d47b-7d5f-41c7-a87c-c50c28cc4e39
+		summarizeBy: none
+		sourceColumn: Contact_Language__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Domino_Sub__c
+		dataType: string
+		lineageTag: 059c46ec-5b7f-4211-a00f-570a0ca78887
+		summarizeBy: none
+		sourceColumn: Domino_Sub__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Oracle_Account__c
+		dataType: string
+		lineageTag: 47d77886-9ca8-4f99-899e-e3e7a68a150f
+		summarizeBy: none
+		sourceColumn: Oracle_Account__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column h_Re_Opened_Case_Resolution_Violated__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a5fd535-7814-40fc-9a3d-4e49eda02777
+		summarizeBy: sum
+		sourceColumn: h_Re_Opened_Case_Resolution_Violated__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SLA_Report_Field__c
+		dataType: string
+		lineageTag: 341337b7-06b7-4c52-b21a-dead29dd738c
+		summarizeBy: none
+		sourceColumn: SLA_Report_Field__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Case_Closed_due_to_Work_Order_Creation__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e9ad78c-9e7f-414b-ac71-112b396a55c3
+		summarizeBy: sum
+		sourceColumn: Case_Closed_due_to_Work_Order_Creation__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Keep_Open__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 9076b05f-49af-4538-9855-8c1cbadabd28
+		summarizeBy: sum
+		sourceColumn: Keep_Open__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone_Fix_Technical_Advice__c
+		dataType: string
+		lineageTag: ef0c9795-3028-4f5f-93ee-4a3801ad37ac
+		summarizeBy: none
+		sourceColumn: Phone_Fix_Technical_Advice__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Complaint__c
+		dataType: string
+		lineageTag: 44bcf201-cf4a-44d8-a9f7-eb3f7ed4a86f
+		summarizeBy: none
+		sourceColumn: Complaint__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Customer_Category__c
+		dataType: string
+		lineageTag: 25f6f652-8757-4332-a570-994ddb50b777
+		summarizeBy: none
+		sourceColumn: Customer_Category__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Operations_Site__c
+		dataType: string
+		lineageTag: 391202ed-5166-4c5f-942f-6e505aa0701d
+		summarizeBy: none
+		sourceColumn: Operations_Site__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Owner_Is_Running_User__c
+		dataType: double
+		lineageTag: 7dd2422f-e55a-430b-8f6d-c3340aee7665
+		summarizeBy: sum
+		sourceColumn: Owner_Is_Running_User__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Value_Open_Oppty__c
+		dataType: double
+		lineageTag: 918f49e5-8f70-4622-8ee7-7fd7fb60a211
+		summarizeBy: sum
+		sourceColumn: Total_Value_Open_Oppty__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Internal_representative__c
+		dataType: string
+		lineageTag: eb4d845e-db08-46de-998e-f4a1240d93f9
+		summarizeBy: none
+		sourceColumn: Internal_representative__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Web_Contact_Name__c
+		dataType: string
+		lineageTag: 808193e9-5768-4bdd-8c50-aa0f5d01813c
+		summarizeBy: none
+		sourceColumn: Web_Contact_Name__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column WO_Creation_Reason_Notes__c
+		dataType: string
+		lineageTag: 2dca392e-6e08-4da1-863f-60f48c36cc90
+		summarizeBy: none
+		sourceColumn: WO_Creation_Reason_Notes__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column WO_Creation_Reason__c
+		dataType: string
+		lineageTag: 0a9fe95e-a85b-4e10-81a8-d2fd7386417a
+		summarizeBy: none
+		sourceColumn: WO_Creation_Reason__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_cost_of_complaint__c
+		dataType: double
+		lineageTag: 7db19e6f-569e-448d-b8e0-b2aa2aac5e24
+		summarizeBy: sum
+		sourceColumn: Total_cost_of_complaint__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Alert_ID__c
+		dataType: string
+		lineageTag: 683a62f0-bfce-42e7-8e74-51d54f938fd8
+		summarizeBy: none
+		sourceColumn: Alert_ID__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contract_Type__c
+		dataType: string
+		lineageTag: 223bc9b4-32c0-47fe-9572-e0c93ae0172a
+		summarizeBy: none
+		sourceColumn: Contract_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Local_Contract_Type__c
+		dataType: string
+		lineageTag: 36f48e2a-bfa2-4ac4-837f-a1ef1dd63367
+		summarizeBy: none
+		sourceColumn: Local_Contract_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time_Saved_by_Using_AR_Mins__c
+		dataType: double
+		lineageTag: c075785a-0d26-41f5-96c8-0e3a979d5cfd
+		summarizeBy: sum
+		sourceColumn: Time_Saved_by_Using_AR_Mins__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Service_Function__c
+		dataType: string
+		lineageTag: 7d6ab077-00b6-46d2-b2f7-7537e2614f84
+		summarizeBy: none
+		sourceColumn: Service_Function__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Case_Open_Duration__c
+		dataType: double
+		lineageTag: 4f8a86e7-f3e0-42da-851e-c2f448818b4e
+		summarizeBy: sum
+		sourceColumn: Case_Open_Duration__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Send_New_Owner_Notification__c
+		dataType: int64
+		formatString: 0
+		lineageTag: d29624a2-a46d-46d4-8822-cbc128443d8a
+		summarizeBy: sum
+		sourceColumn: Send_New_Owner_Notification__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column AR_Against_Customer_Policy__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 4185795e-5322-4af6-afae-897113b5adff
+		summarizeBy: sum
+		sourceColumn: AR_Against_Customer_Policy__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column AR_Charge__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 41e84551-485a-4ee7-9eb9-7958a8cd0a64
+		summarizeBy: sum
+		sourceColumn: AR_Charge__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column AR_Enabled__c
+		dataType: int64
+		formatString: 0
+		lineageTag: edb28731-d57e-4a72-8d96-e412ca2becb2
+		summarizeBy: sum
+		sourceColumn: AR_Enabled__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column AR_Entitled__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 141df95e-299a-4d91-a9f5-f7d783e4a56c
+		summarizeBy: sum
+		sourceColumn: AR_Entitled__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column AR_Previously_Used__c
+		dataType: int64
+		formatString: 0
+		lineageTag: f2df3c77-4537-4dec-a6ed-3f4594e9662a
+		summarizeBy: sum
+		sourceColumn: AR_Previously_Used__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column DCI_Enabled__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 9fd9ffce-44ab-4551-a74f-cb328d0be09b
+		summarizeBy: sum
+		sourceColumn: DCI_Enabled__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column User_Contact_Id__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 214957ac-6d7a-46d4-8c4e-26813c41fe64
+		summarizeBy: sum
+		sourceColumn: User_Contact_Id__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_owner
+		dataType: string
+		lineageTag: fb8a296c-65b0-421b-8ba6-7f6fb4e1967d
+		summarizeBy: none
+		sourceColumn: case_owner
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 63953d8d-59bf-42ce-97ab-4c68dd60df3f
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey =
+			
+			VAR dt = BI_SF_CASE[ClosedDate]         -- replace with your column name
+			RETURN
+			    IF (
+			        ISBLANK ( dt ),              -- keep blanks blank
+			        BLANK (),
+			        YEAR ( dt ) * 10000          -- YYYY
+			        + MONTH ( dt ) * 100         --   MM
+			        + DAY ( dt )                 --     DD
+			    )
+		formatString: 0
+		lineageTag: 83f29ce2-30d7-4ce6-bc3e-1ad30b174e18
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Remote fix' = IF( BI_SF_CASE[Phone_Fix__c] = 1, "Yes", "No" )
+		lineageTag: 7254b6b7-c934-409a-b94c-a4e419b97e5f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Work_Order_Number_del__c
+		dataType: string
+		lineageTag: ff62df76-99ae-4315-b2a2-cad3e8a02f4d
+		summarizeBy: none
+		sourceColumn: Work_Order_Number_del__c
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BI_SF_CASE-79595fe7-79e9-4c5d-a09d-7d94c9cb17d0 = m
+		mode: import
+		source =
+				let
+				    // Connect to SQL Server
+				    Source = Sql.Database("azwemisqldcoe.0f9aff9ccbfc.database.windows.net", "DCOE", [Query="SELECT C.[Id]#(lf)      ,C.[CaseNumber]#(lf)      ,C.[AccountId]#(lf)      ,C.[Type]#(lf)      ,C.[Status]#(lf)      ,C.[Reason]#(lf)      ,C.[Origin]#(lf)      ,C.[Subject]#(lf)      ,C.[Priority]#(lf)      ,C.[Description]#(lf)      ,C.[IsClosed]#(lf)      ,C.[ClosedDate]#(lf)      ,C.[CreatedDate]#(lf)      ,C.[Local_Complaint__c]#(lf)      ,C.[Group_Complaint__c]#(lf)      ,C.[Account_Domino_Sub__c]#(lf)      ,C.[Order_no__c]#(lf)      ,C.[Corrective_Action__c]#(lf)      ,C.[Preventive_Action__c]#(lf)      ,C.[Department__c]#(lf)      ,C.[SVMXC__Auto_Entitlement_Status__c]#(lf)      ,C.[SVMXC__Billing_Type__c]#(lf)      ,C.[SVMXC__Component__c]#(lf)      ,C.[SVMXC__Entitlement_Type__c]#(lf)      ,C.[SVMXC__SLA_Terms__c]#(lf)      ,C.[SVMXC__Scheduled_Date__c]#(lf)      ,C.[SVMXC__Service_Contract__c]#(lf)      ,C.[SVMXC__Site__c]#(lf)      ,C.[SVMXC__Warranty__c]#(lf)      ,C.[Account_Customer_Category__c]#(lf)      ,C.[Case_technology__c]#(lf)      ,C.[Close_To_Onsite_SLA_Expiry__c]#(lf)      ,C.[Close_To_Resolution_SLA_Expiry__c]#(lf)      ,C.[Close_To_Restoration_SLA_Expiry__c]#(lf)      ,C.[Master_Case_Number__c]#(lf)      ,C.[Oracle_Sales_Number__c]#(lf)      ,C.[PO_Number__c]#(lf)      ,C.[Request_Type__c]#(lf)      ,C.[Type__c]#(lf)      ,C.[Domino_Setting__c]#(lf)      ,C.[Phone_Fix__c]#(lf)      ,C.[Part_Number__c]#(lf)      ,C.[Phone_Fix_Resolution__c]#(lf)      ,C.[Oracle_Ship_To__c]#(lf)      ,C.[Assigned_Queue__c]#(lf)      ,C.[BuyDomino_Account_User__c]#(lf)      ,C.[Customer_Resolution__c]#(lf)      ,C.[Re_opened_Case__c]#(lf)      ,C.[h_Case_Resolution_Violated__c]#(lf)      ,C.[h_Initial_Response_Violated__c]#(lf)      ,C.[Account_ISO_Country__c]#(lf)      ,C.[Account_Owner__c]#(lf)      ,C.[Case_Reason__c]#(lf)      ,C.[Contact_Language__c]#(lf)      ,C.[Domino_Sub__c]#(lf)      ,C.[Oracle_Account__c]#(lf)      ,C.[h_Re_Opened_Case_Resolution_Violated__c]#(lf)      ,C.[SLA_Report_Field__c]#(lf)      ,C.[Case_Closed_due_to_Work_Order_Creation__c]#(lf)      ,C.[Keep_Open__c]#(lf)      ,C.[Phone_Fix_Technical_Advice__c]#(lf)      ,C.[Complaint__c]#(lf)      ,C.[Customer_Category__c]#(lf)      ,C.[Operations_Site__c]#(lf)      ,C.[Owner_Is_Running_User__c]#(lf)      ,C.[Total_Value_Open_Oppty__c]#(lf)      ,C.[Internal_representative__c]#(lf)      ,C.[Web_Contact_Name__c]#(lf)      ,C.[WO_Creation_Reason_Notes__c]#(lf)      ,C.[WO_Creation_Reason__c]#(lf)      ,C.[Total_cost_of_complaint__c]#(lf)      ,C.[Alert_ID__c]#(lf)      ,C.[Contract_Type__c]#(lf)      ,C.[Local_Contract_Type__c]#(lf)      ,C.[Time_Saved_by_Using_AR_Mins__c]#(lf)      ,C.[Service_Function__c]#(lf)      ,C.[Case_Open_Duration__c]#(lf)      ,C.[Send_New_Owner_Notification__c]#(lf)      ,C.[AR_Against_Customer_Policy__c]#(lf)      ,C.[AR_Charge__c]#(lf)      ,C.[AR_Enabled__c]#(lf)      ,C.[AR_Entitled__c]#(lf)      ,C.[AR_Previously_Used__c]#(lf)      ,C.[DCI_Enabled__c]#(lf)      ,C.[User_Contact_Id__c]#(lf)#(tab)  ,C.Work_Order_Number_del__c#(lf)#(tab)  ,U.[Name] AS case_owner#(lf)  FROM [DCOE].[dbo].[ods_sf_case] C#(lf)  LEFT JOIN [DCOE].dbo.[ods_sf_user] U#(lf)  ON c.OwnerId = u.Id#(lf)  WHERE 1=1#(lf)#(tab)AND ( C.ClosedDate >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) - 12, 0) OR C.ClosedDate IS NULL )#(lf)#(tab)AND C.[Domino_Sub__c] IN ('Domino UK', 'Domino BE/LUX', 'Domino US', 'Domino FR', 'Domino NL', 'Domino CA')", CommandTimeout=#duration(0, 0, 40, 0)])
+				in
+				    Source
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,147 @@
+table BI_SVTLY_ALERTS_HISTORY
+	lineageTag: 42d54721-ce05-4136-9bd6-c7508d12db56
+
+	column ALERTDEFINITIONID
+		dataType: string
+		lineageTag: 64a5d0c7-eeb9-430c-a1e3-45daefd672fd
+		summarizeBy: none
+		sourceColumn: ALERTDEFINITIONID
+
+		annotation SummarizationSetBy = Automatic
+
+	column THING_ID
+		dataType: string
+		lineageTag: 692a08bc-f995-40d3-881f-d6e09c4c0392
+		summarizeBy: none
+		sourceColumn: THING_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column STARTTIMESTAMP
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ca190461-566a-4abb-bf1a-a02b988d2acd
+		summarizeBy: none
+		sourceColumn: STARTTIMESTAMP
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ENDTIMESTAMP
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9ccab7a0-7f03-4b18-8b54-d6bc44f7dbd7
+		summarizeBy: none
+		sourceColumn: ENDTIMESTAMP
+
+		annotation SummarizationSetBy = Automatic
+
+	column DURATION_SEC
+		dataType: int64
+		formatString: 0
+		lineageTag: da3933a5-ccfc-4c50-be1a-78a655ae7bcc
+		summarizeBy: sum
+		sourceColumn: DURATION_SEC
+
+		annotation SummarizationSetBy = Automatic
+
+	column SEVERITY
+		dataType: string
+		lineageTag: 2e239f45-0064-4240-8adb-f244bc80668a
+		summarizeBy: none
+		sourceColumn: SEVERITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column TITLE
+		dataType: string
+		lineageTag: 3d3e8db5-0a3c-43ba-8bd5-3a4077061019
+		summarizeBy: none
+		sourceColumn: TITLE
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: d15ed09d-4fb9-47d2-94a9-b0e702c4cddb
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column TitleAndSeries
+		dataType: string
+		lineageTag: 5a2bb452-9b03-4efb-82dc-ce461bdb8779
+		summarizeBy: none
+		sourceColumn: TitleAndSeries
+
+		annotation SummarizationSetBy = Automatic
+
+	column THINGDEFINITION_PROPERTIES_PRINTERSERIES
+		dataType: string
+		lineageTag: 4fd2ecb3-d4c4-4c93-993f-2c60dee81663
+		summarizeBy: none
+		sourceColumn: THINGDEFINITION_PROPERTIES_PRINTERSERIES
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_NAME
+		dataType: string
+		lineageTag: 91553ee0-8f08-4715-b4e2-51a89b7c5916
+		summarizeBy: none
+		sourceColumn: CUSTOMER_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column SEVERITY_TYPE =
+			SWITCH( BI_SVTLY_ALERTS_HISTORY[SEVERITY],
+			        "WARNING", "Amber alerts",
+			        "FAILURE", "Red alerts",
+			        "CRITICAL", "Red alerts",
+			        "INFORMATIONAL", "Informational",
+			        "Unclassified"
+			)
+		lineageTag: 08578b30-6406-4ff5-a378-18c7592be28d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column DURATION_HRS = DIVIDE( BI_SVTLY_ALERTS_HISTORY[DURATION_SEC], 3600)
+		lineageTag: 6c8ddda3-49a7-4de1-a844-e4c99cd65a37
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DateKey =
+			
+			VAR dt = 'BI_SVTLY_ALERTS_HISTORY'[STARTTIMESTAMP]        -- replace with your column name
+			RETURN
+			    IF (
+			        ISBLANK ( dt ),              -- keep blanks blank
+			        BLANK (),
+			        YEAR ( dt ) * 10000          -- YYYY
+			        + MONTH ( dt ) * 100         --   MM
+			        + DAY ( dt )                 --     DD
+			    )
+		formatString: 0
+		lineageTag: 2567a04e-bc4a-458e-84f5-8d8eb7271df7
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BI_SVTLY_ALERTS_HISTORY = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("azwemisqldcoe.0f9aff9ccbfc.database.windows.net", "DCOE_PR_CLOUD_DATA", [Query="WITH BaseAlertsTable AS (SELECT alerts_history.[ALERTDEFINITIONID]#(lf)      ,alerts_history.[THINGID] AS THING_ID#(lf)      ,alerts_history.[STARTTIMESTAMP]#(lf)      ,alerts_history.[ENDTIMESTAMP]#(lf)      ,DATEDIFF(SECOND, alerts_history.[STARTTIMESTAMP], alerts_history.[ENDTIMESTAMP]) as DURATION_SEC#(lf)      ,alerts_history.[SEVERITY]#(lf)      ,alerts_history.[TITLE]#(lf)      ,cat.category#(lf)      ,CONCAT(things.THINGDEFINITION_PROPERTIES_PRINTERSERIES, ' : ', alerts_history.[TITLE]) AS TitleAndSeries#(lf)      ,things.THINGDEFINITION_PROPERTIES_PRINTERSERIES#(lf)      ,things.CUSTOMER_NAME#(lf)FROM [DCOE_PR_CLOUD_DATA].[dbo].[BI_SVTLY_ALERTS_HISTORY_V2] as alerts_history #(lf)LEFT JOIN [DCOE_PR_CLOUD_DATA].[dbo].[BI_SVTLY_THINGS] AS things#(lf)ON alerts_history.THINGID = things.ID#(lf)LEFT JOIN [DCOE_PR_CLOUD_DATA].[dbo].[BI_SVTLY_ALERT_CATEGORIES] cat#(lf)ON CONCAT(things.THINGDEFINITION_PROPERTIES_PRINTERSERIES, ' : ', alerts_history.[TITLE]) = cat.alert_series_and_title#(lf)WHERE CUSTOMER_NAME NOT LIKE '%domino%'#(lf)  AND STARTTIMESTAMP >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) -12, 0)#(lf)  )#(lf)#(lf)SELECT *#(lf)FROM BaseAlertsTable", CommandTimeout=#duration(0, 0, 25, 0)]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"STARTTIMESTAMP", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

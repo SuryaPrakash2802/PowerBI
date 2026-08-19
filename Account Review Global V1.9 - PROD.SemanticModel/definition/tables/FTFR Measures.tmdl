@@ -1,0 +1,42 @@
+table 'FTFR Measures'
+	lineageTag: 660b4527-8fc6-4f98-be63-9276d7590a66
+	sourceLineageTag: f757c3aa-768f-4902-8ec2-6a07e389c666
+
+	measure 'Success Count' = EXTERNALMEASURE("Success Count", INTEGER, "DirectQuery to AS - Customer 360 4")
+		formatString: 0
+		lineageTag: 1f042e92-d468-41de-94fc-514cff602c4e
+		sourceLineageTag: 3aee2757-e157-4890-822a-f9756921b6dd
+		dataCategory: Uncategorized
+
+	measure 'Fail Count' = EXTERNALMEASURE("Fail Count", INTEGER, "DirectQuery to AS - Customer 360 4")
+		formatString: 0
+		lineageTag: 24c7793f-9330-45de-b1e6-bd73e7e700ae
+		sourceLineageTag: fb1452b3-e4c2-478f-aecd-16fb7c953e79
+		dataCategory: Uncategorized
+
+	measure 'Total Count' = EXTERNALMEASURE("Total Count", INTEGER, "DirectQuery to AS - Customer 360 4")
+		formatString: 0
+		lineageTag: be6d0735-07a7-4a48-a60d-e49ec4025297
+		sourceLineageTag: f0ea523a-46be-489b-9403-2a1a399f3fd9
+		dataCategory: Uncategorized
+
+	measure 'Fail %' = EXTERNALMEASURE("Fail %", DOUBLE, "DirectQuery to AS - Customer 360 4")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 14122d3f-0fad-4e21-bd1f-3e26adda3c11
+		sourceLineageTag: 3b8c273f-4cba-44bd-9116-8c11227749ac
+		dataCategory: Uncategorized
+
+		changedProperty = IsHidden
+
+	measure 'FTFR %' = EXTERNALMEASURE("FTFR %", DOUBLE, "DirectQuery to AS - Customer 360 4")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: dffc8728-c9c2-4704-bdb3-cb8f6a82074b
+		sourceLineageTag: dc227b7c-6eb9-4f7d-84b9-6a1712eff29d
+		dataCategory: Uncategorized
+
+	partition 'FTFR Measures' = entity
+		mode: directQuery
+		source
+			entityName: FTFR Measures
+			expressionSource: 'DirectQuery to AS - Customer 360 4'
+

@@ -1,0 +1,28 @@
+table Dim_Channel
+	lineageTag: 3dba2e46-673f-4130-b912-02c42dea153a
+
+	column ChannelName
+		lineageTag: 22bee293-aeb8-4886-893b-290cd34006fa
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ChannelName]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Channel = calculated
+		mode: import
+		source =
+				
+				VAR Channels =
+				    DISTINCT (
+				        SELECTCOLUMNS (
+				            'BI_SF_ACCOUNT',
+				            "ChannelName",
+				            TRIM ( SUBSTITUTE ( 'BI_SF_ACCOUNT'[Domino_Sub__c] & "", UNICHAR ( 160 ), " " ) )
+				        )
+				    )
+				RETURN
+				    FILTER ( Channels, [ChannelName] <> "" )
+
+	annotation PBI_Id = 37804298c8bd4b6faec6ca5ee7bbab55
+

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "49e0b16d310a8bf7d3a3",
+  "position": {
+    "x": 994.40353460972,
+    "y": 59.381443298969067,
+    "z": 23000,
+    "height": 61.266568483063324,
+    "width": 273.34315169366715,
+    "tabOrder": 23000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SVTLY_THINGS"
+                    }
+                  },
+                  "Property": "LOCATION_NAME"
+                }
+              },
+              "queryRef": "BI_SVTLY_THINGS.LOCATION_NAME",
+              "nativeQueryRef": "Domino Cloud Site",
+              "active": true,
+              "displayName": "Domino Cloud Site"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "syncGroup": {
+      "groupName": "LOCATION_NAME",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

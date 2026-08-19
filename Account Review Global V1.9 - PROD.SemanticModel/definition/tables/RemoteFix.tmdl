@@ -1,0 +1,801 @@
+table RemoteFix
+	lineageTag: f6f32d74-e925-4da1-abff-578d97a8960c
+	sourceLineageTag: 42bdf32b-4a7c-4f08-8b42-8b323f9e9e66
+
+	measure maxdate = EXTERNALMEASURE("maxdate", DATETIME, "DirectQuery to AS - Customer 360 3")
+		formatString: General Number
+		lineageTag: 0ab6a364-aa01-4de8-a576-276036cc404b
+		sourceLineageTag: aeeb69a1-b4e7-4dfc-9fa0-15a94cef08fd
+		dataCategory: Uncategorized
+
+	column isdeleted
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c8d91f6-d9c6-48e4-8255-c4862190ac84
+		sourceLineageTag: 10aafd11-7095-4def-8951-3a17dcb58e3d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: isdeleted
+
+		annotation SummarizationSetBy = User
+
+	column casenumber
+		dataType: string
+		lineageTag: 1f323723-1427-4f0c-be34-0c344d738cd7
+		sourceLineageTag: d83ac1a9-d20a-4aa8-bc68-93433119e6c9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: casenumber
+
+		annotation SummarizationSetBy = User
+
+	column accountid
+		dataType: string
+		lineageTag: 336c4c72-8391-477f-8f9e-d733951d55e8
+		sourceLineageTag: 2e1d2d25-efa3-4c8a-b11f-a5a68c549850
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: accountid
+
+		annotation SummarizationSetBy = User
+
+	column origin
+		dataType: string
+		lineageTag: fc7fe0ed-8834-487c-8293-898407937b0e
+		sourceLineageTag: fc9a722c-8e43-43f3-95f3-2496b6d29b9a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: origin
+
+		annotation SummarizationSetBy = User
+
+	column Account_Domino_Sub__c
+		dataType: string
+		lineageTag: ac0c22bf-a46d-423d-bbd7-215773605a4a
+		sourceLineageTag: 53f06f88-6464-477b-b6cc-e5f4c090342b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Account_Domino_Sub__c
+
+		annotation SummarizationSetBy = User
+
+	column Phone_Fix_Technical_Advice__c
+		dataType: string
+		lineageTag: 9c4c64e8-82d6-4bfa-8b06-f20c0a413dff
+		sourceLineageTag: 0d228911-7f09-4f8a-8429-5bdb356d7885
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Phone_Fix_Technical_Advice__c
+
+		annotation SummarizationSetBy = User
+
+	column Phone_Fix_Resolution__c
+		dataType: string
+		lineageTag: 2df304c3-d1b2-4901-aa99-ba2a5c159d83
+		sourceLineageTag: be00403a-b0a9-4c81-b67f-f306e0f6466e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Phone_Fix_Resolution__c
+
+		annotation SummarizationSetBy = User
+
+	column Sightcall_Feedback__c
+		dataType: string
+		lineageTag: 0225c0c5-d6d9-407a-a0ba-b8e14cb8e77d
+		sourceLineageTag: b1ebc58e-ae67-425b-9633-5b04f18bb493
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sightcall_Feedback__c
+
+		annotation SummarizationSetBy = User
+
+	column Fix_Type
+		dataType: string
+		lineageTag: 4ac618f5-c481-463e-b56a-417689532f50
+		sourceLineageTag: a66aebc4-a78d-4c29-ae36-c86c79477062
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Fix_Type
+
+		annotation SummarizationSetBy = User
+
+	column SVMXC__Actual_onsite_response__c
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: e736e4df-f5ac-44be-ac24-af0ede3bf7dd
+		sourceLineageTag: 65b3aada-ab72-441a-b7d0-9ab06b6b272d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SVMXC__Actual_onsite_response__c
+
+		variation Variation
+			isDefault
+			relationship: de088ae0-6129-4a4a-a00a-1cddabc282b9
+			defaultHierarchy: LocalDateTable_d5a956f1-5dad-4e2c-ad41-37a3de54dc4d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column SVMXC__Product__c
+		dataType: string
+		lineageTag: dbb5a141-8880-4fb0-a2d8-4c40889354cd
+		sourceLineageTag: 896aa8a4-aaf2-4aa2-9ba2-c59bac1be029
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SVMXC__Product__c
+
+		annotation SummarizationSetBy = User
+
+	column SVMXC__Service_Contract__c
+		dataType: string
+		lineageTag: a1e53b04-c0d7-4d4b-a132-bc3ebe65ab47
+		sourceLineageTag: 8595a142-f1f6-4445-963c-cb1b006f0ff5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SVMXC__Service_Contract__c
+
+		annotation SummarizationSetBy = User
+
+	column SVMXC__Warranty__c
+		dataType: string
+		lineageTag: cc631ecc-70ac-408a-816b-894dbcfc80c0
+		sourceLineageTag: db3965df-1ff5-4a7d-8d8e-345df1b0e2e8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SVMXC__Warranty__c
+
+		annotation SummarizationSetBy = User
+
+	column Case_Reason__c
+		dataType: string
+		lineageTag: 9747ef21-430a-49a2-b3a8-f454ea5d1b92
+		sourceLineageTag: c8a961e1-2f5d-47c1-92d9-a1ed13fd14b9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Case_Reason__c
+
+		annotation SummarizationSetBy = User
+
+	column phone_fix__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a309a48-0ce6-4e56-825e-64ee678fe3eb
+		sourceLineageTag: a15cca15-d2a0-48ef-9164-eba7adf3f9c9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: phone_fix__c
+
+		annotation SummarizationSetBy = User
+
+	column service_function__c
+		dataType: string
+		lineageTag: 989551d6-50b5-4d98-9a01-c2a6633abd13
+		sourceLineageTag: 1741cb73-1c2b-48ca-a313-e57ee4371b73
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: service_function__c
+
+		annotation SummarizationSetBy = User
+
+	column request_type__c
+		dataType: string
+		lineageTag: dae402fa-0b7a-4040-91f1-5240631736f3
+		sourceLineageTag: 49fa3924-8137-43c2-9fde-113c8482336b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: request_type__c
+
+		annotation SummarizationSetBy = User
+
+	column part_number
+		dataType: string
+		lineageTag: 23dc04a3-eaf0-4e08-b50f-cc263c854e32
+		sourceLineageTag: 6f6a7f6a-9d1e-4099-872a-60181a8d8e58
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: part_number
+
+		annotation SummarizationSetBy = User
+
+	column case_number
+		dataType: string
+		lineageTag: be23e686-101e-416d-a379-a8d504369783
+		sourceLineageTag: ab7e9229-c47c-4a91-b7ec-c3ee7325daab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: case_number
+
+		annotation SummarizationSetBy = User
+
+	column case_type
+		dataType: string
+		lineageTag: c179c058-249d-493a-b8a8-bbc4330f527e
+		sourceLineageTag: 596450e5-5c19-43c8-9034-589e80cdb859
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: case_type
+
+		annotation SummarizationSetBy = User
+
+	column case_reason
+		dataType: string
+		lineageTag: 60519712-c3d8-4702-af22-a065db900faa
+		sourceLineageTag: 381334ae-1e4d-4733-91a1-c4a547024674
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: case_reason
+
+		annotation SummarizationSetBy = User
+
+	column reason_code
+		dataType: string
+		lineageTag: ced26d40-2674-4368-853c-9fa9d13ddf11
+		sourceLineageTag: 2303d6db-8e42-47ae-b6f1-2072d514a37a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: reason_code
+
+		annotation SummarizationSetBy = User
+
+	column primary_root_cause
+		dataType: string
+		lineageTag: ef8338f8-c79d-4a4d-9dff-e1eea9c00163
+		sourceLineageTag: 06526446-49ec-48fd-b27b-cbc577255b0f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: primary_root_cause
+
+		annotation SummarizationSetBy = User
+
+	column ops_site
+		dataType: string
+		lineageTag: 795b9ecc-1a6c-4b44-bdfd-26ff00ef54a4
+		sourceLineageTag: 5239ffce-c741-44e7-bcdc-05ba2ed6507c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ops_site
+
+		annotation SummarizationSetBy = User
+
+	column case_transfer_reason
+		dataType: string
+		lineageTag: e6c6b351-185a-4a48-a376-63c0a4e16d8c
+		sourceLineageTag: fab4876b-1f94-479a-b4d7-ce76b2f87ec0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: case_transfer_reason
+
+		annotation SummarizationSetBy = User
+
+	column case_description
+		dataType: string
+		lineageTag: f9d1808c-6df9-4fb6-96b5-69ffaaacd9ef
+		sourceLineageTag: 08428e2f-5622-45f3-9e19-4b75f643e884
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: case_description
+
+		annotation SummarizationSetBy = User
+
+	column owner_queue
+		dataType: string
+		lineageTag: 5d9f0886-509a-4d8e-a0be-6e51e26e01ec
+		sourceLineageTag: 3da4356c-cb3e-4bfc-aaa1-3e817b6dcfe0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: owner_queue
+
+		annotation SummarizationSetBy = User
+
+	column assigned_queue
+		dataType: string
+		lineageTag: 2a424bac-3437-47d8-b15f-d1f87e336af1
+		sourceLineageTag: 64766b4a-3a4f-4d50-ab43-1fdab0e56282
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: assigned_queue
+
+		annotation SummarizationSetBy = User
+
+	column account_iso_country
+		dataType: string
+		lineageTag: f61ef7c0-d1bc-4e85-a700-9e979a086c71
+		sourceLineageTag: 2d47b62e-eb1d-4b0c-bd09-67299ae4ace5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: account_iso_country
+
+		annotation SummarizationSetBy = User
+
+	column sf_product_code
+		dataType: string
+		lineageTag: dc3ae25c-fd48-459c-9979-3569ff53f566
+		sourceLineageTag: 1773f320-9d28-49e1-ac29-5e9565690035
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: sf_product_code
+
+		annotation SummarizationSetBy = User
+
+	column sf_product_description
+		dataType: string
+		lineageTag: e49d31f2-4f8d-4a4f-a675-b31a79680155
+		sourceLineageTag: 6abea4f8-8666-4426-9622-e2e39c0dee0f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: sf_product_description
+
+		annotation SummarizationSetBy = User
+
+	column is_installed_product
+		dataType: int64
+		formatString: 0
+		lineageTag: d5b6b61d-d517-4030-b53e-8b458a122cc0
+		sourceLineageTag: 6dfeb8e1-a0d5-48a6-a3ca-e3fc5927f635
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: is_installed_product
+
+		annotation SummarizationSetBy = User
+
+	column product_tech
+		dataType: string
+		lineageTag: 95d55833-a468-4bc4-8eef-4ab611facf0e
+		sourceLineageTag: 785c2754-a5ae-4c0d-98d2-4cc3b54c2927
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_tech
+
+		annotation SummarizationSetBy = User
+
+	column product_tech_family
+		dataType: string
+		lineageTag: eac7f38d-f274-4fc1-8c85-8f6e8d9865f6
+		sourceLineageTag: 6e8bb705-9209-4865-b242-185eb01a004a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_tech_family
+
+		annotation SummarizationSetBy = User
+
+	column product_tech_levelx
+		dataType: string
+		lineageTag: 2ca8efa8-e63b-436e-b184-cf14d0a8cfd8
+		sourceLineageTag: ff41f5cb-f7fc-473c-a41e-7d0d013b4a9f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_tech_levelx
+
+		annotation SummarizationSetBy = User
+
+	column product_tech_levely
+		dataType: string
+		lineageTag: 9a558797-10b2-492f-a6a9-4c40729e63c8
+		sourceLineageTag: b1e1cc12-bd24-452c-9e84-ff464e31a2f6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_tech_levely
+
+		annotation SummarizationSetBy = User
+
+	column ora_inventory_item_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ed9689d5-dc58-43b1-9138-bae8e3dbd537
+		sourceLineageTag: dba339c0-9019-42e5-9fa0-d82da4854191
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: ora_inventory_item_id
+
+		annotation SummarizationSetBy = User
+
+	column ora_part_number
+		dataType: string
+		lineageTag: cb03f3ab-8b1e-4883-8c45-c8e457fdebb7
+		sourceLineageTag: cdb38274-651a-4412-84c1-f32e0e7b4b76
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ora_part_number
+
+		annotation SummarizationSetBy = User
+
+	column ora_part_description
+		dataType: string
+		lineageTag: 294dd3f0-ea08-4eff-b2f7-88c36b120471
+		sourceLineageTag: 78e9b459-8e1d-49ee-9e8a-c21d1a47d1b9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ora_part_description
+
+		annotation SummarizationSetBy = User
+
+	column AttentionFlag
+		dataType: string
+		lineageTag: ec549e48-2732-4a27-a33d-f7d45ee564be
+		sourceLineageTag: 87004ebd-8a02-43f4-96d5-6b823451713e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AttentionFlag
+
+		annotation SummarizationSetBy = User
+
+	column Case_Key
+		dataType: string
+		lineageTag: 8af32f1d-997f-4f5d-90d5-63215d020097
+		sourceLineageTag: af7ae604-d839-4b7c-ac89-15e51a57e1e0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Case_Key
+
+		annotation SummarizationSetBy = User
+
+	column AR_Enabled__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e118c95-020d-4df0-80d3-0ce6ccb87324
+		sourceLineageTag: db691fa9-f1d4-471e-bca9-7287e32c6547
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: AR_Enabled__c
+
+		annotation SummarizationSetBy = User
+
+	column Case_Open_Duration__C
+		dataType: double
+		lineageTag: 99dd7dfd-4ffe-4c98-9962-a9ecae447e5e
+		sourceLineageTag: 6c234d40-219c-4b2d-9438-625eb4ab5cb3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Case_Open_Duration__C
+
+		annotation SummarizationSetBy = User
+
+	column Time_Saved_by_Using_AR_Mins__C
+		dataType: double
+		lineageTag: 085506a6-b5c6-4e87-a31e-6954388bf475
+		sourceLineageTag: 7860eeaf-a271-4ffa-9bf1-67cb88107e2a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Time_Saved_by_Using_AR_Mins__C
+
+		annotation SummarizationSetBy = User
+
+	column SightCall_Used__c
+		dataType: string
+		lineageTag: ce224e0e-13b0-4166-9502-197896b17f72
+		sourceLineageTag: 922ce516-b115-452a-a89a-bee6e6fe9b2f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SightCall_Used__c
+
+		annotation SummarizationSetBy = User
+
+	column Contract_Type__c
+		dataType: string
+		lineageTag: 1dd80adc-59c8-402c-9d66-313522967ed9
+		sourceLineageTag: d95e826c-74f4-4a26-aafc-4e8b92a16d33
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Contract_Type__c
+
+		annotation SummarizationSetBy = User
+
+	column Reported_Issue__c
+		dataType: string
+		lineageTag: 084d63b5-8d80-42e6-9296-a45662cd3771
+		sourceLineageTag: 32292def-589c-4a54-8490-4cf7ae1ec577
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Reported_Issue__c
+
+		annotation SummarizationSetBy = User
+
+	column Send_TS_NPS_survey__c
+		dataType: int64
+		formatString: 0
+		lineageTag: ba62e28d-2654-463a-9a30-1cc6226a9cab
+		sourceLineageTag: 751167b1-b995-4331-b739-54e1be08a6ac
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Send_TS_NPS_survey__c
+
+		annotation SummarizationSetBy = User
+
+	column WO_Creation_Reason__C
+		dataType: string
+		lineageTag: 2b307d52-6a1b-4146-a821-087a5e11d60b
+		sourceLineageTag: 01f562b3-5b1c-4d05-b7a6-a0467f9291bc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: WO_Creation_Reason__C
+
+		annotation SummarizationSetBy = User
+
+	column CaseID
+		dataType: string
+		lineageTag: 1b1dbbdc-6cf6-4b75-818b-e58092370c48
+		sourceLineageTag: 11ddd483-983b-4e1c-b8b0-a8bafbb55d2e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CaseID
+
+		annotation SummarizationSetBy = User
+
+	column Type
+		dataType: string
+		lineageTag: 7eaa45ef-70b2-4e8c-958d-7bf11eeb9cee
+		sourceLineageTag: c63395b2-7ab7-4316-bb8a-643507abb1e0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = User
+
+	column Status
+		dataType: string
+		lineageTag: a13b964e-4b36-4577-849b-4f39c9d574cf
+		sourceLineageTag: 2cd5648e-4d72-448e-b0fe-3553f58bf1c0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column Priority
+		dataType: string
+		lineageTag: 8e844a69-9c8d-4ba3-a8c1-85dd129eb802
+		sourceLineageTag: 4c72a492-e012-45c3-9d00-88a24d5e710f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Priority
+
+		annotation SummarizationSetBy = User
+
+	column IsClosed
+		dataType: int64
+		formatString: 0
+		lineageTag: 645884cc-7bdb-4531-af09-a8da504d812d
+		sourceLineageTag: 6508a6f4-f884-4011-abee-c02e24ccd739
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: IsClosed
+
+		annotation SummarizationSetBy = User
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 5166769a-3b34-49e9-9959-08217d1e2371
+		sourceLineageTag: d09cf994-5c0f-414d-bbb2-c166f50d2cbb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: fc95b3c7-0377-464f-a6cd-f56a56a01dab
+			defaultHierarchy: LocalDateTable_ab89ba8d-3917-4feb-9ba2-f5c87be41107.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 6da9b11e-9fcb-49b2-ba60-5bc98e5099de
+		sourceLineageTag: 25eb9d79-bd06-41e6-b87d-d0bc21d1d873
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 5a5b981d-fb9f-4a98-a0ce-4db4672ddb86
+			defaultHierarchy: LocalDateTable_8718fb62-8ff6-462f-987d-3d06ad0c878e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column Age_2__c
+		dataType: double
+		lineageTag: 2ea7e650-b4e2-4356-82b8-2601e454fa89
+		sourceLineageTag: b3ad31fd-1f06-41ac-9d74-d08c95ada194
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Age_2__c
+
+		annotation SummarizationSetBy = User
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b15eb39d-4e7b-4413-8e96-47392487da50
+		sourceLineageTag: ad49177b-d371-4db8-81e6-ef0a837bb0a0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = User
+
+	column VisitorRemote
+		dataType: string
+		lineageTag: 01a0b5b5-fe56-47b5-aaae-159d0a000232
+		sourceLineageTag: 4f6cbd88-f4cc-41f5-9afe-9f0c9f8812d2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: VisitorRemote
+
+		annotation SummarizationSetBy = User
+
+	column 'Sales Channel'
+		dataType: string
+		lineageTag: 1b4b1caa-8cac-4e91-8d61-b761cddc96aa
+		sourceLineageTag: 17d7e853-b00c-480e-87f1-c06f3ba8df5d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales Channel
+
+		annotation SummarizationSetBy = User
+
+	column 'Cust Segmentation'
+		dataType: string
+		lineageTag: c482ba01-647a-4613-9c3c-704002da1b81
+		sourceLineageTag: 8bebc923-1a46-4620-bb9b-6929aa8b6d3a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Cust Segmentation
+
+		annotation SummarizationSetBy = User
+
+	column 'Account Name'
+		dataType: string
+		lineageTag: a1e33111-d500-4170-bfb5-7cd423aa0dae
+		sourceLineageTag: eb4f66d4-bfe3-48f3-a1a4-2b0e50d21c31
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Account Name
+
+		annotation SummarizationSetBy = User
+
+	column 'Purpose of Visit'
+		dataType: string
+		lineageTag: ed64608f-daa9-4dea-8d45-c9490e8d8a17
+		sourceLineageTag: a505f005-a412-42e9-9260-0dfd83165680
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Purpose of Visit
+
+		annotation SummarizationSetBy = User
+
+	column Fix_Type_
+		dataType: string
+		lineageTag: 4eebe5c1-eb7e-492a-893b-261e640e67fc
+		sourceLineageTag: f6c1a511-bc35-43df-b3d6-9729f57a83ca
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Fix_Type_
+
+		annotation SummarizationSetBy = User
+
+	column DataQualityCheckPass
+		dataType: string
+		lineageTag: 0856f98c-95a8-4dfd-8a2c-6a7eeba997c8
+		sourceLineageTag: 9f5d2314-b8e0-4628-8f76-6bf98ea79537
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DataQualityCheckPass
+
+		annotation SummarizationSetBy = User
+
+	column Assigned_Queue__c
+		dataType: string
+		lineageTag: e17ebd5a-7341-4588-8239-6b4e57e6de42
+		sourceLineageTag: c4217154-6a27-4fe9-ade7-1f39782fb870
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Assigned_Queue__c
+
+		annotation SummarizationSetBy = User
+
+	column WOCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b7126e8-8e1c-408d-bc17-8e4ff22a7984
+		sourceLineageTag: c07d542b-24f2-4d76-8d63-093983531f6c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: WOCount
+
+		annotation SummarizationSetBy = User
+
+	column PeriodName
+		dataType: string
+		lineageTag: ab25d0bd-1380-4157-84d2-498220a336c8
+		sourceLineageTag: 70f703d5-34da-4854-bf25-c6ed81bc7d43
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: PeriodName
+
+		annotation SummarizationSetBy = User
+
+	column BurdenCost_Key
+		dataType: string
+		lineageTag: 34741ba0-6c34-452e-874f-1809e38e6a58
+		sourceLineageTag: 9d70cd51-dbe8-4b8e-b166-97345aa61cdd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BurdenCost_Key
+
+		annotation SummarizationSetBy = User
+
+	column SVMXC__Billing_Type__c
+		dataType: string
+		lineageTag: addbd46c-9133-4e31-8bc3-dc0d7baa664a
+		sourceLineageTag: ec084ee3-6822-4fcc-a8ed-dd8b3152bce5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SVMXC__Billing_Type__c
+
+		annotation SummarizationSetBy = User
+
+	column BurdenCost
+		dataType: double
+		lineageTag: 20517f43-4fec-4ff1-8759-734775265f78
+		sourceLineageTag: 04d3bff4-8084-4aeb-b9a5-bb8a05601531
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: BurdenCost
+
+		annotation SummarizationSetBy = User
+
+	column Alert_ID__c
+		dataType: string
+		lineageTag: c0abc10f-fd0c-42be-8957-00a9cb265a55
+		sourceLineageTag: 87830977-e626-42d4-a69d-3a6836eb8f08
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Alert_ID__c
+
+		annotation SummarizationSetBy = User
+
+	column Duration
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e122969-0e68-4c4f-89ad-f895d1c9f8b4
+		sourceLineageTag: c4cada5a-f5d6-45b4-b218-e8531e1ffa52
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Duration
+
+		annotation SummarizationSetBy = User
+
+	column ClosedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 9ced607c-c2bb-491a-bf3f-8f0f1245d7fd
+		sourceLineageTag: ea3a4bb7-2663-43f9-ab21-f26f28bb3b78
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ClosedDate
+
+		variation Variation
+			isDefault
+			relationship: 6840b759-432d-4788-9bef-eac622989a6c
+			defaultHierarchy: LocalDateTable_8d0c6bb1-a506-4ba6-a5fc-0e5be355c17c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d9eb461-2612-48d9-af16-f016fe90631c
+		sourceLineageTag: 2bc72a85-3aac-4fe6-ad39-fb0342d1f22f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = User
+
+	partition RemoteFix = entity
+		mode: directQuery
+		source
+			entityName: RemoteFix
+			expressionSource: 'DirectQuery to AS - Customer 360 3'
+

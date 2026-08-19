@@ -1,0 +1,792 @@
+table SurveyFeedback
+	lineageTag: f6bfbd0a-c671-4def-bbfe-185e24b4dc69
+	sourceLineageTag: 36937c45-8f6d-4070-8099-98442bed826f
+
+	column id
+		dataType: string
+		lineageTag: 1307af3b-fbb2-4ac0-a351-695bfa9cc1f5
+		sourceLineageTag: 5850fb6e-1f3a-4913-921e-5a8d9605a0e4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = User
+
+	column IsDeleted
+		dataType: int64
+		formatString: 0
+		lineageTag: a39432f6-5e2d-4e87-bd2c-2da99fb71d5c
+		sourceLineageTag: 24839bcf-ac6c-4dbc-ab0e-cb0b88db225a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: IsDeleted
+
+		annotation SummarizationSetBy = User
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 700e84bb-17c9-43dc-9ab3-2f5accbf2172
+		sourceLineageTag: 54a743aa-12dd-478f-9446-18b742285515
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 16d629d7-f0d3-4d73-addd-195878163d14
+			defaultHierarchy: LocalDateTable_fb6a618b-0641-4e09-8193-7fc9d718399d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: e9e184db-0736-4b90-8ed5-e3f297bae89c
+		sourceLineageTag: 96643ad6-d978-406c-bcd8-9d070a34b9a1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 6f0362ea-b358-47ba-b8a3-aab7b317c7d6
+			defaultHierarchy: LocalDateTable_e0be9231-8be6-4c20-9cf1-0773fb8ed202.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column Account__c
+		dataType: string
+		lineageTag: 09503b82-37d8-47da-95e0-b8d8776532ff
+		sourceLineageTag: 0994a4da-8118-42c1-a3df-e4b7790ebd63
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Account__c
+
+		annotation SummarizationSetBy = User
+
+	column Contact__c
+		dataType: string
+		lineageTag: c0347792-1385-4faf-b71b-79ee50a465e1
+		sourceLineageTag: dcdf439d-2ae7-4c48-ad0a-4cc1e29e8433
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Contact__c
+
+		annotation SummarizationSetBy = User
+
+	column ETA__c
+		dataType: string
+		lineageTag: 5bf97ff2-654f-40ad-af03-d3966d603033
+		sourceLineageTag: fc5c5158-ed81-443b-9a48-3c89d68361b5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ETA__c
+
+		annotation SummarizationSetBy = User
+
+	column Engineer_on_time__c
+		dataType: string
+		lineageTag: c0822630-1bda-46da-b711-5f16fbccb19e
+		sourceLineageTag: c2a9318f-fbf4-4abb-bb19-f6f6273f0c52
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Engineer_on_time__c
+
+		annotation SummarizationSetBy = User
+
+	column Head_office__c
+		dataType: string
+		lineageTag: 8c88a460-c5a5-45e6-b029-8a24d16aebca
+		sourceLineageTag: 1323fd18-a6b6-488a-a48e-aacced55de82
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Head_office__c
+
+		annotation SummarizationSetBy = User
+
+	column Improve_customer_experience__c
+		dataType: string
+		lineageTag: e72f865a-b904-4a66-846b-711392ce1cc5
+		sourceLineageTag: cc071108-a9ce-4605-afa2-e619ef896389
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Improve_customer_experience__c
+
+		annotation SummarizationSetBy = User
+
+	column Knowledge_of_customer_product__c
+		dataType: string
+		lineageTag: 274b5cb4-81e2-4ad2-af05-21e073b66793
+		sourceLineageTag: 5fe4830f-393c-429b-a373-1f2d2adc4d6c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Knowledge_of_customer_product__c
+
+		annotation SummarizationSetBy = User
+
+	column Last_90_Days__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 002bbb9b-02a7-44b1-b5d2-62db5d3a9c91
+		sourceLineageTag: 461a5ebc-26a1-4296-9d86-69fd403c22db
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Last_90_Days__c
+
+		annotation SummarizationSetBy = User
+
+	column NPS_Number__c
+		dataType: double
+		lineageTag: 7e3e4bfd-db29-41bd-9c02-06c34f61de1e
+		sourceLineageTag: 29ed91a6-77b3-4942-b3f4-bbdbd8722482
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: NPS_Number__c
+
+		annotation SummarizationSetBy = User
+
+	column Overall_experience__c
+		dataType: string
+		lineageTag: ed480a0c-4904-4a12-ba42-1bf2ebc0686a
+		sourceLineageTag: d3d64306-2b95-403d-b62e-7d6b4022b3f5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Overall_experience__c
+
+		annotation SummarizationSetBy = User
+
+	column Professionalism__c
+		dataType: string
+		lineageTag: 9d058164-dc0e-414d-8244-4b9f42331d02
+		sourceLineageTag: 7c7b05ef-b748-4196-aed0-eb2204fcaf9c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Professionalism__c
+
+		annotation SummarizationSetBy = User
+
+	column Recommend_Domino__c
+		dataType: string
+		lineageTag: 5e2cd6df-7cc6-47df-9f0b-2933f3271e35
+		sourceLineageTag: fd47db46-39f9-43a9-8b90-44076392ee36
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Recommend_Domino__c
+
+		annotation SummarizationSetBy = User
+
+	column Repair_Survey__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 3a30dc15-0194-4221-aaf9-54960668ecb6
+		sourceLineageTag: 822846b4-6a9e-4570-b75f-791026815e30
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Repair_Survey__c
+
+		annotation SummarizationSetBy = User
+
+	column Repair_quality__c
+		dataType: string
+		lineageTag: f494921a-f3a7-4e0b-acaa-26bb343693c8
+		sourceLineageTag: 6b711d57-e05c-4324-bc2a-80789b3a5899
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Repair_quality__c
+
+		annotation SummarizationSetBy = User
+
+	column Submitted_date__c
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 22f58148-a03f-46f9-9b04-976d801d36d7
+		sourceLineageTag: 9053e82f-2d55-4c89-8e46-6a45a7d348e8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Submitted_date__c
+
+		variation Variation
+			isDefault
+			relationship: 58d9bff6-8361-4fde-b00e-c1460d68829a
+			defaultHierarchy: LocalDateTable_cc30bb06-c194-45f6-8685-ee261dceb8ac.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column Work_Order_Number__c
+		dataType: string
+		lineageTag: f31409c0-ccdf-428d-a8e5-70c9349b9a4c
+		sourceLineageTag: 43487141-7a40-4945-a084-0a970a4a0102
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Work_Order_Number__c
+
+		annotation SummarizationSetBy = User
+
+	column date_time_convenient__c
+		dataType: string
+		lineageTag: f653583c-09ff-49b9-ac00-1142ff23813d
+		sourceLineageTag: 84e4f7a8-51cd-4dac-bbde-6cc2bd9d94c5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: date_time_convenient__c
+
+		annotation SummarizationSetBy = User
+
+	column NPS_Detractor__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 3201420f-2afe-4a08-88f1-965e95db8363
+		sourceLineageTag: 27d9f509-5744-4369-a8b9-d7693831f12e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: NPS_Detractor__c
+
+		annotation SummarizationSetBy = User
+
+	column NPS_Promoter__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b4ccb73-ee04-458d-bab9-d4dbd713d050
+		sourceLineageTag: 627a1818-07e6-44ff-a83b-6aae3c5dcbdf
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: NPS_Promoter__c
+
+		annotation SummarizationSetBy = User
+
+	column Purpose_of_Visit__c
+		dataType: string
+		lineageTag: 2a60ea99-c39c-43ee-a675-5942232582ac
+		sourceLineageTag: 4efac834-4f3b-46f3-8e94-3a6f332bc3e0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Purpose_of_Visit__c
+
+		annotation SummarizationSetBy = User
+
+	column Maintenance_Survey__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f2ff26a-a0f2-45f2-b522-1b0954067dca
+		sourceLineageTag: d9055e03-a3f5-45c0-85af-b9165a1532c5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Maintenance_Survey__c
+
+		annotation SummarizationSetBy = User
+
+	column Install_Survey__c
+		dataType: int64
+		formatString: 0
+		lineageTag: e274d4f3-4f48-469d-b2ac-d0e866633eea
+		sourceLineageTag: 24614e96-6e1a-42e1-8d2e-11ab2e87bbb5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Install_Survey__c
+
+		annotation SummarizationSetBy = User
+
+	column Condition_after_repair__c
+		dataType: string
+		lineageTag: 21c03577-a40c-4160-b07b-2d746ac95fe5
+		sourceLineageTag: 0199dbbe-145a-4c6d-af07-6e57b27511ff
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Condition_after_repair__c
+
+		annotation SummarizationSetBy = User
+
+	column Knowledge_of_Product_Score__c
+		dataType: double
+		lineageTag: 1afc25e3-7d93-4321-88f2-f15273b8648e
+		sourceLineageTag: 49556ce7-442b-43ae-811b-09b8e19fa614
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Knowledge_of_Product_Score__c
+
+		annotation SummarizationSetBy = User
+
+	column Knowledge_of_support_team__c
+		dataType: string
+		lineageTag: 4b4fcf13-e1bc-40fc-a094-8c00a984f90d
+		sourceLineageTag: 78e4fc05-5991-4868-9d28-faabab3f2810
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Knowledge_of_support_team__c
+
+		annotation SummarizationSetBy = User
+
+	column Professionalism_Score__c
+		dataType: double
+		lineageTag: 369ec1f4-dc10-4444-8afd-31d33f04e3ca
+		sourceLineageTag: bbf30aa4-94d1-48eb-9f21-0f34a6a93823
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Professionalism_Score__c
+
+		annotation SummarizationSetBy = User
+
+	column Repair_quality_Score__c
+		dataType: double
+		lineageTag: 8b79b5b3-6d10-4424-9d20-69793fa60ed0
+		sourceLineageTag: 800d4681-ec5b-459c-8f4b-f706b1dd045e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Repair_quality_Score__c
+
+		annotation SummarizationSetBy = User
+
+	column Technical_Help_Desk_Score__c
+		dataType: double
+		lineageTag: e29f8810-c377-4b93-bfee-c8d265957f97
+		sourceLineageTag: 04d9b84d-b760-46fb-b4cb-83ce8c2e0da5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Technical_Help_Desk_Score__c
+
+		annotation SummarizationSetBy = User
+
+	column Domino_Sub__c
+		dataType: string
+		lineageTag: e69e8e78-f0f5-4f3d-bbc3-ca08a907debf
+		sourceLineageTag: f1954520-771f-4c84-90d0-020f13b4f16d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Domino_Sub__c
+
+		annotation SummarizationSetBy = User
+
+	column NPS_Category__c
+		dataType: string
+		lineageTag: 059935e7-d25e-49f3-9e51-cb59f3d9be57
+		sourceLineageTag: 82077e17-cff0-40e5-8c01-20ec59ae59c1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: NPS_Category__c
+
+		annotation SummarizationSetBy = User
+
+	column Surveyed_Case__c
+		dataType: string
+		lineageTag: b8dfeaf3-c9f6-4049-99bf-86ac82c0e7d1
+		sourceLineageTag: 183772f9-3cb9-41d4-b9cd-1ca0796f0ed1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Surveyed_Case__c
+
+		annotation SummarizationSetBy = User
+
+	column Surveyed_Opportunity__c
+		dataType: string
+		lineageTag: 5e4d55af-d342-414d-9d56-bd95e62492fb
+		sourceLineageTag: c5306df5-fbe1-496d-8981-4972494ee6d9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Surveyed_Opportunity__c
+
+		annotation SummarizationSetBy = User
+
+	column Response_Type__c
+		dataType: string
+		lineageTag: 8bb6b0a7-e038-4f6b-84f4-9450deebd349
+		sourceLineageTag: 7c0d5b96-4be1-4e0b-a212-645122ceadeb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Response_Type__c
+
+		annotation SummarizationSetBy = User
+
+	column Sales_Knowledge_Professionalism__c
+		dataType: string
+		lineageTag: a39b2bf5-ebe7-43eb-8dcf-0ea242fef994
+		sourceLineageTag: 650b1017-a133-4cd9-9d61-aa6a18ad2cd1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales_Knowledge_Professionalism__c
+
+		annotation SummarizationSetBy = User
+
+	column Sales_Overall_Experience_Score__c
+		dataType: double
+		lineageTag: cbe8dc95-36b6-4977-a905-6239260d7513
+		sourceLineageTag: 7563e11f-568a-4528-914a-68541a7c59f6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sales_Overall_Experience_Score__c
+
+		annotation SummarizationSetBy = User
+
+	column Sales_Overall_Experience__c
+		dataType: string
+		lineageTag: a280e877-1afe-4e86-b65f-96d7e029c1fb
+		sourceLineageTag: 18b865af-2236-4b56-9b6e-4a692ff0cf0c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales_Overall_Experience__c
+
+		annotation SummarizationSetBy = User
+
+	column Sales_Samples__c
+		dataType: string
+		lineageTag: 7a051c17-e6b7-485d-8c26-ef0225a08f3c
+		sourceLineageTag: 6fa83d97-f4a8-46cf-bcfd-ec1d2af9b237
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales_Samples__c
+
+		annotation SummarizationSetBy = User
+
+	column Sales_Sample_Score__c
+		dataType: double
+		lineageTag: da81ac10-3fb8-4339-8eb8-3bc35dd92888
+		sourceLineageTag: 30602ed3-d2bd-4545-97c1-da6775e005f4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sales_Sample_Score__c
+
+		annotation SummarizationSetBy = User
+
+	column Sales_Trial_Printer__c
+		dataType: string
+		lineageTag: 8b8707bf-596e-4c3e-85cd-2cc3f91b43e2
+		sourceLineageTag: 084eec81-522e-4517-b02d-7abed37ef7ec
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Sales_Trial_Printer__c
+
+		annotation SummarizationSetBy = User
+
+	column Sales_Trial_Score__c
+		dataType: double
+		lineageTag: 6fdbf927-2b41-4dff-9c8f-cc314526f5a4
+		sourceLineageTag: 69831b59-9367-4602-80ca-c2cf57f31d18
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sales_Trial_Score__c
+
+		annotation SummarizationSetBy = User
+
+	column Order_Number__c
+		dataType: string
+		lineageTag: 03e6f383-dfe9-4581-ab5b-22694c2842df
+		sourceLineageTag: a38fc356-99b5-46dd-a94a-ab8053506636
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Order_Number__c
+
+		annotation SummarizationSetBy = User
+
+	column Difficulty_Perception__c
+		dataType: string
+		lineageTag: a432b152-2557-4ed6-a5ec-e63b66edc788
+		sourceLineageTag: 0160f9f9-7464-4f48-98d9-b860d74b4d77
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Difficulty_Perception__c
+
+		annotation SummarizationSetBy = User
+
+	column NPS_Score__c
+		dataType: double
+		lineageTag: c2d0f2c6-fafd-4ebc-a1d2-4f54bf675320
+		sourceLineageTag: f81bb3d9-baeb-4a04-9cc6-725578cdd478
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: NPS_Score__c
+
+		annotation SummarizationSetBy = User
+
+	column Difficulty_Perception_Score__c
+		dataType: double
+		lineageTag: 47763787-bcd5-4866-b225-d9d16e3e3069
+		sourceLineageTag: 3f07b783-2e9c-4b6e-b13b-922089c20e4c
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Difficulty_Perception_Score__c
+
+		annotation SummarizationSetBy = User
+
+	column Maintenance_Survey2__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 16736593-d12e-4c63-b8b1-eb0738cdc36a
+		sourceLineageTag: 42a3ba0b-8b14-4f2f-8485-5c735bb00d19
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Maintenance_Survey2__c
+
+		annotation SummarizationSetBy = User
+
+	column Repair_Survey2__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 58fe6cf3-615d-4ed8-a0c4-a535cbdde13f
+		sourceLineageTag: cf94513c-d9d2-4f12-ae2b-5b105657d897
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Repair_Survey2__c
+
+		annotation SummarizationSetBy = User
+
+	column BuyDomino_Satisfaction__c
+		dataType: string
+		lineageTag: 38adb977-b719-43f6-a04e-5c6854a3f084
+		sourceLineageTag: 1cff71ac-c5e8-4ac5-9d34-d3ad71d250e0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BuyDomino_Satisfaction__c
+
+		annotation SummarizationSetBy = User
+
+	column BuyDomino_OrderID__c
+		dataType: string
+		lineageTag: b29e057c-a0d3-423a-b933-5662c53b59d9
+		sourceLineageTag: c02278aa-d07e-45c8-81c2-525b27658e15
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: BuyDomino_OrderID__c
+
+		annotation SummarizationSetBy = User
+
+	column CaseNumber
+		dataType: string
+		lineageTag: e66e280e-5250-4587-aeab-a91c3fd91432
+		sourceLineageTag: 4e97ed6e-88f5-40e5-a324-f2892223bf80
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CaseNumber
+
+		annotation SummarizationSetBy = User
+
+	column ClosedDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: c612af0b-c530-43bb-ab10-86fd77972f58
+		sourceLineageTag: ba60bc9e-8cba-4f22-a6e8-472eaaaeda4d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ClosedDate
+
+		variation Variation
+			isDefault
+			relationship: ef016d22-f380-4946-ab8e-5b1d7d494186
+			defaultHierarchy: LocalDateTable_333650bd-2f36-42df-abd9-0aff7d9ec3e2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column TypeId
+		dataType: string
+		lineageTag: 20b229dd-970b-401d-86b0-10d0319979cb
+		sourceLineageTag: c5e9407e-4b5e-40e7-8709-c373eead87a8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: TypeId
+
+		annotation SummarizationSetBy = User
+
+	column Type
+		dataType: string
+		lineageTag: a6475eab-7d4c-4a0d-a751-b8ffb881560b
+		sourceLineageTag: 97efeb5f-f8a8-4c26-bbe8-c6083cdf1a8e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = User
+
+	column AccountId
+		dataType: string
+		lineageTag: 4bd005f9-69a6-4025-a208-e61575b7667a
+		sourceLineageTag: 350a2e75-e2fe-4adf-aee4-e51a1e79f3b9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AccountId
+
+		annotation SummarizationSetBy = User
+
+	column Survey_Sent__c
+		dataType: string
+		lineageTag: 03a7bcef-97dc-49ae-ba8b-db99ac80a6ab
+		sourceLineageTag: f5ca1ad6-9d67-41a2-87ab-38c7d758b596
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Survey_Sent__c
+
+		annotation SummarizationSetBy = User
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e40776ea-6956-4acf-8c14-17b423c7c47b
+		sourceLineageTag: a1519339-d0ee-4519-ba7a-bfcf82fa0c59
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = User
+
+	column Printer_Family__c
+		dataType: string
+		lineageTag: 6c396fdd-56d8-4d84-a761-150216136500
+		sourceLineageTag: 1a11e4c3-a08b-441a-b0f5-fb5b38981ba6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Printer_Family__c
+
+		annotation SummarizationSetBy = User
+
+	column Reported_Issue__c
+		dataType: string
+		lineageTag: 88f3ca19-8706-4e60-81cd-5ab663a7304a
+		sourceLineageTag: aca2243b-0976-4dc3-b520-05b1e432252a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Reported_Issue__c
+
+		annotation SummarizationSetBy = User
+
+	column Survey_Response_Received__c
+		dataType: int64
+		formatString: 0
+		lineageTag: b0b2560b-db52-4805-814e-820c03e8e192
+		sourceLineageTag: fbe91e2e-e9df-451e-967b-418ed761228e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Survey_Response_Received__c
+
+		annotation SummarizationSetBy = User
+
+	column 'CSAT Overall WO'
+		dataType: double
+		lineageTag: d87dced1-bef5-4b46-935a-3fb9c0bd572c
+		sourceLineageTag: 6c332aab-9c4c-4167-bae8-3a968411ce45
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CSAT Overall WO
+
+		annotation SummarizationSetBy = User
+
+	column condition_after_repair_Score__c
+		dataType: double
+		lineageTag: 91da9f05-070d-41f3-9dbb-7858ff94266b
+		sourceLineageTag: b57a5208-eb95-48b4-9ade-dbb4a1dee706
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: condition_after_repair_Score__c
+
+		annotation SummarizationSetBy = User
+
+	column 'CSAT Overall Opp'
+		dataType: double
+		lineageTag: 35e1a562-3db2-45b3-90ee-77693c520820
+		sourceLineageTag: 4f6f9a36-2505-42c3-8479-5c673a8ebbac
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CSAT Overall Opp
+
+		annotation SummarizationSetBy = User
+
+	column 'CSAT Overall'
+		dataType: double
+		lineageTag: 1e658d0b-e45c-4532-be49-d58b3e158531
+		sourceLineageTag: 91fe6933-6056-4ea2-bf0f-0d5d5d681b29
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: CSAT Overall
+
+		annotation SummarizationSetBy = User
+
+	column Cost_of_Complaint__c
+		dataType: double
+		lineageTag: 0d47a644-55a7-495d-bd25-f53a78371e1c
+		sourceLineageTag: 96abce4e-3139-4381-97e5-03a065bd77b1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Cost_of_Complaint__c
+
+		annotation SummarizationSetBy = User
+
+	column Cost_of_effort__c
+		dataType: string
+		lineageTag: 4f5b0267-406e-411b-9c99-ba37979c1d50
+		sourceLineageTag: a9a5f218-6451-4d38-83cf-74d92ccde0bc
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Cost_of_effort__c
+
+		annotation SummarizationSetBy = User
+
+	column Cost_of_concessions_credits__c
+		dataType: double
+		lineageTag: a0d95f03-bae5-42b4-bb72-dde943bfeace
+		sourceLineageTag: b4f2f232-9e7f-4ee3-b324-7cec5468060a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Cost_of_concessions_credits__c
+
+		annotation SummarizationSetBy = User
+
+	column Total_cost_of_complaint__c
+		dataType: double
+		lineageTag: dfea9fd6-39e6-4dcb-93b2-a3689afd32b1
+		sourceLineageTag: 3b01a63d-b52a-423a-9a85-484567d876c3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Total_cost_of_complaint__c
+
+		annotation SummarizationSetBy = User
+
+	column 'Include Flag'
+		dataType: string
+		lineageTag: b0e50826-5cf3-450c-8908-4b1ef47a69c7
+		sourceLineageTag: 28c2a38c-ab30-409a-921c-b0429435747d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Include Flag
+
+		annotation SummarizationSetBy = User
+
+	column name
+		dataType: string
+		lineageTag: 02ef86b5-6e56-4a3d-9844-5823dd3d1771
+		sourceLineageTag: 35b5d99d-3974-49ee-ba0a-1551475b1016
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = User
+
+	column AssesDate
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: f8d03046-bd0c-4209-b812-1896d9f317b6
+		sourceLineageTag: c02c8440-0a98-4832-95cb-3b97f4828f62
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AssesDate
+
+		variation Variation
+			isDefault
+			relationship: 8b33c518-f579-43f4-8ea0-54ae48585274
+			defaultHierarchy: LocalDateTable_7dd60d3b-6845-463f-9fff-bd31809ac581.'Date Hierarchy'
+
+		annotation SummarizationSetBy = User
+
+	column id_ignore
+		dataType: int64
+		formatString: 0
+		lineageTag: 041a6751-9a4a-46b1-b874-b4f85f4a8c0f
+		sourceLineageTag: 389b5d31-eec8-4e6c-a236-4c6a920de218
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: id_ignore
+
+		annotation SummarizationSetBy = User
+
+	partition SurveyFeedback = entity
+		mode: directQuery
+		source
+			entityName: SurveyFeedback
+			expressionSource: 'DirectQuery to AS - Customer 360'
+

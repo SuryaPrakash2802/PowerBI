@@ -1,0 +1,116 @@
+table FTFR
+	lineageTag: 6acdad07-8310-4a75-bb57-1b25614fea31
+	sourceLineageTag: 8280ad9f-9506-405d-bd39-07b250d8b7db
+
+	column fail_printer_reason
+		dataType: string
+		lineageTag: 54da93f4-0f49-4e95-85f3-38ccd2897459
+		sourceLineageTag: a6e99818-cbdd-4349-bd4b-18566f7640ee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: fail_printer_reason
+
+		annotation SummarizationSetBy = User
+
+	column domino_sub
+		dataType: string
+		lineageTag: 93701181-bf40-425b-89d4-83bf3615cb4d
+		sourceLineageTag: 4d6812cc-6c1b-407d-b142-dd663eb366e8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: domino_sub
+
+		annotation SummarizationSetBy = User
+
+	column product_family
+		dataType: string
+		lineageTag: a501fb33-dd4d-4ea0-831f-6382f73e0a6e
+		sourceLineageTag: d9552b64-1d99-4565-ab81-393ee1a5f0a5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: product_family
+
+		annotation SummarizationSetBy = User
+
+	column dp_work_order__c
+		dataType: int64
+		formatString: 0
+		lineageTag: c898f828-6388-4482-912d-2da5b6bd9015
+		sourceLineageTag: e1124535-f749-411b-868b-e99ba70befe2
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: dp_work_order__c
+
+		annotation SummarizationSetBy = User
+
+	column Month_
+		dataType: int64
+		formatString: 0
+		lineageTag: a33349e2-0537-49a8-8261-9093dbee826a
+		sourceLineageTag: 949c2c02-c2eb-4679-9283-83dd24464133
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Month_
+
+		annotation SummarizationSetBy = User
+
+	column year_
+		dataType: int64
+		formatString: 0
+		lineageTag: bda960c7-a3fb-4a20-a5e8-facf36499d04
+		sourceLineageTag: c2ea9469-15c7-4d1d-bbe2-987b67aa7a62
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: year_
+
+		annotation SummarizationSetBy = User
+
+	column 'Fail Count'
+		dataType: int64
+		formatString: 0
+		lineageTag: 68262a76-3a4a-480f-861b-d3b52a2ce0f5
+		sourceLineageTag: cfc856ef-b4eb-46f7-9423-f687d5a465a5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Fail Count
+
+		annotation SummarizationSetBy = User
+
+	column 'Success Count'
+		dataType: int64
+		formatString: 0
+		lineageTag: 838517bd-0fd3-4e1e-a270-d2218013a8a5
+		sourceLineageTag: ff460cc3-72eb-432f-bf79-0c3138a1e44d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Success Count
+
+		annotation SummarizationSetBy = User
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 26d0d590-a4ce-49c4-ab38-463df85f689e
+		sourceLineageTag: 25574b8b-18f0-42fd-b41a-5203bc444c93
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = User
+
+	column AccountID
+		dataType: string
+		lineageTag: a7990381-e781-4fe3-8a0b-30e514dee8a7
+		sourceLineageTag: 57e8a548-c6b3-4b60-bf82-e3331908da60
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: AccountID
+
+		annotation SummarizationSetBy = User
+
+	partition FTFR = entity
+		mode: directQuery
+		source
+			entityName: FTFR
+			expressionSource: 'DirectQuery to AS - Customer 360 4'
+

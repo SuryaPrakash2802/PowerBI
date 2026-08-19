@@ -1,0 +1,649 @@
+table 'SurveyFeedback Measures'
+	lineageTag: a15bff74-4b04-4c34-919f-dfa1e5437966
+	sourceLineageTag: 121035bd-7fba-4c5e-a52c-ed4799530094
+
+	measure 'Survey Response' = EXTERNALMEASURE("Survey Response", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 6659093b-0233-443a-a837-cce6eb0f7dd9
+		sourceLineageTag: 04cc7aa3-7614-4ae5-aafd-33d6eb8a4c3f
+		dataCategory: Uncategorized
+
+	measure 'Promoter Count' = EXTERNALMEASURE("Promoter Count", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: f41ab56c-a237-4b11-a35d-7ba36e1f82e7
+		sourceLineageTag: e0e334a1-558a-48cd-8d4b-e4ece9763ba3
+		dataCategory: Uncategorized
+
+	measure 'Detractor Count' = EXTERNALMEASURE("Detractor Count", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: cef284f4-fdef-4505-acba-824e9a624571
+		sourceLineageTag: d277b6aa-84e8-47d7-974d-ae962bdfd015
+		dataCategory: Uncategorized
+
+	measure 'promoter %' = EXTERNALMEASURE("promoter %", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: eeeecec7-5d43-4c28-8928-711f6addec57
+		sourceLineageTag: e497bbb4-83a5-43e1-a268-2c2c938ecc41
+		dataCategory: Uncategorized
+
+	measure 'detractor %' = EXTERNALMEASURE("detractor %", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 96f3e146-02c5-4c23-9843-274aa3c21444
+		sourceLineageTag: c13c100d-624a-4f13-a233-54b9dcce52f2
+		dataCategory: Uncategorized
+
+	measure NPS% = EXTERNALMEASURE("NPS%", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 0c005da0-c5b5-46a4-a35f-32f4f31accfa
+		sourceLineageTag: 74a22a5d-e001-44f3-b351-1deb55f8accd
+		dataCategory: Uncategorized
+
+	measure 'NPS% PY' = EXTERNALMEASURE("NPS% PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0%;-0%;0%
+		lineageTag: d77af97d-a1c4-47d6-9000-5f403522c51f
+		sourceLineageTag: bf8d3cb7-a666-4238-a7b7-99c802d5efb4
+		dataCategory: Uncategorized
+
+	measure 'NPS %CY vs LY' = EXTERNALMEASURE("NPS %CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 9d1d3d6f-5261-43ef-8289-00b24e18a57e
+		sourceLineageTag: 2ee46320-44ac-45ba-83c6-6c8302c43b6f
+		dataCategory: Uncategorized
+
+	measure 'Object Count' = EXTERNALMEASURE("Object Count", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 9bd159bd-1eb6-496a-8d96-0fc5dbc7f91c
+		sourceLineageTag: edcfd701-fedb-4151-9167-48950cb397f1
+		dataCategory: Uncategorized
+
+	measure 'Survey Sent Count' = EXTERNALMEASURE("Survey Sent Count", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 2ea8ef64-15b9-4e99-9eed-df369d09d128
+		sourceLineageTag: c1b6f783-35e0-4f6f-b0c3-e1208632fe1b
+		dataCategory: Uncategorized
+
+	measure 'Survey Sent Count PY' = EXTERNALMEASURE("Survey Sent Count PY", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: b66ce5ca-b04e-43b0-9244-c2b75b25a13e
+		sourceLineageTag: e717f8b2-7234-49d8-acaf-255b75c8f7f6
+		dataCategory: Uncategorized
+
+	measure 'Survey Sent CY vs LY' = EXTERNALMEASURE("Survey Sent CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: e3e1f898-21f9-4420-87f2-d7d8a59e32fb
+		sourceLineageTag: b3372952-d164-4569-bb41-c75326819411
+		dataCategory: Uncategorized
+
+	measure 'Survey Response PY' = EXTERNALMEASURE("Survey Response PY", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 383ea66d-c342-4cb3-a828-0c54b3b11138
+		sourceLineageTag: d667a43e-c87f-4961-bf1d-09bab7ec55ad
+		dataCategory: Uncategorized
+
+	measure 'Survey Response CY vs LY' = EXTERNALMEASURE("Survey Response CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: d12e3411-6569-41a4-ab90-3364dd67a7a6
+		sourceLineageTag: 42e24ebf-241b-4e31-b6f6-4d1780cf2e83
+		dataCategory: Uncategorized
+
+	measure 'Response Rate' = EXTERNALMEASURE("Response Rate", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 901e01ab-9ee8-4949-a09a-c1beae0a2770
+		sourceLineageTag: 07650759-4f09-4764-9182-411dee148ac2
+		dataCategory: Uncategorized
+
+	measure 'Response Rate PY' = EXTERNALMEASURE("Response Rate PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: eddb3c8a-d58c-431e-9276-4bd43cbb034f
+		sourceLineageTag: cd64c80c-f077-4d7b-a289-8e13e9fdf1af
+		dataCategory: Uncategorized
+
+	measure 'Repsonse Rate CY vs LY' = EXTERNALMEASURE("Repsonse Rate CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: ed42ea91-676c-4b09-add6-03d113ff972d
+		sourceLineageTag: e1d6a881-b086-40df-b78b-e0155b014a5e
+		dataCategory: Uncategorized
+
+	measure 'Active Customers' = EXTERNALMEASURE("Active Customers", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: c39975ed-201b-4f5f-b447-9da4360a247d
+		sourceLineageTag: d697fc44-65a6-4ed4-9e6a-1d81b85e99db
+		dataCategory: Uncategorized
+
+	measure 'Active Customer PY YTD' = EXTERNALMEASURE("Active Customer PY YTD", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 4616a95c-ee86-4809-8ddd-01c492240710
+		sourceLineageTag: 84260a54-3d67-4f60-8ace-0f0d76c5f711
+		dataCategory: Uncategorized
+
+	measure 'Active Customers CY vs LY' = EXTERNALMEASURE("Active Customers CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 030bd855-6551-498e-8df2-9ecd67108f7d
+		sourceLineageTag: 749d399c-06dc-4b71-853a-a0518bd614ba
+		dataCategory: Uncategorized
+
+	measure 'Active Customers Variacne' = EXTERNALMEASURE("Active Customers Variacne", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 863526ca-aff4-4c7e-b142-60e270f90fad
+		sourceLineageTag: e9274beb-205b-4ec7-81dc-b0d79f869816
+		dataCategory: Uncategorized
+
+	measure 'Active Customer Revenue' = EXTERNALMEASURE("Active Customer Revenue", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: ac304093-1146-4157-98ca-9e7f67e03fcb
+		sourceLineageTag: 12650714-3cb0-4d68-af8c-fd4e4651e4e1
+		dataCategory: Uncategorized
+
+	measure 'Active Customer Revenue PY' = EXTERNALMEASURE("Active Customer Revenue PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 662d2a8f-c7bf-4092-982f-5dd2bbe27bee
+		sourceLineageTag: 6920022f-edf5-4aa9-b0c0-5f12dd6b0ac5
+		dataCategory: Uncategorized
+
+	measure 'Active Customers Revenue CY vs LY' = EXTERNALMEASURE("Active Customers Revenue CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: e19dfe8d-4a00-4393-835b-7043df18d517
+		sourceLineageTag: 426a4c62-be11-4d0d-bd8c-5d7d16346b1d
+		dataCategory: Uncategorized
+
+	measure 'Customer Effort Score' = EXTERNALMEASURE("Customer Effort Score", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0.0
+		lineageTag: 77f368bf-d9b8-4852-ad8c-ea49d2ea386b
+		sourceLineageTag: d25630a7-29c0-4cde-93ee-94805e23d15a
+		dataCategory: Uncategorized
+
+	measure 'CES PY' = EXTERNALMEASURE("CES PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 47648731-bc16-45b3-a101-42eaaf6b231d
+		sourceLineageTag: ed9b3774-8b59-47c4-969f-facbf8cc9b1d
+		dataCategory: Uncategorized
+
+	measure 'CES CY vs LY' = EXTERNALMEASURE("CES CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 1979ea02-bd35-41ae-b97a-26acb7aa9d3c
+		sourceLineageTag: 6cc1ab84-3972-416c-abc6-8b38b1a73c19
+		dataCategory: Uncategorized
+
+	measure 'CES Variance' = EXTERNALMEASURE("CES Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 8bcbc0de-1dc4-4fe7-b94b-6ae7e00b3385
+		sourceLineageTag: e2b121fd-d1cc-45b5-842e-05b574cfff88
+		dataCategory: Uncategorized
+
+	measure CSAT = EXTERNALMEASURE("CSAT", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0.00
+		lineageTag: 672d1623-0c6d-45f3-b659-613c13e89a83
+		sourceLineageTag: 48931eb8-c207-451e-abc8-605b81264753
+		dataCategory: Uncategorized
+
+	measure 'CSAT PY' = EXTERNALMEASURE("CSAT PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0.00
+		lineageTag: 8d7e8578-73e4-413d-90a3-bc874e9d4770
+		sourceLineageTag: a58356bd-5de8-42f7-80a7-169e619ac477
+		dataCategory: Uncategorized
+
+	measure 'CSAT CY vs LY' = EXTERNALMEASURE("CSAT CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: a94a3086-f620-4262-8a9b-b256c0dcb6df
+		sourceLineageTag: 383f3c81-e85a-4e3d-89ba-8435fb3c1337
+		dataCategory: Uncategorized
+
+	measure 'CSAT Variance' = EXTERNALMEASURE("CSAT Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 88be66cc-b8f0-48bc-a9d3-47319d900171
+		sourceLineageTag: b83147ac-bf56-48b9-b652-78bb0b779172
+		dataCategory: Uncategorized
+
+	measure 'Customers Surveyed PY' = EXTERNALMEASURE("Customers Surveyed PY", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: d898658f-e377-47a4-a44d-5c67b928d949
+		sourceLineageTag: f8958d67-b719-40f9-b3f9-127090b83e10
+		dataCategory: Uncategorized
+
+	measure 'Customer Coverage' = EXTERNALMEASURE("Customer Coverage", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: ba857ee7-62b3-4f2c-ad2c-2412228daad5
+		sourceLineageTag: c44d6a14-e144-4432-9203-7505d63393af
+		dataCategory: Uncategorized
+
+	measure 'Customer Coverage PY' = EXTERNALMEASURE("Customer Coverage PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 40a6951e-d6c8-4a02-bcaa-46973fe4ab80
+		sourceLineageTag: a6119dbd-f9db-4ed1-a614-6d97b02ba804
+		dataCategory: Uncategorized
+
+	measure 'Customer Coverage CY vs LY' = EXTERNALMEASURE("Customer Coverage CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 7bc01e56-12fc-459b-b12d-09a20d1e38af
+		sourceLineageTag: 352d5794-94f9-40d2-8b3a-a33a2167e894
+		dataCategory: Uncategorized
+
+	measure 'Customers Surveyed' = EXTERNALMEASURE("Customers Surveyed", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 80b94f65-ebea-45a8-8d18-3d5b7d02e730
+		sourceLineageTag: 729f44ca-b7be-4a6f-a8f2-a5aa0b3e6374
+		dataCategory: Uncategorized
+
+	measure 'Active Customers PY' = EXTERNALMEASURE("Active Customers PY", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 5ec8d2b1-0597-4daf-b6ca-d697010e4e22
+		sourceLineageTag: 18645738-0015-41e1-9ec6-7f450abc8354
+		dataCategory: Uncategorized
+
+	measure 'Customer Coverage Variance' = EXTERNALMEASURE("Customer Coverage Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: a7cbf064-2274-4685-a603-78c458f72461
+		sourceLineageTag: 347fb0ef-109a-408e-8311-df7b7f7fe4b7
+		dataCategory: Uncategorized
+
+	measure SalesOverAllExperienceScore = EXTERNALMEASURE("SalesOverAllExperienceScore", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 11481677-fb53-4506-a013-bd8e7d357c13
+		sourceLineageTag: eae33e39-4ce2-4a48-801c-f624e1c781e9
+		dataCategory: Uncategorized
+
+	measure 'SalesOverAllExperienceScore PY' = EXTERNALMEASURE("SalesOverAllExperienceScore PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: dc2979a3-b6fd-42e0-9462-1f0be11efc63
+		sourceLineageTag: 1c15c836-0a2f-4025-87e1-8c5164a85f90
+		dataCategory: Uncategorized
+
+	measure 'SalesOverAllExperienceScore CY vs LY' = EXTERNALMEASURE("SalesOverAllExperienceScore CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: eb94d3d3-fa56-4359-a963-d327fd95941d
+		sourceLineageTag: 701c942b-8e81-439a-8c40-cb408cf8f8f9
+		dataCategory: Uncategorized
+
+	measure SalesSampleScore = EXTERNALMEASURE("SalesSampleScore", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 2792978a-ee0c-423a-91dd-bd8c32de980e
+		sourceLineageTag: 0e874438-edc1-4def-8e57-3af43ccf59dd
+		dataCategory: Uncategorized
+
+	measure 'SalesSampleScore PY' = EXTERNALMEASURE("SalesSampleScore PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 297bc04c-94b1-4c60-b35e-ecbf4780371b
+		sourceLineageTag: 11734be3-411b-40f3-995e-4b4ecc9400b8
+		dataCategory: Uncategorized
+
+	measure 'SalesSampleScore CY vs LY' = EXTERNALMEASURE("SalesSampleScore CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 2c4d1e69-b8fa-4945-864e-67c5d257ad23
+		sourceLineageTag: 1539b4b1-da02-448a-8913-0bd1b3bc160c
+		dataCategory: Uncategorized
+
+	measure 'SalesOverallExp Variance' = EXTERNALMEASURE("SalesOverallExp Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 62cf5b71-42cd-41e3-84bb-2078d6abac26
+		sourceLineageTag: af2d0385-c318-451d-aed8-02b02ef2a79f
+		dataCategory: Uncategorized
+
+	measure 'SalesSample Variance' = EXTERNALMEASURE("SalesSample Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: db3d0ba6-76f8-4445-ac79-fc22fecf6c62
+		sourceLineageTag: b41f7ae6-15af-4385-94b6-9be31c04c6a1
+		dataCategory: Uncategorized
+
+	measure SalesTrialScore = EXTERNALMEASURE("SalesTrialScore", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 38d9389d-9659-4930-90df-308ac242d8ee
+		sourceLineageTag: 93289029-c81e-4429-b97c-ff699be432fd
+		dataCategory: Uncategorized
+
+	measure 'SalesTrialScore PY' = EXTERNALMEASURE("SalesTrialScore PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: d866cb5e-41df-42a8-a59e-c660a97a4171
+		sourceLineageTag: 0e31b0be-d31c-4364-875b-a229d784d26a
+		dataCategory: Uncategorized
+
+	measure 'SalesTrialScore CY vs LY' = EXTERNALMEASURE("SalesTrialScore CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 21983725-525b-4333-9c03-cc4bf0e7fe8d
+		sourceLineageTag: 11f558e4-fe60-4edd-a692-a1df8f5f3901
+		dataCategory: Uncategorized
+
+	measure 'SalesTrailScore Variance' = EXTERNALMEASURE("SalesTrailScore Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 38b5c5b6-7e1c-46a5-b0a9-f4d9d1b9f9a4
+		sourceLineageTag: 0a30c53f-789c-42bc-9331-af5bdf88d5ce
+		dataCategory: Uncategorized
+
+	measure TechnicalHelpDeskScore = EXTERNALMEASURE("TechnicalHelpDeskScore", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 486529cc-cd40-49d4-b151-60a558725047
+		sourceLineageTag: 02a688d9-7664-4407-b0b6-4e625a8fa9b4
+		dataCategory: Uncategorized
+
+	measure 'TechnicalHelpDeskScore PY' = EXTERNALMEASURE("TechnicalHelpDeskScore PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 436d4df6-b590-479c-b682-15478a53ed6c
+		sourceLineageTag: 4b19fce5-fbb9-486b-a095-97210bd09438
+		dataCategory: Uncategorized
+
+	measure 'TechnicalHelpDeskScore CY vs LY' = EXTERNALMEASURE("TechnicalHelpDeskScore CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: cd2a5e88-a8de-4144-babf-9f361b9d616c
+		sourceLineageTag: a3a62838-78e3-4d4d-bf14-c68434de46a5
+		dataCategory: Uncategorized
+
+	measure 'Techhelpdeskscore variance' = EXTERNALMEASURE("Techhelpdeskscore variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: c93aad88-a431-49a3-bdb0-c0a3d2affc6f
+		sourceLineageTag: f62cb2c9-d9a1-4579-a772-0cbbe06846a9
+		dataCategory: Uncategorized
+
+	measure Knowledgeodproductscore = EXTERNALMEASURE("Knowledgeodproductscore", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: e9728df1-4ae6-4896-a041-1d9a0d8f7324
+		sourceLineageTag: b6dd6697-f0ae-483f-85c6-e191949bda24
+		dataCategory: Uncategorized
+
+	measure 'knowledgeofproductscore PY' = EXTERNALMEASURE("knowledgeofproductscore PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 5b3638a2-58f0-4631-977f-9d8eccee0e5a
+		sourceLineageTag: 5761b589-732a-48ce-bc5f-cfee4f278c09
+		dataCategory: Uncategorized
+
+	measure 'KnowledgeofProductScore CY vs LY' = EXTERNALMEASURE("KnowledgeofProductScore CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 3c3f215f-dc65-45e8-b9a7-7dbb882ea10a
+		sourceLineageTag: 8f4c088e-f2ea-47e0-8c75-aa1ba566f77b
+		dataCategory: Uncategorized
+
+	measure 'knowledgeofproductscore variance' = EXTERNALMEASURE("knowledgeofproductscore variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 0763c9ca-6cab-4f2a-b66c-476805218b0c
+		sourceLineageTag: ab19562a-385e-481c-b2f0-1eff422632e4
+		dataCategory: Uncategorized
+
+	measure 'Complaints Count' = EXTERNALMEASURE("Complaints Count", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 526d290f-a932-4dfc-9aef-4f00e5e74e9c
+		sourceLineageTag: a32f19b0-06a7-4ecb-8304-aae5aef7fd4e
+		dataCategory: Uncategorized
+
+	measure 'Complaints Count PY' = EXTERNALMEASURE("Complaints Count PY", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 41827fc5-627d-4bd6-8583-e6618e302280
+		sourceLineageTag: cf27d0a1-8232-4f38-b529-50cd90b1172e
+		dataCategory: Uncategorized
+
+	measure 'Complaints Count CY vs LY' = EXTERNALMEASURE("Complaints Count CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 5d7acc98-552b-4e53-829d-4b7094ab4814
+		sourceLineageTag: 0995efab-3595-4fac-a2d4-20d1906576c0
+		dataCategory: Uncategorized
+
+	measure 'Complaints Variance' = EXTERNALMEASURE("Complaints Variance", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 68c32df1-f9fb-4368-b76e-270813164140
+		sourceLineageTag: 919c269c-24df-4064-bd4b-c0013e9fe3be
+		dataCategory: Uncategorized
+
+	measure 'Complaints Count CY vs LY Card' = EXTERNALMEASURE("Complaints Count CY vs LY Card", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 87fcdda4-8863-49d7-a833-a724104c148f
+		sourceLineageTag: 543eb341-8ef8-490f-8f42-d44eee38b99b
+		dataCategory: Uncategorized
+
+	measure 'Detractor Count Table' = EXTERNALMEASURE("Detractor Count Table", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 088bd14c-7979-4b2f-bab2-df2045a10c8c
+		sourceLineageTag: 6661b1fd-5c71-4092-9fe3-4043e2bd7bce
+		dataCategory: Uncategorized
+
+	measure 'NPS Weight' = EXTERNALMEASURE("NPS Weight", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: db244c73-2660-45be-8f1a-1b4aa213b793
+		sourceLineageTag: 84f0b5f4-c87f-452e-ab32-0ba4678da561
+		dataCategory: Uncategorized
+
+	measure 'Total Returned Survey' = EXTERNALMEASURE("Total Returned Survey", INTEGER, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: fdc431de-3626-4714-aa9e-b12516143ba9
+		sourceLineageTag: 6b3e6511-3e1a-4e4d-9e93-bc9c133ada09
+		dataCategory: Uncategorized
+
+	measure 'NPS Weight PY' = EXTERNALMEASURE("NPS Weight PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 0dcfa68d-67c1-4e49-87b2-fb2195a1ca3a
+		sourceLineageTag: 4748a9db-1dfc-4da1-9242-7ffd2fa97315
+		dataCategory: Uncategorized
+
+	measure Weight = EXTERNALMEASURE("Weight", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: c74c5c5e-fd4b-4ea4-b493-5daf2692d805
+		sourceLineageTag: 92821f64-c7d6-4d5e-9465-c9cfa243807a
+		dataCategory: Uncategorized
+
+	measure 'Complaints Cost' = EXTERNALMEASURE("Complaints Cost", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: d6b1e236-d18d-47ba-a4ea-3fc832cda2a4
+		sourceLineageTag: 6e888024-292c-4162-9af9-baa3b02389df
+		dataCategory: Uncategorized
+
+	measure 'Complaints Cost PY' = EXTERNALMEASURE("Complaints Cost PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 45808ee9-77ac-4efb-becf-651f83b575cb
+		sourceLineageTag: ea5f3e00-8c84-45ba-9ef3-142b3444ad61
+		dataCategory: Uncategorized
+
+	measure 'Complaints Cost CY vs LY' = EXTERNALMEASURE("Complaints Cost CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: a3d1903a-d11c-4a4d-bf93-4cffd1823094
+		sourceLineageTag: af8838db-106b-4e40-bb06-6729e3bf8c55
+		dataCategory: Uncategorized
+
+	measure 'Complaints Cost Variance' = EXTERNALMEASURE("Complaints Cost Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: c896e4c9-d921-4a56-bac5-cad683d7e6e9
+		sourceLineageTag: 79a25d81-05cf-48aa-84b4-a465a74fc00a
+		dataCategory: Uncategorized
+
+	measure 'Total Cost of Complaints' = EXTERNALMEASURE("Total Cost of Complaints", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 1294564b-0d85-4353-a14b-3f7f8a7c9b2b
+		sourceLineageTag: a8c0de60-641b-40df-80a7-890074906c89
+		dataCategory: Uncategorized
+
+	measure 'Total Cost of Complaints PY' = EXTERNALMEASURE("Total Cost of Complaints PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: fa520f6b-64e4-45c6-9f66-0ed89c3f571e
+		sourceLineageTag: d5e04e3a-b221-480b-a0e1-9aec564dfdc0
+		dataCategory: Uncategorized
+
+	measure 'Total Cost of Complaints CY vs LY' = EXTERNALMEASURE("Total Cost of Complaints CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: d220f8c0-920e-429f-a3ec-e37eff182081
+		sourceLineageTag: a48bc724-2e79-4b5c-bd2b-6797ea41717a
+		dataCategory: Uncategorized
+
+	measure 'CES Response Rate' = EXTERNALMEASURE("CES Response Rate", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f87cec7e-378c-442d-853d-7deae2b4b288
+		sourceLineageTag: 69fe855a-5b5f-4b3a-bbfa-bf4e4489bd3d
+		dataCategory: Uncategorized
+
+	measure 'CES Response Rate PY' = EXTERNALMEASURE("CES Response Rate PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: a2ba6463-6c0a-4a81-b102-5523d2da0c2f
+		sourceLineageTag: 4c0c8828-d2df-4b5e-a2a5-cf03d0bcc1b0
+		dataCategory: Uncategorized
+
+	measure 'CES Response Rate CY vs LY' = EXTERNALMEASURE("CES Response Rate CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 6c963743-5724-45fe-95cb-d95d39ca769e
+		sourceLineageTag: 4c14f0b7-1042-4249-8d54-ef56ab46e51a
+		dataCategory: Uncategorized
+
+	measure 'CES Customer Coverage' = EXTERNALMEASURE("CES Customer Coverage", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: 7a051df4-ada7-4294-bf8a-d7b84096cf38
+		sourceLineageTag: 6cbfd0e8-0dbd-458a-838c-2aca7834569c
+		dataCategory: Uncategorized
+
+	measure 'CES Customer Coverage PY' = EXTERNALMEASURE("CES Customer Coverage PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0
+		lineageTag: d641a8c2-2e13-4f85-a0f5-8c895ef53280
+		sourceLineageTag: 0be62f03-2f4d-4222-8b40-fd290dcdc473
+		dataCategory: Uncategorized
+
+	measure 'CES Customer Coverage CY vs LY' = EXTERNALMEASURE("CES Customer Coverage CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 59464239-55bb-4b13-b0e0-7a9c05dd6795
+		sourceLineageTag: 1432569a-ba7b-4e00-9083-ba89bd824885
+		dataCategory: Uncategorized
+
+	measure 'CES Active Customer Revenue' = EXTERNALMEASURE("CES Active Customer Revenue", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 20fcaef2-1fe8-46d1-90b3-2c3424b21707
+		sourceLineageTag: 1fad6c2a-5f37-4227-bfae-863cb5e5af65
+		dataCategory: Uncategorized
+
+	measure 'CES Active Customer Revenue PY' = EXTERNALMEASURE("CES Active Customer Revenue PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 12defce7-4b73-4ca7-adf4-f0260a8a503f
+		sourceLineageTag: 9a11447c-c698-4a54-8682-f51743198a18
+		dataCategory: Uncategorized
+
+	measure 'CES Active Customers Revenue CY vs LY' = EXTERNALMEASURE("CES Active Customers Revenue CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 996ecb56-a35d-48c9-b42c-92a661e71710
+		sourceLineageTag: 49aaa658-1734-4d65-a905-3eb08478a716
+		dataCategory: Uncategorized
+
+	measure 'CES Response Rate Variance' = EXTERNALMEASURE("CES Response Rate Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: c2bae46e-8aec-4078-907b-aef273903b5e
+		sourceLineageTag: 5ac380e3-f5a4-434e-948f-62a3f75a66e9
+		dataCategory: Uncategorized
+
+	measure 'CES customer Coverage varaicne' = EXTERNALMEASURE("CES customer Coverage varaicne", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 15658c52-4a54-48f5-a934-2f77ba45e4fc
+		sourceLineageTag: 5e35e72a-eece-448f-b927-1dff5a35f867
+		dataCategory: Uncategorized
+
+	measure 'CSAT WO' = EXTERNALMEASURE("CSAT WO", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 0867f848-e0af-4846-ab3e-9e9d44d17826
+		sourceLineageTag: 6d94d0fe-2288-4b79-981f-e8cf57817548
+		dataCategory: Uncategorized
+
+	measure 'CSAT WO PY' = EXTERNALMEASURE("CSAT WO PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 420dec14-4066-4e07-9c21-a59e0bec604f
+		sourceLineageTag: 14c0a142-026f-45d1-9904-b31c5be1cdc1
+		dataCategory: Uncategorized
+
+	measure 'CSAT WO CY vs LY' = EXTERNALMEASURE("CSAT WO CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: e69ea015-c621-4db0-b9e7-ff9311f7f404
+		sourceLineageTag: c96cefa8-f662-48f4-827d-afd440f39488
+		dataCategory: Uncategorized
+
+	measure 'CSAT Opp' = EXTERNALMEASURE("CSAT Opp", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 7d0e996d-9b29-40bb-b41d-76d09905cf47
+		sourceLineageTag: 2ae70b25-65ca-4c8e-80c7-05e0fadda5e7
+		dataCategory: Uncategorized
+
+	measure 'CSAT Opp PY' = EXTERNALMEASURE("CSAT Opp PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 010aa357-48f1-4b02-bf7b-0eb09d81a0a5
+		sourceLineageTag: 57f8c1a5-3710-468f-884c-61344178a5e3
+		dataCategory: Uncategorized
+
+	measure 'CSAT Opp CY vs LY' = EXTERNALMEASURE("CSAT Opp CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 0339af01-9739-4489-95eb-ebf30d8ec1f9
+		sourceLineageTag: aeac3bfe-7fa2-493d-9548-fa07490f8fc1
+		dataCategory: Uncategorized
+
+	measure 'CSAT Customer Coverage' = EXTERNALMEASURE("CSAT Customer Coverage", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: b4fc58c8-9ee2-40d2-a1a8-33294f90e986
+		sourceLineageTag: fbf327c7-f97c-486b-aa07-6a268fa5a2f1
+		dataCategory: Uncategorized
+
+	measure 'CSAT Customer Coverage PY' = EXTERNALMEASURE("CSAT Customer Coverage PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: ed6832d3-809d-444d-bf27-7e937e92d46f
+		sourceLineageTag: 9e6170d3-1a59-4e99-9b05-aa64c1bf1e27
+		dataCategory: Uncategorized
+
+	measure 'CSAT Customer Coverage CY vs LY' = EXTERNALMEASURE("CSAT Customer Coverage CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: c5c8039d-affa-45ce-a22a-9bbddbd9634f
+		sourceLineageTag: 4605e5f8-9dc7-4c53-a003-180cdd472bf9
+		dataCategory: Uncategorized
+
+	measure 'CSAT Customer Coverage Variance' = EXTERNALMEASURE("CSAT Customer Coverage Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 22bb6812-22e2-491e-ab0e-0664a74d0ca5
+		sourceLineageTag: 0184470f-5cd7-4506-86e5-11cc344ae09b
+		dataCategory: Uncategorized
+
+	measure 'Active Customer Revenue Variance' = EXTERNALMEASURE("Active Customer Revenue Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 9f95c2a2-1f64-4b0b-a521-6565be51d4d5
+		sourceLineageTag: 232be0dd-3983-4ec6-b2a8-adb5bd78e9f9
+		dataCategory: Uncategorized
+
+	measure 'CSAT WO Variance' = EXTERNALMEASURE("CSAT WO Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: da902121-2a86-403a-bbcd-3ad60ee174d2
+		sourceLineageTag: dd891c97-3bf3-478e-85f0-622549e22dca
+		dataCategory: Uncategorized
+
+	measure 'NPS Target' = EXTERNALMEASURE("NPS Target", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b66a5530-f82a-464e-89fe-7a952bec3a8f
+		sourceLineageTag: 0a07cabd-2969-4374-8177-e955e04fc3b9
+		dataCategory: Uncategorized
+
+	measure 'CES Target' = EXTERNALMEASURE("CES Target", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 51ed5e89-77d8-4f5f-8bbf-c3168412ab19
+		sourceLineageTag: ac196f7f-b9cd-4c40-a41d-a209a71512e8
+		dataCategory: Uncategorized
+
+	measure 'Complaints Ratio Target' = EXTERNALMEASURE("Complaints Ratio Target", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0.000
+		lineageTag: 17054ac3-cc3e-4032-8006-a66f86c6d3d3
+		sourceLineageTag: 68e1fedd-d1e5-419e-ae21-e1f7a4e8ec0b
+		dataCategory: Uncategorized
+
+	measure 'NPS Target Variance' = EXTERNALMEASURE("NPS Target Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 2deb816f-c48e-4279-ba17-9f6727b6e4b1
+		sourceLineageTag: decc733a-9df4-45d1-99bc-e0b1cc70b53c
+		dataCategory: Uncategorized
+
+	measure 'NPS %CY vs TGT' = EXTERNALMEASURE("NPS %CY vs TGT", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 0e656b6f-1d3a-47ce-8293-1b528dd5e321
+		sourceLineageTag: c5177af2-0c0c-4fef-a6f5-ec97f7959a1f
+		dataCategory: Uncategorized
+
+	measure 'CES TGT Variance' = EXTERNALMEASURE("CES TGT Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 16709139-81ee-457a-8e10-7aadf6deb2b1
+		sourceLineageTag: 73a7cddd-ec83-4fd7-95af-8dba8c98bf80
+		dataCategory: Uncategorized
+
+	measure 'CES CY vs TGT' = EXTERNALMEASURE("CES CY vs TGT", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: b053e7c1-37d7-4941-9d01-660c633ec620
+		sourceLineageTag: 6bca887e-c665-447a-bb32-270349c16f1c
+		dataCategory: Uncategorized
+
+	measure 'Measure 3' = EXTERNALMEASURE("Measure 3", INTEGER, "DirectQuery to AS - Customer 360")
+		lineageTag: 0a7f9fc7-48ab-47f4-80b5-e50da4109eec
+		sourceLineageTag: f1eb0aba-1d45-47d9-9cf8-21618a9699fa
+		dataCategory: Uncategorized
+
+	measure 'Concessions Credit' = EXTERNALMEASURE("Concessions Credit", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 573d7f4f-8d33-4f7b-ba8d-c218a939a2dd
+		sourceLineageTag: 35b79b29-de92-404f-a7db-6541242ead11
+		dataCategory: Uncategorized
+
+	measure 'Concessions Credit PY' = EXTERNALMEASURE("Concessions Credit PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: f4bbf099-c3ff-48e6-a7ab-c0aba7895272
+		sourceLineageTag: d89d4eef-2953-4670-b1e3-82b79ae2caf2
+		dataCategory: Uncategorized
+
+	measure 'Concessions Credit Variance' = EXTERNALMEASURE("Concessions Credit Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 621e2a32-de6d-4ead-9330-c52eac6d15ba
+		sourceLineageTag: 239f7f91-8448-40d0-8784-51c0578bdd2c
+		dataCategory: Uncategorized
+
+	measure 'Concessions CY vs LY' = EXTERNALMEASURE("Concessions CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 1cee1de8-9006-40c6-8e97-d44d0e0de416
+		sourceLineageTag: 0aeb8bf4-b4df-4165-bc45-93cdf7ecad46
+		dataCategory: Uncategorized
+
+	measure 'Sales Order' = EXTERNALMEASURE("Sales Order", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: bdf10510-d3c6-4caa-a0f6-f2dfc57eca4d
+		sourceLineageTag: 3a854cca-1419-4b55-99de-c51c46d6ae97
+		dataCategory: Uncategorized
+
+	measure 'Sales Order PY' = EXTERNALMEASURE("Sales Order PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 0e93066a-b854-4646-8593-0d0feb9469cb
+		sourceLineageTag: 5306c0e2-7c3e-4b7a-87d1-13ec66c0e15e
+		dataCategory: Uncategorized
+
+	measure 'Sales Order CY vs LY' = EXTERNALMEASURE("Sales Order CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 496e872f-f036-491b-8d08-fce765050440
+		sourceLineageTag: 6a61c0d8-d958-4124-8f45-14c3c46d9a3f
+		dataCategory: Uncategorized
+
+	measure 'Sales Order Variance' = EXTERNALMEASURE("Sales Order Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: f7d4a026-666f-4ed3-87b3-3bb69c796e32
+		sourceLineageTag: d7e6eee9-44c5-4923-aefe-a28da62a2234
+		dataCategory: Uncategorized
+
+	measure 'Complaints to Order Ratio' = EXTERNALMEASURE("Complaints to Order Ratio", DOUBLE, "DirectQuery to AS - Customer 360")
+		formatString: 0.00
+		lineageTag: 01ce67e0-7953-4530-811d-d50262eb6922
+		sourceLineageTag: 5b48acc4-e722-4e3d-98d1-9b4981db0aee
+		dataCategory: Uncategorized
+
+	measure 'Complaints to Order Ratio PY' = EXTERNALMEASURE("Complaints to Order Ratio PY", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 445167f8-e540-4701-8d8c-8246d145dbc9
+		sourceLineageTag: e2ba61c9-41a9-4d21-b672-adcc13847890
+		dataCategory: Uncategorized
+
+	measure 'Complaints to Order Ratio variance' = EXTERNALMEASURE("Complaints to Order Ratio variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: 3ade1f05-baf9-4a14-a7c6-3bcd10e48424
+		sourceLineageTag: 14cd549d-b701-40f5-abfc-d9d101838f61
+		dataCategory: Uncategorized
+
+	measure 'Complaints to Order Ratio CY vs LY' = EXTERNALMEASURE("Complaints to Order Ratio CY vs LY", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: 176a048e-d5c4-4c76-b917-40d17dc74511
+		sourceLineageTag: 930d0efd-e293-4ac7-8ad8-1c65c21bd1eb
+		dataCategory: Uncategorized
+
+	measure 'Complaints to Order Ratio CY vs TGT' = EXTERNALMEASURE("Complaints to Order Ratio CY vs TGT", STRING, "DirectQuery to AS - Customer 360")
+		lineageTag: c56de019-eb36-41f1-80f2-aa7331a91e81
+		sourceLineageTag: 5d6fb9ac-fd12-4adc-8140-2f9f3245d04f
+		dataCategory: Uncategorized
+
+	measure 'Complaints to Order Ratio vs TGT Variance' = EXTERNALMEASURE("Complaints to Order Ratio vs TGT Variance", DOUBLE, "DirectQuery to AS - Customer 360")
+		lineageTag: e38a63f2-870f-4e46-8efe-87cf1a4e9fa5
+		sourceLineageTag: 9905cbfe-bc78-40e4-8efb-d2c72570093c
+		dataCategory: Uncategorized
+
+	partition 'SurveyFeedback Measures' = entity
+		mode: directQuery
+		source
+			entityName: SurveyFeedback Measures
+			expressionSource: 'DirectQuery to AS - Customer 360'
+

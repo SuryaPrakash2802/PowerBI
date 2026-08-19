@@ -1,0 +1,668 @@
+table BI_SV_SALES_TO_INSTALL_DTL
+	lineageTag: 35baf158-09e7-4345-8606-954fe4ff75da
+
+	column WO_MACHINE_KEY = [SERIAL_NUMBER]&":"&[WORK_ORDER_NUMBER]
+		lineageTag: e3010fd5-9f04-4acc-8910-5a400880999b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOURS_AGGREGATED = SUMX(DISTINCT(BI_SV_SALES_TO_INSTALL_DTL[WO_MACHINE_KEY]), CALCULATE(SUM(BI_SV_SALES_TO_INSTALL_DTL[Hours]), BI_SV_SALES_TO_INSTALL_DTL[LINE_TYPE] = "Labor", USERELATIONSHIP(DIM_CALENDAR_REFERENCE[DATE_REEFRENCE], BI_SV_SALES_TO_INSTALL_DTL[SCHEDULED_DATE])))
+		lineageTag: 4258261d-d2b3-4459-b629-0ca698b452a8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SCHEDULED_DATE = DATE(YEAR([SCHEDULED_DATE_TIME]), MONTH(BI_SV_SALES_TO_INSTALL_DTL[SCHEDULED_DATE_TIME]), DAY(BI_SV_SALES_TO_INSTALL_DTL[SCHEDULED_DATE_TIME]))
+		formatString: General Date
+		lineageTag: dd44eefe-4aaa-4658-9cd1-36fa88c6dfb9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Maintenance = IF(AND(BI_SV_SALES_TO_INSTALL_DTL[LINE_TYPE] = "Printer",BI_SV_SALES_TO_INSTALL_DTL[ACTIVITY_TYPE] = "Printer: Maintenance"),1,0)
+		formatString: 0
+		lineageTag: 747f9cef-1965-4400-ad01-250a721db2f3
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Repair = IF(AND(BI_SV_SALES_TO_INSTALL_DTL[LINE_TYPE] = "Printer",BI_SV_SALES_TO_INSTALL_DTL[ACTIVITY_TYPE] = "Printer: Repair"),1,0)
+		formatString: 0
+		lineageTag: 49f827d3-d5e6-43ab-b7d0-037a8c1f9ccf
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column domino_sub
+		dataType: string
+		lineageTag: e7a01739-a86e-4a81-bc38-e46f95da78e6
+		summarizeBy: none
+		sourceColumn: domino_sub
+
+		annotation SummarizationSetBy = Automatic
+
+	column sub_timezone
+		dataType: string
+		lineageTag: d6b88731-6bdf-4bbf-b6ce-4aa60c8b9792
+		summarizeBy: none
+		sourceColumn: sub_timezone
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_created_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9c6e87bd-c1ac-4296-9afc-6abfffed5819
+		summarizeBy: none
+		sourceColumn: case_created_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column wol_start_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4f6ec6be-13da-4e47-bbfe-de65c4d472e6
+		summarizeBy: none
+		sourceColumn: wol_start_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column wol_end_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5c11c655-f03d-49eb-85bc-610f8b3b40f3
+		summarizeBy: none
+		sourceColumn: wol_end_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_id
+		dataType: string
+		lineageTag: a8ee7cc7-7ac5-45f2-b3ff-b01724dc4e20
+		summarizeBy: none
+		sourceColumn: case_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column case_number
+		dataType: string
+		lineageTag: 656e6d62-976f-4a00-ba14-f7b0aa520447
+		summarizeBy: none
+		sourceColumn: case_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_id
+		dataType: string
+		lineageTag: ea609026-94db-4730-b422-8749fadaf303
+		summarizeBy: none
+		sourceColumn: account_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column account_name
+		dataType: string
+		lineageTag: 6176f9bd-a460-4e1f-8ed8-b7de1a9bba3a
+		summarizeBy: none
+		sourceColumn: account_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column shipping_city
+		dataType: string
+		lineageTag: 034b0c6a-3916-46f6-ab8b-01a946b7ef63
+		summarizeBy: none
+		sourceColumn: shipping_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column shipping_state
+		dataType: string
+		lineageTag: 83e20e57-2c9f-43b3-8814-e1d30e198c39
+		summarizeBy: none
+		sourceColumn: shipping_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column shipping_country
+		dataType: string
+		lineageTag: 73b3309f-0edf-4f51-9d49-f7cf6646a34f
+		summarizeBy: none
+		sourceColumn: shipping_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_territory
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b4c68b5-5189-458d-91fb-8e74c2387be2
+		summarizeBy: sum
+		sourceColumn: primary_territory
+
+		annotation SummarizationSetBy = Automatic
+
+	column contact_name
+		dataType: string
+		lineageTag: 3f625d6b-e09d-49fe-a016-17347ad2141e
+		summarizeBy: none
+		sourceColumn: contact_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column woh_owner_name
+		dataType: string
+		lineageTag: 9952f461-ae9e-4110-9369-38d276d95054
+		summarizeBy: none
+		sourceColumn: woh_owner_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c7ec251e-f1f6-4ba9-a181-773cfd6bd9db
+		summarizeBy: none
+		sourceColumn: created_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column scheduled_date_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b14c2c35-f865-4731-9776-f3afd3fd4efe
+		summarizeBy: none
+		sourceColumn: scheduled_date_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column closed_on_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2dbbfda8-5852-47dd-9019-44acb926ac6b
+		summarizeBy: none
+		sourceColumn: closed_on_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_installed
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8573cbd0-c7f7-4e46-a720-6382cb1258c5
+		summarizeBy: none
+		sourceColumn: date_installed
+
+		annotation SummarizationSetBy = Automatic
+
+	column warranty_end_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3157af37-b5dc-4e69-8a38-3677d04015c7
+		summarizeBy: none
+		sourceColumn: warranty_end_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column woh_id
+		dataType: string
+		lineageTag: e445b645-bbc9-4c0f-89f4-c05261d22608
+		summarizeBy: none
+		sourceColumn: woh_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column work_order_number
+		dataType: string
+		lineageTag: ee6ac964-bea6-4b66-86e2-8dfd88532ace
+		summarizeBy: none
+		sourceColumn: work_order_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column purpose_of_visit
+		dataType: string
+		lineageTag: bd5f297b-ce6c-4030-a6dd-5f34e70b4d42
+		summarizeBy: none
+		sourceColumn: purpose_of_visit
+
+		annotation SummarizationSetBy = Automatic
+
+	column problem_description
+		dataType: string
+		lineageTag: e968744a-ccb5-4c0d-aa84-8a58a0805f2d
+		summarizeBy: none
+		sourceColumn: problem_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column installation_wo_failed_reason
+		dataType: string
+		lineageTag: a47c25d8-59f3-431c-842b-b63a5eb61aab
+		summarizeBy: none
+		sourceColumn: installation_wo_failed_reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column return_visit
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a8315c2-c89b-4929-8000-0c8a318d7496
+		summarizeBy: sum
+		sourceColumn: return_visit
+
+		annotation SummarizationSetBy = Automatic
+
+	column return_visit_required
+		dataType: int64
+		formatString: 0
+		lineageTag: 82003011-46f9-4602-a4bc-e77b5ea0b363
+		summarizeBy: sum
+		sourceColumn: return_visit_required
+
+		annotation SummarizationSetBy = Automatic
+
+	column return_visit_info
+		dataType: string
+		lineageTag: 22574155-e8aa-4ec3-8782-ee137bc7eb42
+		summarizeBy: none
+		sourceColumn: return_visit_info
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_duration
+		dataType: double
+		lineageTag: 3530acd5-5a64-4ea7-9e3b-959b7f61b3e8
+		summarizeBy: sum
+		sourceColumn: actual_duration
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_initial_response
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 918f2c31-4de6-4b93-8fb5-90bef74e2cc1
+		summarizeBy: none
+		sourceColumn: actual_initial_response
+
+		annotation SummarizationSetBy = Automatic
+
+	column actual_onsite_response
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 819f5b2e-ad11-4373-9823-06e6f1d22d17
+		summarizeBy: none
+		sourceColumn: actual_onsite_response
+
+		annotation SummarizationSetBy = Automatic
+
+	column call_ahead_call
+		dataType: int64
+		formatString: 0
+		lineageTag: f65d3184-43bf-449f-9d46-09e9ab60561f
+		summarizeBy: sum
+		sourceColumn: call_ahead_call
+
+		annotation SummarizationSetBy = Automatic
+
+	column call_follow_up
+		dataType: int64
+		formatString: 0
+		lineageTag: 8295918d-2619-4c13-9b19-246bf54ebfa7
+		summarizeBy: sum
+		sourceColumn: call_follow_up
+
+		annotation SummarizationSetBy = Automatic
+
+	column call_visit_notification
+		dataType: int64
+		formatString: 0
+		lineageTag: 646c59c1-2194-4a95-9189-6c0a7173f6f5
+		summarizeBy: sum
+		sourceColumn: call_visit_notification
+
+		annotation SummarizationSetBy = Automatic
+
+	column wol_id
+		dataType: string
+		lineageTag: fb1cd9aa-4220-44ef-af48-6518af9172c0
+		summarizeBy: none
+		sourceColumn: wol_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column wol_name
+		dataType: string
+		lineageTag: a974faf9-6fc8-4938-9a15-94b1620e4d54
+		summarizeBy: none
+		sourceColumn: wol_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column activity_type
+		dataType: string
+		lineageTag: 414fc3ce-3093-4d7c-859a-1a05f635a26d
+		summarizeBy: none
+		sourceColumn: activity_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column line_type
+		dataType: string
+		lineageTag: 450f0526-7260-4800-acbf-d19349c906a7
+		summarizeBy: none
+		sourceColumn: line_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column line_qty
+		dataType: double
+		lineageTag: b999e885-61a0-403c-98f2-892372c7fda9
+		summarizeBy: sum
+		sourceColumn: line_qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column billing_type
+		dataType: string
+		lineageTag: 69247c63-9d71-4b06-9ffc-9eedcec97d5a
+		summarizeBy: none
+		sourceColumn: billing_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column work_description
+		dataType: string
+		lineageTag: 9ad8f8c3-6ed5-4198-bdbc-b79a271565cb
+		summarizeBy: none
+		sourceColumn: work_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column symptom
+		dataType: string
+		lineageTag: 82548445-0522-42a1-a36b-df50e1d4c5a1
+		summarizeBy: none
+		sourceColumn: symptom
+
+		annotation SummarizationSetBy = Automatic
+
+	column root_cause
+		dataType: string
+		lineageTag: e13210eb-55d7-4cc7-a4ea-68bff2375198
+		summarizeBy: none
+		sourceColumn: root_cause
+
+		annotation SummarizationSetBy = Automatic
+
+	column how_fixed
+		dataType: string
+		lineageTag: d652de9c-2de5-4b6f-9ed8-2574ba58796f
+		summarizeBy: none
+		sourceColumn: how_fixed
+
+		annotation SummarizationSetBy = Automatic
+
+	column installation_feedback
+		dataType: string
+		lineageTag: 660e4d35-c9df-400d-a211-d84acfd20a5a
+		summarizeBy: none
+		sourceColumn: installation_feedback
+
+		annotation SummarizationSetBy = Automatic
+
+	column installation_feedback_notes
+		dataType: string
+		lineageTag: 457092f1-687f-49cb-9732-ff8de46db5f8
+		summarizeBy: none
+		sourceColumn: installation_feedback_notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column fail_printer_reason
+		dataType: string
+		lineageTag: 6d9490bd-d621-4c0f-8fc2-35bc6719f40e
+		summarizeBy: none
+		sourceColumn: fail_printer_reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column fail_printer_information
+		dataType: string
+		lineageTag: 581e6774-4af0-472f-ac94-8965ee1f1eda
+		summarizeBy: none
+		sourceColumn: fail_printer_information
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: f4e6ce78-37a5-46fc-a422-291c83f13117
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column sales_order_number
+		dataType: string
+		lineageTag: cfc95d7d-8547-48d7-944f-04008d0efcf2
+		summarizeBy: none
+		sourceColumn: sales_order_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column installed_product_id
+		dataType: string
+		lineageTag: 832ea4a8-ef6e-4acb-9fc4-384a3d6b465e
+		summarizeBy: none
+		sourceColumn: installed_product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column serial_number
+		dataType: string
+		lineageTag: 09f72318-a89e-4887-b85d-ea6bd2f3e921
+		summarizeBy: none
+		sourceColumn: serial_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column installed_product_name
+		dataType: string
+		lineageTag: 067dd61f-d54d-4b8e-add6-ea77f10a87c2
+		summarizeBy: none
+		sourceColumn: installed_product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_family
+		dataType: string
+		lineageTag: 6df16a5c-ad1c-4ebe-abfd-2cd143e7c213
+		summarizeBy: none
+		sourceColumn: product_family
+
+		annotation SummarizationSetBy = Automatic
+
+	column sf_tech
+		dataType: string
+		lineageTag: d246d7f5-de89-45d3-99e5-a41583ec826c
+		summarizeBy: none
+		sourceColumn: sf_tech
+
+		annotation SummarizationSetBy = Automatic
+
+	column nozzle
+		dataType: string
+		lineageTag: bc55f0da-7c57-4ca8-ba8b-6fa7653402fd
+		summarizeBy: none
+		sourceColumn: nozzle
+
+		annotation SummarizationSetBy = Automatic
+
+	column ink
+		dataType: string
+		lineageTag: d2164875-f257-4f74-a940-946ace54f9a8
+		summarizeBy: none
+		sourceColumn: ink
+
+		annotation SummarizationSetBy = Automatic
+
+	column contract_id
+		dataType: string
+		lineageTag: 82ae02fe-69f1-4b07-b7fa-087cb163a462
+		summarizeBy: none
+		sourceColumn: contract_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column contract_name
+		dataType: string
+		lineageTag: 817ba984-af6f-4b78-a162-8e502057b031
+		summarizeBy: none
+		sourceColumn: contract_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column alert_id
+		dataType: string
+		lineageTag: debb61cf-1161-4a26-ae33-6cd5c34812c4
+		summarizeBy: none
+		sourceColumn: alert_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column reported_issue
+		dataType: string
+		lineageTag: 3ac509ed-975a-4f7c-a114-c1805318f554
+		summarizeBy: none
+		sourceColumn: reported_issue
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolution
+		dataType: string
+		lineageTag: c82fc368-2e77-4d0e-893b-2155eb44fa58
+		summarizeBy: none
+		sourceColumn: resolution
+
+		annotation SummarizationSetBy = Automatic
+
+	column software_version
+		dataType: string
+		lineageTag: a45d5286-6868-41c2-b7a2-3754df316298
+		summarizeBy: none
+		sourceColumn: software_version
+
+		annotation SummarizationSetBy = Automatic
+
+	column labor_qty
+		dataType: double
+		lineageTag: 048e1c2b-2175-4eb9-a4d4-e0dc756c2b66
+		summarizeBy: sum
+		sourceColumn: labor_qty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column hours
+		dataType: double
+		lineageTag: 12ad5e2d-1b2c-4019-8067-9a568af9ec0a
+		summarizeBy: sum
+		sourceColumn: hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column spares
+		dataType: int64
+		formatString: 0
+		lineageTag: 715131c2-6406-4d05-9cc7-b27bde9e7caf
+		summarizeBy: sum
+		sourceColumn: spares
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column installation_failed
+		dataType: string
+		lineageTag: 500f894d-b92c-43ed-a594-8e632278f7ce
+		summarizeBy: none
+		sourceColumn: installation_failed
+
+		annotation SummarizationSetBy = Automatic
+
+	column fault_resolution
+		dataType: string
+		lineageTag: daf53f17-14c3-42d0-99ca-1ecc5b116797
+		summarizeBy: none
+		sourceColumn: fault_resolution
+
+		annotation SummarizationSetBy = Automatic
+
+	column fault_finding_description
+		dataType: string
+		lineageTag: f9c4b838-3ef2-409e-a3b3-651a86002d0c
+		summarizeBy: none
+		sourceColumn: fault_finding_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey =
+			
+			VAR dt = BI_SV_SALES_TO_INSTALL_DTL[created_date]         -- replace with your column name
+			RETURN
+			    IF (
+			        ISBLANK ( dt ),              -- keep blanks blank
+			        BLANK (),
+			        YEAR ( dt ) * 10000          -- YYYY
+			        + MONTH ( dt ) * 100         --   MM
+			        + DAY ( dt )                 --     DD
+			    )
+		formatString: 0
+		lineageTag: 8e6d3f07-3031-4a54-bc84-79f936ed3104
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BI_SV_SALES_TO_INSTALL_DTL-db30dd67-e769-4d7e-82ef-babe1978e4c9 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("azwemisqldcoe.0f9aff9ccbfc.database.windows.net", "DCOE", [Query="SELECT *#(lf)FROM [DCOE].[dbo].[gld_bi_sv_sales_to_install_dtl]#(lf)WHERE 1=1#(lf)#(tab)AND domino_sub IN ('Domino UK', 'Domino BE/LUX', 'Domino US', 'Domino FR', 'Domino NL', 'Domino CA')#(lf)#(tab)AND created_date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) -24, 0)#(lf)", CommandTimeout=#duration(0, 0, 35, 0)]),
+				    // Add calculated columns efficiently
+				    #"new_column_labor_qty" = Table.AddColumn(Source, "labor_qty", each if [line_type] = "Labor" then [line_qty] else null, type number),
+				    #"divide_labor_qty_by_4" = Table.AddColumn(#"new_column_labor_qty", "hours", each [labor_qty] / 4, type number),
+				    #"add_spares_column" = Table.AddColumn(#"divide_labor_qty_by_4", "spares", each if [line_type] = "Parts" then [line_qty] else null),
+				
+				    // Conditional Column for Failed Work Orders
+				    #"installation_status" = Table.AddColumn(#"add_spares_column", "installation_failed", each if ([activity_type] = "Printer: Installation") and ([line_type] = "Printer") then [installation_wo_failed] else null),
+				
+				    // Convert Boolean Values if needed
+				    #"convert_boolean" = Table.ReplaceValue(#"installation_status", true, 0, Replacer.ReplaceValue, {"installation_wo_failed"}),
+				    #"convert_boolean_2" = Table.ReplaceValue(#"convert_boolean", false, 1, Replacer.ReplaceValue, {"installation_wo_failed"}),
+				
+				    // Ensure date column is correctly handled
+				    #"transform_date" = Table.TransformColumns(#"convert_boolean_2", {{"case_created_date", Date.From}}),
+				
+				    // Remove Unnecessary Columns
+				    #"removed_unused_columns" = Table.RemoveColumns(#"transform_date", {"fail_printer", "installation_wo_failed"}),
+				
+				    // Reorder Columns
+				    #"reorder_columns" = Table.ReorderColumns(#"removed_unused_columns", {"domino_sub", "case_created_date", "hours", "spares", "installation_failed"})
+				in
+				    reorder_columns
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,309 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 1808.7833657441479,
+        "y": 1185.5158223673741
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 773.21374864626409,
+            "y": 0
+          },
+          "nodeIndex": "BI_SF_SERVICE_MAINT_CONTRACT",
+          "nodeLineageTag": "c610b959-0e2e-48fa-a87a-33ca4444f71c",
+          "size": {
+            "height": 1000,
+            "width": 300
+          },
+          "zIndex": 20
+        },
+        {
+          "location": {
+            "x": 1438.0855412236606,
+            "y": 17.336683417085261
+          },
+          "nodeIndex": "BI_SV_SALES_TO_INSTALL_DTL",
+          "nodeLineageTag": "35baf158-09e7-4345-8606-954fe4ff75da",
+          "size": {
+            "height": 1000,
+            "width": 234
+          },
+          "zIndex": 21
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "BI_SF_ACCOUNT",
+          "nodeLineageTag": "ace77b32-487a-4ac7-86ba-78f130f95ca1",
+          "size": {
+            "height": 680,
+            "width": 234
+          },
+          "zIndex": 19,
+          "expandedHeight": 1000
+        },
+        {
+          "location": {
+            "x": 2192.0789460404521,
+            "y": 1149.5370959821535
+          },
+          "nodeIndex": "BI_SF_CASE",
+          "nodeLineageTag": "02cb506f-0d5b-4f1f-8f1b-8d9e7ba92b22",
+          "size": {
+            "height": 1000,
+            "width": 285.74498289283656
+          },
+          "zIndex": 25
+        },
+        {
+          "location": {
+            "x": 1710.7798466727158,
+            "y": 0
+          },
+          "nodeIndex": "BI_SV_DTL_STG_SURVEY_FEEDBACK",
+          "nodeLineageTag": "088aeb08-98c7-4449-9241-22027eddb219",
+          "size": {
+            "height": 1000,
+            "width": 234
+          },
+          "zIndex": 22
+        },
+        {
+          "location": {
+            "x": 1122.44678283757,
+            "y": 7.2236180904521952
+          },
+          "nodeIndex": "BI_SF_INSTALLED_PRODUCT",
+          "nodeLineageTag": "db85b59a-09ec-4896-83d5-a618551d724f",
+          "size": {
+            "height": 1000,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 2279.8644204851739,
+            "y": 637.97618437243659
+          },
+          "nodeIndex": "ods_sf_printer_fault_code",
+          "nodeLineageTag": "5c3f0bf1-4fc8-48f9-9f0d-f8676c522677",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 1138.9732698140822,
+            "y": 1530.3012218554611
+          },
+          "nodeIndex": "DIM_DATE",
+          "nodeLineageTag": "deae7389-6a49-4b1e-8bfd-e0079b4aaf0b",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 99.882615578241086,
+            "y": 844.32802699981391
+          },
+          "nodeIndex": "Dim_Channel",
+          "nodeLineageTag": "3dba2e46-673f-4130-b912-02c42dea153a",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 4915.2250556626277,
+            "y": 660.33759734004946
+          },
+          "nodeIndex": "Security_EmailToChannel",
+          "nodeLineageTag": "a2a48647-a767-4cb6-b4fd-d427d458865c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 1098.0461883555563,
+            "y": 2558.3655924179066
+          },
+          "nodeIndex": "BI_SVTLY_THINGS",
+          "nodeLineageTag": "566413f9-9aa3-41e3-8d30-2462d4b837c8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 960.23036418623008,
+            "y": 2097.5165897722254
+          },
+          "nodeIndex": "BI_SVTLY_ALERTS_HISTORY",
+          "nodeLineageTag": "42d54721-ce05-4136-9bd6-c7508d12db56",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 1233.7801072649881,
+            "y": 2086.8971051210638
+          },
+          "nodeIndex": "BI_SVTLY_PRINTER_STATES",
+          "nodeLineageTag": "78141ef9-e25c-4416-b739-c0f12dd69de4",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 23
+        },
+        {
+          "location": {
+            "x": 5687.5911193737138,
+            "y": 1045.2604066041429
+          },
+          "nodeIndex": "SurveyFeedback Measures",
+          "nodeLineageTag": "a15bff74-4b04-4c34-919f-dfa1e5437966",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 24
+        },
+        {
+          "location": {
+            "x": 5688.7571556723115,
+            "y": 1387.3641624615339
+          },
+          "nodeIndex": "Survey Feedback Targets",
+          "nodeLineageTag": "4f408f74-85bd-4779-a519-32986a9aa355",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 318.93450123936032,
+            "y": 1414.032318249592
+          },
+          "nodeIndex": "SurveyFeedback",
+          "nodeLineageTag": "f6bfbd0a-c671-4def-bbfe-185e24b4dc69",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 4303.8183564496194,
+            "y": 1036.5625963368857
+          },
+          "nodeIndex": "Measures Table",
+          "nodeLineageTag": "a4ec75a9-6cbe-4c97-9fba-2149a4dc288e",
+          "size": {
+            "height": 298.03880310422983,
+            "width": 234
+          },
+          "zIndex": 26
+        },
+        {
+          "location": {
+            "x": 845.71387395088,
+            "y": 1419.693255200563
+          },
+          "nodeIndex": "Rebel Printers",
+          "nodeLineageTag": "d3b25a4d-4068-4de8-8682-803edc18e672",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 5420.6242524506852,
+            "y": 1039.0062120614284
+          },
+          "nodeIndex": "RemoteFix Measures",
+          "nodeLineageTag": "adf5cf42-6ceb-437d-908b-60828cbd0717",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 61.127805883664792,
+            "y": 1409.0711254106329
+          },
+          "nodeIndex": "RemoteFix",
+          "nodeLineageTag": "f6f32d74-e925-4da1-abff-578d97a8960c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 4584.1517826797881,
+            "y": 1038.430327958388
+          },
+          "nodeIndex": "FTFR Measures",
+          "nodeLineageTag": "660b4527-8fc6-4f98-be63-9276d7590a66",
+          "size": {
+            "height": 300.4436157245425,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1807.9854760089343,
+            "y": 1186.3575296641811
+          },
+          "nodeIndex": "FTFR",
+          "nodeLineageTag": "6acdad07-8310-4a75-bb57-1b25614fea31",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 55.0646373060954,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

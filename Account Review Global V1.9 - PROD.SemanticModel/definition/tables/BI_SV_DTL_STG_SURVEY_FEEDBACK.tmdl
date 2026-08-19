@@ -1,0 +1,751 @@
+table BI_SV_DTL_STG_SURVEY_FEEDBACK
+	lineageTag: 088aeb08-98c7-4449-9241-22027eddb219
+
+	column Id
+		dataType: string
+		lineageTag: 6d2b78c0-8c05-423c-963a-1cdc740d7fd6
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDeleted
+		dataType: int64
+		formatString: 0
+		lineageTag: 691bba56-82aa-401c-ac20-6b6e3fcd2b5f
+		summarizeBy: sum
+		sourceColumn: IsDeleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 9bea47c4-3487-4c8e-a514-62091e363796
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyIsoCode
+		dataType: string
+		lineageTag: f2db778f-6ada-475d-83f8-fdee98289ae2
+		summarizeBy: none
+		sourceColumn: CurrencyIsoCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 92e802cf-b8b9-4567-8f49-204b3e20f233
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedById
+		dataType: string
+		lineageTag: 927fdcf6-0bfa-4f78-862e-8a50710fde76
+		summarizeBy: none
+		sourceColumn: CreatedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: da70c55d-9706-4c32-8b6c-fbcf2d638d05
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedById
+		dataType: string
+		lineageTag: d4b7df81-ced1-42f7-914b-3eb4aa72874b
+		summarizeBy: none
+		sourceColumn: LastModifiedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column SystemModstamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 83beb204-9a67-483b-9ee8-b803e2677a00
+		summarizeBy: none
+		sourceColumn: SystemModstamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastActivityDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1e7d2a76-e452-491a-b4a9-31cfdc3163ea
+		summarizeBy: none
+		sourceColumn: LastActivityDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastViewedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 864fce2c-5dea-4b3c-9c4d-bf15d5b19d9f
+		summarizeBy: none
+		sourceColumn: LastViewedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastReferencedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 597314bd-d244-4fa6-af82-7e583743356f
+		summarizeBy: none
+		sourceColumn: LastReferencedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Account__c
+		dataType: string
+		lineageTag: 13d1070e-b2b7-46cc-bffd-bfff2c70db67
+		summarizeBy: none
+		sourceColumn: Account__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Condition_after_repair__c
+		dataType: string
+		lineageTag: 6bcdac90-4734-4685-88bb-bcdecf2c05c7
+		summarizeBy: none
+		sourceColumn: Condition_after_repair__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Customer_Service_Engineer__c
+		dataType: string
+		lineageTag: 5073c901-fde6-4bc8-a713-4f0db593dad2
+		summarizeBy: none
+		sourceColumn: Customer_Service_Engineer__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column ENGINEER_work_OK__c
+		dataType: string
+		lineageTag: f51f5481-62ee-45c3-836d-849a86e474dc
+		summarizeBy: none
+		sourceColumn: ENGINEER_work_OK__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETA__c
+		dataType: string
+		lineageTag: b8e5456f-4c33-45e6-a00d-3a3d9955b905
+		summarizeBy: none
+		sourceColumn: ETA__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Engineer_on_time__c
+		dataType: string
+		lineageTag: 1de598e2-6b47-476f-b39a-41883c0a8612
+		summarizeBy: none
+		sourceColumn: Engineer_on_time__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Head_office__c
+		dataType: string
+		lineageTag: 93a7796d-622c-43f2-b849-08758a3faa2a
+		summarizeBy: none
+		sourceColumn: Head_office__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Improve_customer_experience__c
+		dataType: string
+		lineageTag: 277217ca-3e3c-4fc0-a4ca-cd53a8b80158
+		summarizeBy: none
+		sourceColumn: Improve_customer_experience__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Knowledge_of_customer_product__c
+		dataType: string
+		lineageTag: 7a1e31df-3822-4b5d-b8b3-51987cdf88af
+		summarizeBy: none
+		sourceColumn: Knowledge_of_customer_product__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Last_90_Days__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f538eed-afbb-431e-bb51-9e295aad3f7b
+		summarizeBy: sum
+		sourceColumn: Last_90_Days__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column NPS_Number__c
+		dataType: double
+		lineageTag: 34e0d8d3-25b8-48f7-adf3-dd8119fcd71e
+		summarizeBy: sum
+		sourceColumn: NPS_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Overall_experience__c
+		dataType: string
+		lineageTag: 69b6edf6-b137-4047-aebd-e48f0ab44976
+		summarizeBy: none
+		sourceColumn: Overall_experience__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Professionalism__c
+		dataType: string
+		lineageTag: d6a9f691-15f8-475e-8b18-3acd230f6c63
+		summarizeBy: none
+		sourceColumn: Professionalism__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Recommend_Domino__c
+		dataType: string
+		lineageTag: 0a5b546d-a865-44a7-b985-a853ff8d483c
+		summarizeBy: none
+		sourceColumn: Recommend_Domino__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Repair_Survey__c
+		dataType: int64
+		formatString: 0
+		lineageTag: dbcaab37-5d70-491b-9a25-cfc89e8a0467
+		summarizeBy: sum
+		sourceColumn: Repair_Survey__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Repair_quality__c
+		dataType: string
+		lineageTag: 1dd5f82e-9f86-44b6-a725-3444a60c6aa9
+		summarizeBy: none
+		sourceColumn: Repair_quality__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Submitted_date__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c3dd82f1-73e1-422e-a418-4ce2be9cf88c
+		summarizeBy: none
+		sourceColumn: Submitted_date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Survey_response_received__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8af5178f-c26d-46be-abf1-80db4449aff1
+		summarizeBy: none
+		sourceColumn: Survey_response_received__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Work_Order_Number__c
+		dataType: string
+		lineageTag: 7ba4f485-3a25-4f34-94f9-e9187748b33c
+		summarizeBy: none
+		sourceColumn: Work_Order_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_time_convenient__c
+		dataType: string
+		lineageTag: 26f2c8ac-cc36-4003-a842-bf49d3ab5c76
+		summarizeBy: none
+		sourceColumn: date_time_convenient__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Generelle_Kundenzufriedenheit_Number__c
+		dataType: double
+		lineageTag: b47a8892-a7cc-4ce3-beea-5d149b73e3f0
+		summarizeBy: sum
+		sourceColumn: Generelle_Kundenzufriedenheit_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Kundendienst_Techniker_Number__c
+		dataType: double
+		lineageTag: 8186ed3e-0e07-44d1-8eec-3df889142e39
+		summarizeBy: sum
+		sourceColumn: Kundendienst_Techniker_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Telefonische_Hotline_Number__c
+		dataType: double
+		lineageTag: bebc119f-5fc9-4762-9470-04611e3e2154
+		summarizeBy: sum
+		sourceColumn: Telefonische_Hotline_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NPS_Detractor__c
+		dataType: int64
+		formatString: 0
+		lineageTag: de1c43d0-8468-4f43-917d-dd9790cf0542
+		summarizeBy: sum
+		sourceColumn: NPS_Detractor__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column NPS_Promoter__c
+		dataType: int64
+		formatString: 0
+		lineageTag: b5940a32-72a9-4908-bd74-f97f16ea6c13
+		summarizeBy: sum
+		sourceColumn: NPS_Promoter__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Purpose_of_Visit__c
+		dataType: string
+		lineageTag: 86d4b23b-6ae2-4b3d-b51e-08c31c04791e
+		summarizeBy: none
+		sourceColumn: Purpose_of_Visit__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Maintenance_Survey__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 42cddc5c-46b6-4ee0-8694-3421af1ea21d
+		summarizeBy: sum
+		sourceColumn: Maintenance_Survey__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Install_Survey__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 606a8ad5-9072-47e7-9a5b-8e8be5556142
+		summarizeBy: sum
+		sourceColumn: Install_Survey__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quality_of_the_response__c
+		dataType: string
+		lineageTag: b146aa8a-9287-4f6f-b5f4-f42c7c201ff9
+		summarizeBy: none
+		sourceColumn: Quality_of_the_response__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Survey_Type__c
+		dataType: string
+		lineageTag: 11287379-a4b1-4c57-a8f9-ba4424149d63
+		summarizeBy: none
+		sourceColumn: Survey_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time_to_resolve__c
+		dataType: string
+		lineageTag: 165bff4f-3e36-46dc-901c-6b0536aeac87
+		summarizeBy: none
+		sourceColumn: Time_to_resolve__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Knowledge_of_support_team__c
+		dataType: string
+		lineageTag: 8c68dd16-b5ae-4f5b-8bbd-70f58f794ce8
+		summarizeBy: none
+		sourceColumn: Knowledge_of_support_team__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Condition_after_repair_Score__c
+		dataType: double
+		lineageTag: b3ef5b53-613c-448d-a26a-add5a075a280
+		summarizeBy: sum
+		sourceColumn: Condition_after_repair_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Knowledge_of_Product_Score__c
+		dataType: double
+		lineageTag: c96a1458-49dd-42e0-a4fd-2b67553ae78d
+		summarizeBy: sum
+		sourceColumn: Knowledge_of_Product_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Knowledge_of_support_team_Score__c
+		dataType: double
+		lineageTag: e0a6223e-555e-4a91-9a5f-2fabcf7f613e
+		summarizeBy: sum
+		sourceColumn: Knowledge_of_support_team_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Professionalism_Score__c
+		dataType: double
+		lineageTag: f205a2fc-fb6e-49e2-9b36-b170a2b1b938
+		summarizeBy: sum
+		sourceColumn: Professionalism_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Quality_of_the_response_Score__c
+		dataType: double
+		lineageTag: bfa9d390-5e98-4c83-9080-1a452a3ff87c
+		summarizeBy: sum
+		sourceColumn: Quality_of_the_response_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Repair_quality_Score__c
+		dataType: double
+		lineageTag: c8f9b5b4-3b1b-4ac0-906d-74f8dfa4cadb
+		summarizeBy: sum
+		sourceColumn: Repair_quality_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Technical_Help_Desk_Score__c
+		dataType: double
+		lineageTag: 94b070aa-8666-48d7-97f9-2dbd454bc336
+		summarizeBy: sum
+		sourceColumn: Technical_Help_Desk_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Time_to_resolve_Score__c
+		dataType: double
+		lineageTag: a68851de-2d60-44ad-b483-9a7dc2399652
+		summarizeBy: sum
+		sourceColumn: Time_to_resolve_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Domino_Sub__c
+		dataType: string
+		lineageTag: b4b68f14-f5d8-4807-8d2d-c1810f3bca99
+		summarizeBy: none
+		sourceColumn: Domino_Sub__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column NPS_Category__c
+		dataType: string
+		lineageTag: e0a764dc-d302-4d7a-9361-5bdae3f0fcea
+		summarizeBy: none
+		sourceColumn: NPS_Category__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Surveyed_Case__c
+		dataType: string
+		lineageTag: c6cec035-e952-4601-a838-b9827d038db5
+		summarizeBy: none
+		sourceColumn: Surveyed_Case__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Surveyed_Opportunity__c
+		dataType: string
+		lineageTag: b460479e-e741-4622-8b66-7b29557ad7d4
+		summarizeBy: none
+		sourceColumn: Surveyed_Opportunity__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Response_Type__c
+		dataType: string
+		lineageTag: 06eb4e03-c68c-4b47-ab6c-73be5ca6c44b
+		summarizeBy: none
+		sourceColumn: Response_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Days_Since_Submitted__c
+		dataType: double
+		lineageTag: 18aabfa0-2e13-44d6-9521-b9142e6ac94a
+		summarizeBy: sum
+		sourceColumn: Days_Since_Submitted__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Last_12_Months__c
+		dataType: int64
+		formatString: 0
+		lineageTag: b0d8f7e1-228c-41e8-8ead-6d812f9aada4
+		summarizeBy: sum
+		sourceColumn: Last_12_Months__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sales_Knowledge_Professionalism_Score__c
+		dataType: double
+		lineageTag: 553c3735-6d49-44cb-85d6-d66ae7c37c79
+		summarizeBy: sum
+		sourceColumn: Sales_Knowledge_Professionalism_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sales_Knowledge_Professionalism__c
+		dataType: string
+		lineageTag: f1f0a1f6-ca84-4c90-b972-f9841cd3d700
+		summarizeBy: none
+		sourceColumn: Sales_Knowledge_Professionalism__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sales_Overall_Experience_Score__c
+		dataType: double
+		lineageTag: 1bbcde39-4243-40c1-9531-9630f44a6f8d
+		summarizeBy: sum
+		sourceColumn: Sales_Overall_Experience_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sales_Overall_Experience__c
+		dataType: string
+		lineageTag: d954dc79-5efa-4cef-957f-dc6a45e069e7
+		summarizeBy: none
+		sourceColumn: Sales_Overall_Experience__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sales_Sample_Score__c
+		dataType: double
+		lineageTag: 1b7cb8e0-3076-427a-8e3f-e8d9a4b1ab3d
+		summarizeBy: sum
+		sourceColumn: Sales_Sample_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sales_Samples__c
+		dataType: string
+		lineageTag: 5df1de33-7c77-4c7c-b9b0-fbcc7533c1e2
+		summarizeBy: none
+		sourceColumn: Sales_Samples__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sales_Trial_Printer__c
+		dataType: string
+		lineageTag: 4ed5f126-b518-41cd-8add-523d85e4b536
+		summarizeBy: none
+		sourceColumn: Sales_Trial_Printer__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sales_Trial_Score__c
+		dataType: double
+		lineageTag: 56cce75a-4dbd-454c-8364-41effcb68cc6
+		summarizeBy: sum
+		sourceColumn: Sales_Trial_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Order_Number__c
+		dataType: string
+		lineageTag: 302baf3a-0321-4db1-9463-ff146ff7cfcc
+		summarizeBy: none
+		sourceColumn: Order_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Exclude_from_NPS_Reporting__c
+		dataType: int64
+		formatString: 0
+		lineageTag: f6a15549-cdc7-401d-92b1-3d9b81d6e1b1
+		summarizeBy: sum
+		sourceColumn: Exclude_from_NPS_Reporting__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Difficulty_Perception__c
+		dataType: string
+		lineageTag: 96220e1f-4919-4828-b0a2-23c33e07b505
+		summarizeBy: none
+		sourceColumn: Difficulty_Perception__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column NPS_Score__c
+		dataType: double
+		lineageTag: c1280565-44ab-403c-937b-fe1bea1cf3c7
+		summarizeBy: sum
+		sourceColumn: NPS_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Difficulty_Perception_Score__c
+		dataType: double
+		lineageTag: d6b5dab7-035c-402f-924c-ea5dc33c19a4
+		summarizeBy: sum
+		sourceColumn: Difficulty_Perception_Score__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Install_Survey2__c
+		dataType: int64
+		formatString: 0
+		lineageTag: d1beb5d5-8043-4ab9-8dc9-e09b5ef7f625
+		summarizeBy: sum
+		sourceColumn: Install_Survey2__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Maintenance_Survey2__c
+		dataType: int64
+		formatString: 0
+		lineageTag: ef0041af-6c68-4f01-b342-95f1ca585b4b
+		summarizeBy: sum
+		sourceColumn: Maintenance_Survey2__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Repair_Survey2__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 717c9c6b-fd3a-49ac-8773-c733b34fd187
+		summarizeBy: sum
+		sourceColumn: Repair_Survey2__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description_Translation__c
+		dataType: string
+		lineageTag: bb73fa63-591e-47a0-b620-7c402c2777bc
+		summarizeBy: none
+		sourceColumn: Description_Translation__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tier_1_Category__c
+		dataType: string
+		lineageTag: 4ee1c65c-75b3-4ae6-9703-99d6d9799948
+		summarizeBy: none
+		sourceColumn: Tier_1_Category__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tier_2_Category__c
+		dataType: string
+		lineageTag: ffb27fc2-9452-46c1-8be9-00f53bc566a1
+		summarizeBy: none
+		sourceColumn: Tier_2_Category__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tier_3_Category__c
+		dataType: string
+		lineageTag: a5738c21-f7b3-4b07-a0ae-52ef7243e307
+		summarizeBy: none
+		sourceColumn: Tier_3_Category__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column BuyDomino_Ease_of_Use__c
+		dataType: string
+		lineageTag: 683ea0ad-dac5-44ec-a5a0-e6c05fb7050a
+		summarizeBy: none
+		sourceColumn: BuyDomino_Ease_of_Use__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column BuyDomino_OrderID__c
+		dataType: string
+		lineageTag: aa46a923-1d7c-46ea-bfc3-c46fe9d811d2
+		summarizeBy: none
+		sourceColumn: BuyDomino_OrderID__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column BuyDomino_Satisfaction__c
+		dataType: string
+		lineageTag: f9b5f112-53a2-404c-8606-550543760c2a
+		summarizeBy: none
+		sourceColumn: BuyDomino_Satisfaction__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Buy_Domino_Username__c
+		dataType: string
+		lineageTag: 46e11b95-8cc7-47f0-851d-5959b6d66367
+		summarizeBy: none
+		sourceColumn: Buy_Domino_Username__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contact_name
+		dataType: string
+		lineageTag: 351ff6fe-3416-409e-b806-d152b906a67e
+		summarizeBy: none
+		sourceColumn: Contact_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BI_SV_DTL_STG_SURVEY_FEEDBACK-335273dd-98f1-4765-81b4-91825a5386c7 = m
+		mode: import
+		source =
+				let
+				    // Connect to SQL Server
+				    Source = Sql.Database("azwemisqldcoe.0f9aff9ccbfc.database.windows.net", "DCOE", [Query="SELECT S.[Id]#(lf)      ,S.[IsDeleted]#(lf)      ,S.[Name]#(lf)      ,S.[CurrencyIsoCode]#(lf)      ,S.[CreatedDate]#(lf)      ,S.[CreatedById]#(lf)      ,S.[LastModifiedDate]#(lf)      ,S.[LastModifiedById]#(lf)      ,S.[SystemModstamp]#(lf)      ,S.[LastActivityDate]#(lf)      ,S.[LastViewedDate]#(lf)      ,S.[LastReferencedDate]#(lf)      ,[Account__c]#(lf)      ,[Condition_after_repair__c]#(lf)      ,C.Name AS Contact_name#(lf)      ,[Customer_Service_Engineer__c]#(lf)      ,[ENGINEER_work_OK__c]#(lf)      ,[ETA__c]#(lf)      ,[Engineer_on_time__c]#(lf)      ,[Head_office__c]#(lf)      ,[Improve_customer_experience__c]#(lf)      ,[Knowledge_of_customer_product__c]#(lf)      ,[Last_90_Days__c]#(lf)      ,[NPS_Number__c]#(lf)      ,[Overall_experience__c]#(lf)      ,[Professionalism__c]#(lf)      ,[Recommend_Domino__c]#(lf)      ,[Repair_Survey__c]#(lf)      ,[Repair_quality__c]#(lf)      ,[Submitted_date__c]#(lf)      ,[Survey_response_received__c]#(lf)      ,[Work_Order_Number__c]#(lf)      ,[date_time_convenient__c]#(lf)      ,[Generelle_Kundenzufriedenheit_Number__c]#(lf)      ,[Kundendienst_Techniker_Number__c]#(lf)      ,[Telefonische_Hotline_Number__c]#(lf)      ,[NPS_Detractor__c]#(lf)      ,[NPS_Promoter__c]#(lf)      ,[Purpose_of_Visit__c]#(lf)      ,[Maintenance_Survey__c]#(lf)      ,[Install_Survey__c]#(lf)      ,[Quality_of_the_response__c]#(lf)      ,[Survey_Type__c]#(lf)      ,[Time_to_resolve__c]#(lf)      ,[Knowledge_of_support_team__c]#(lf)      ,[Condition_after_repair_Score__c]#(lf)      ,[Knowledge_of_Product_Score__c]#(lf)      ,[Knowledge_of_support_team_Score__c]#(lf)      ,[Professionalism_Score__c]#(lf)      ,[Quality_of_the_response_Score__c]#(lf)      ,[Repair_quality_Score__c]#(lf)      ,[Technical_Help_Desk_Score__c]#(lf)      ,[Time_to_resolve_Score__c]#(lf)      ,[Domino_Sub__c]#(lf)      ,[NPS_Category__c]#(lf)      ,[Surveyed_Case__c]#(lf)      ,[Surveyed_Opportunity__c]#(lf)      ,[Response_Type__c]#(lf)      ,[Days_Since_Submitted__c]#(lf)      ,[Last_12_Months__c]#(lf)      ,[Sales_Knowledge_Professionalism_Score__c]#(lf)      ,[Sales_Knowledge_Professionalism__c]#(lf)      ,[Sales_Overall_Experience_Score__c]#(lf)      ,[Sales_Overall_Experience__c]#(lf)      ,[Sales_Sample_Score__c]#(lf)      ,[Sales_Samples__c]#(lf)      ,[Sales_Trial_Printer__c]#(lf)      ,[Sales_Trial_Score__c]#(lf)      ,[Order_Number__c]#(lf)      ,[Exclude_from_NPS_Reporting__c]#(lf)      ,[Difficulty_Perception__c]#(lf)      ,[NPS_Score__c]#(lf)      ,[Difficulty_Perception_Score__c]#(lf)      ,[Install_Survey2__c]#(lf)      ,[Maintenance_Survey2__c]#(lf)      ,[Repair_Survey2__c]#(lf)      ,[Description_Translation__c]#(lf)      ,[Tier_1_Category__c]#(lf)      ,[Tier_2_Category__c]#(lf)      ,[Tier_3_Category__c]#(lf)      ,[BuyDomino_Ease_of_Use__c]#(lf)      ,[BuyDomino_OrderID__c]#(lf)      ,[BuyDomino_Satisfaction__c]#(lf)      ,[Buy_Domino_Username__c]#(lf)  FROM [DCOE].[dbo].[ods_sf_survey_feedback] S#(lf)  LEFT JOIN [DCOE].[dbo].[ods_sf_contact] C#(lf)  ON S.Contact__c = C.Id#(lf)"]),
+				    // Remove duplicates based on Work_Order_Number__c
+				    #"removed_duplicates" = Table.Distinct(Source, {"Work_Order_Number__c"}),
+				
+				    // Remove any remaining null Work_Order_Number__c values
+				    #"filtered_valid_orders" = Table.SelectRows(#"removed_duplicates", each [Work_Order_Number__c] <> null)
+				in
+				    #"filtered_valid_orders"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

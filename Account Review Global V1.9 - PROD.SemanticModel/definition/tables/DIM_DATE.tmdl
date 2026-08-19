@@ -1,0 +1,179 @@
+table DIM_DATE
+	lineageTag: deae7389-6a49-4b1e-8bfd-e0079b4aaf0b
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: Long Date
+		lineageTag: 2d6532c1-9177-4f90-bdc6-3c34986ed516
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		formatString: 0
+		lineageTag: 7e44bf67-9aaf-49e0-b07a-7a7a26d26c48
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		lineageTag: 54ee3671-1bb3-4dc0-b9cc-d12aa0e0e3d4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Name]
+		sortByColumn: 'Month Number'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Short Month'
+		lineageTag: 9e9fb293-8a3a-461d-afdb-d86eab25a113
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Short Month]
+		sortByColumn: 'Month Number'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		formatString: 0
+		lineageTag: b1f7c2c2-d375-4a12-b267-a83030cb9eb4
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Name'
+		lineageTag: 91f92721-3b5a-4a34-8f24-004c787d21f9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Short Day'
+		lineageTag: 256e456b-b70b-4a8a-9974-8b0e287befda
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Short Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year-Month
+		lineageTag: 0dbab398-0a72-44cd-9c11-f01186abad66
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year-Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Week
+		formatString: 0
+		lineageTag: d26d87f4-e16a-4ba7-9201-0d6aa0f9e58f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Week]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey =
+			
+			VAR dt = 'DIM_DATE'[Date]         -- replace with your column name
+			RETURN
+			    IF (
+			        ISBLANK ( dt ),              -- keep blanks blank
+			        BLANK (),
+			        YEAR ( dt ) * 10000          -- YYYY
+			        + MONTH ( dt ) * 100         --   MM
+			        + DAY ( dt )                 --     DD
+			    )
+		formatString: 0
+		lineageTag: 92a232f9-9df3-4840-a73d-66171e513c41
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter Number'
+		formatString: 0
+		lineageTag: 0fbd1aa8-32c8-46c9-8fc6-f95a13ea21f7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Quarter Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: 03d5c5be-7423-4af1-8015-e1d90c4b6d07
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+		sortByColumn: 'Quarter Number'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: a40b571b-6557-41cd-9cf0-db0b03e195df
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonthSort
+		formatString: 0
+		lineageTag: 932475bf-a136-44b0-b4e1-1ac6f4535e35
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [YearMonthSort]
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Year Hierarchy'
+		lineageTag: 9dcaa28f-0f3a-4dff-8079-afd77562a975
+
+		level Year
+			lineageTag: ca565a46-1555-4ad8-a653-4d0d4bf2ac8a
+			column: Year
+
+		level Quarter
+			lineageTag: 595295ef-313f-4575-a634-275a49609256
+			column: Quarter
+
+		level 'Month Name'
+			lineageTag: a99f3c4d-0758-4911-bc70-24fdcedac31e
+			column: 'Month Name'
+
+		level Date
+			lineageTag: 8821a743-128a-4cd3-8687-b884bc9501b5
+			column: Date
+
+	partition DIM_DATE = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS (
+				    CALENDAR (DATE(1995, 1, 1), DATE(2028, 12, 31)),
+				    "Year", YEAR([Date]),
+				    "Quarter Number", QUARTER([Date]),
+				    "Quarter", "Q" & QUARTER([Date]),
+				    "Month Number", MONTH([Date]),
+				    "Month Name", FORMAT([Date], "MMMM"),
+				    "Short Month", FORMAT([Date], "MMM"),
+				    "Day", DAY([Date]),
+				    "Day Name", FORMAT([Date], "dddd"),
+				    "Short Day", FORMAT([Date], "ddd"),
+				    "Year-Month", FORMAT([Date], "YYYY-MM"),
+				    "YearMonthSort", YEAR([Date]) * 100 + MONTH([Date]),
+				    "Week", WEEKNUM([Date])
+				)
+
+	annotation PBI_Id = b8bd364d4d77424da6740930395594e4
+

@@ -1,0 +1,131 @@
+table BI_SVTLY_THINGS
+	lineageTag: 566413f9-9aa3-41e3-8d30-2462d4b837c8
+
+	column ID
+		dataType: string
+		lineageTag: 90d07249-9aaa-49b4-b747-c1ceeac3f216
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column NAME
+		dataType: string
+		lineageTag: 29247dbe-2845-492e-9ecf-95c28723180d
+		summarizeBy: none
+		sourceColumn: NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column SERIALNUMBER
+		dataType: string
+		lineageTag: b0715371-4033-4f36-92cd-09b5ba590b2b
+		summarizeBy: none
+		sourceColumn: SERIALNUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACTIVATIONDATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d3f78a70-83d4-47b6-ad24-85120afafffc
+		summarizeBy: none
+		sourceColumn: ACTIVATIONDATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column LATESTMETRICVALUETIMESTAMP
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3f7d0655-27eb-4fff-9a07-bb934fd97683
+		summarizeBy: none
+		sourceColumn: LATESTMETRICVALUETIMESTAMP
+
+		annotation SummarizationSetBy = Automatic
+
+	column CUSTOMER_NAME
+		dataType: string
+		lineageTag: 41878cf6-bc44-47a1-956c-a6869830be7f
+		summarizeBy: none
+		sourceColumn: CUSTOMER_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOCATION_NAME
+		dataType: string
+		lineageTag: 181bd742-4f65-478c-943b-058ffeafb096
+		summarizeBy: none
+		sourceColumn: LOCATION_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROPERTIES_PRODUCTIONTARGET
+		dataType: string
+		lineageTag: d5b02b8d-bf96-465c-89de-4d39662599f7
+		summarizeBy: none
+		sourceColumn: PROPERTIES_PRODUCTIONTARGET
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROPERTIES_PRINTERNAME
+		dataType: string
+		lineageTag: 99f87fa4-7a33-4005-b734-d16d7a55a3f4
+		summarizeBy: none
+		sourceColumn: PROPERTIES_PRINTERNAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROPERTIES_TOTALPRINTCOUNT
+		dataType: int64
+		formatString: 0
+		lineageTag: c26f2156-c1c4-43d8-ae12-45dc193b5414
+		summarizeBy: sum
+		sourceColumn: PROPERTIES_TOTALPRINTCOUNT
+
+		annotation SummarizationSetBy = Automatic
+
+	column THINGDEFINITION_NAME
+		dataType: string
+		lineageTag: dc0ac53c-3cde-4267-b298-1810840a4cd5
+		summarizeBy: none
+		sourceColumn: THINGDEFINITION_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column THINGDEFINITION_PROPERTIES_PRINTERSERIES
+		dataType: string
+		lineageTag: 671b8402-5a5b-4511-bb5f-e31b694388bb
+		summarizeBy: none
+		sourceColumn: THINGDEFINITION_PROPERTIES_PRINTERSERIES
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAST_UPDATE_TS
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5b6121d4-3000-4047-93b4-508b871f220f
+		summarizeBy: none
+		sourceColumn: LAST_UPDATE_TS
+
+		annotation SummarizationSetBy = Automatic
+
+	column DOMINO_SUB
+		dataType: string
+		lineageTag: 0d9a8f49-4c79-4f9c-b559-7acffbabdcae
+		summarizeBy: none
+		sourceColumn: DOMINO_SUB
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BI_SVTLY_THINGS = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("azwemisqldcoe.0f9aff9ccbfc.database.windows.net", "DCOE_PR_CLOUD_DATA", [Query="SELECT [ID]#(lf)      ,[NAME]#(lf)      ,[SERIALNUMBER]#(lf)      ,[ACTIVATIONDATE]#(lf)      ,[LATESTMETRICVALUETIMESTAMP]#(lf)      ,[CUSTOMER_NAME]#(lf)      , CASE#(lf)#(tab)#(tab)#(tab)WHEN CUSTOMER_COUNTRY = 'United States' THEN 'Domino US'#(lf)#(tab)#(tab)#(tab)WHEN CUSTOMER_COUNTRY = 'United Kingdom' THEN 'Domino UK'#(lf)#(tab)#(tab)#(tab)WHEN CUSTOMER_COUNTRY = 'France' THEN 'Domino FR'#(lf)#(tab)#(tab)#(tab)WHEN CUSTOMER_COUNTRY IN ('Belgium', 'Luxembourg') THEN 'Domino BE/LUX'#(lf)#(tab)#(tab)#(tab)WHEN CUSTOMER_COUNTRY = 'Netherlands' THEN 'Domino NL'#(lf)#(tab)#(tab)#(tab)WHEN CUSTOMER_COUNTRY = 'Canada' THEN 'Domino CA'#(lf)#(tab)#(tab)#(tab)ELSE NULL#(lf)#(tab)#(tab)END AS DOMINO_SUB#(lf)      ,[LOCATION_NAME]#(lf)      ,[PROPERTIES_PRODUCTIONTARGET]#(lf)      ,[PROPERTIES_PRINTERNAME]#(lf)      ,[PROPERTIES_TOTALPRINTCOUNT]#(lf)      ,[THINGDEFINITION_NAME]#(lf)      ,[THINGDEFINITION_PROPERTIES_PRINTERSERIES]#(lf)      ,[LAST_UPDATE_TS]#(lf)  FROM [DCOE_PR_CLOUD_DATA].[dbo].[BI_SVTLY_THINGS]#(lf)  WHERE CUSTOMER_COUNTRY IN ('United States', 'United Kingdom', 'France', 'Belgium', 'Netherlands', 'Luxembourg', 'Canada')", CommandTimeout=#duration(0, 0, 25, 0)])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,51 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-GB
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["BI_SF_SERVICE_MAINT_CONTRACT","BI_SV_SALES_TO_INSTALL_DTL","BI_SF_ACCOUNT","BI_SF_CASE","BI_SV_DTL_STG_SURVEY_FEEDBACK","BI_SF_INSTALLED_PRODUCT","ods_sf_printer_fault_code","BI_SVTLY_THINGS","BI_SVTLY_ALERTS_HISTORY","BI_SVTLY_PRINTER_STATES","DirectQuery to AS - Customer 360","Measures Table","DirectQuery to AS - Customer 360 2","DirectQuery to AS - Customer 360 3","DirectQuery to AS - Customer 360 4"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode","WebModelingEdit"]
+
+ref table BI_SF_SERVICE_MAINT_CONTRACT
+ref table BI_SV_SALES_TO_INSTALL_DTL
+ref table BI_SF_ACCOUNT
+ref table BI_SF_CASE
+ref table BI_SV_DTL_STG_SURVEY_FEEDBACK
+ref table BI_SF_INSTALLED_PRODUCT
+ref table ods_sf_printer_fault_code
+ref table DIM_DATE
+ref table Dim_Channel
+ref table Security_EmailToChannel
+ref table BI_SVTLY_THINGS
+ref table BI_SVTLY_ALERTS_HISTORY
+ref table BI_SVTLY_PRINTER_STATES
+ref table SurveyFeedback
+ref table 'SurveyFeedback Measures'
+ref table 'Survey Feedback Targets'
+ref table LocalDateTable_fb6a618b-0641-4e09-8193-7fc9d718399d
+ref table LocalDateTable_e0be9231-8be6-4c20-9cf1-0773fb8ed202
+ref table LocalDateTable_cc30bb06-c194-45f6-8685-ee261dceb8ac
+ref table LocalDateTable_333650bd-2f36-42df-abd9-0aff7d9ec3e2
+ref table LocalDateTable_7dd60d3b-6845-463f-9fff-bd31809ac581
+ref table 'Measures Table'
+ref table 'Rebel Printers'
+ref table LocalDateTable_6bdd3d23-4220-4cbc-9d2e-466abcc07fae
+ref table RemoteFix
+ref table 'RemoteFix Measures'
+ref table LocalDateTable_d5a956f1-5dad-4e2c-ad41-37a3de54dc4d
+ref table LocalDateTable_ab89ba8d-3917-4feb-9ba2-f5c87be41107
+ref table LocalDateTable_8718fb62-8ff6-462f-987d-3d06ad0c878e
+ref table LocalDateTable_8d0c6bb1-a506-4ba6-a5fc-0e5be355c17c
+ref table FTFR
+ref table 'FTFR Measures'
+
+ref role 'Channel-wise access'
+
+ref cultureInfo en-US
+

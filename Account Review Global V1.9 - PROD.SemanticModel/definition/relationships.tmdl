@@ -1,0 +1,138 @@
+relationship b7a0e41b-f66e-e4fa-b337-85e34e0a550d
+	fromColumn: BI_SF_CASE.AccountId
+	toColumn: BI_SF_ACCOUNT.Id
+
+relationship ad635d7f-295b-79da-88e4-460bf0974225
+	fromColumn: BI_SF_SERVICE_MAINT_CONTRACT.SVMXC__Company__c
+	toColumn: BI_SF_ACCOUNT.Id
+
+relationship 49ae6d73-a92e-4e27-a4cb-83f1a1e005f5
+	fromColumn: BI_SV_SALES_TO_INSTALL_DTL.alert_id
+	toColumn: ods_sf_printer_fault_code.Id
+
+	annotation PBI_IsFromSource = FS
+
+relationship fcd99a0b-adaf-a07a-5329-2e11a5373d01
+	fromColumn: BI_SVTLY_ALERTS_HISTORY.THING_ID
+	toColumn: BI_SVTLY_THINGS.ID
+
+relationship 1229f10f-62a7-772a-4e5b-8d76cb3990b2
+	fromColumn: BI_SVTLY_PRINTER_STATES.ID
+	toColumn: BI_SVTLY_THINGS.ID
+
+relationship 16d629d7-f0d3-4d73-addd-195878163d14
+	fromColumn: SurveyFeedback.CreatedDate
+	toColumn: LocalDateTable_fb6a618b-0641-4e09-8193-7fc9d718399d.Date
+
+relationship 6f0362ea-b358-47ba-b8a3-aab7b317c7d6
+	fromColumn: SurveyFeedback.LastModifiedDate
+	toColumn: LocalDateTable_e0be9231-8be6-4c20-9cf1-0773fb8ed202.Date
+
+relationship 58d9bff6-8361-4fde-b00e-c1460d68829a
+	fromColumn: SurveyFeedback.Submitted_date__c
+	toColumn: LocalDateTable_cc30bb06-c194-45f6-8685-ee261dceb8ac.Date
+
+relationship ef016d22-f380-4946-ab8e-5b1d7d494186
+	fromColumn: SurveyFeedback.ClosedDate
+	toColumn: LocalDateTable_333650bd-2f36-42df-abd9-0aff7d9ec3e2.Date
+
+relationship 8b33c518-f579-43f4-8ea0-54ae48585274
+	fromColumn: SurveyFeedback.AssesDate
+	toColumn: LocalDateTable_7dd60d3b-6845-463f-9fff-bd31809ac581.Date
+
+relationship 142e4222-38d5-5b3b-9938-87dfbd64d08b
+	securityFilteringBehavior: none
+	fromColumn: SurveyFeedback.AccountId
+	toColumn: BI_SF_ACCOUNT.Id
+
+relationship 47434b42-01e1-69a4-fb42-a0a79d332106
+	securityFilteringBehavior: none
+	fromColumn: SurveyFeedback.DateKey
+	toColumn: DIM_DATE.DateKey
+
+relationship af272dc0-d07e-4781-8345-033933dc405f
+	fromColumn: 'Rebel Printers'.SVMXC__Scheduled_Date_Time__c
+	toColumn: LocalDateTable_6bdd3d23-4220-4cbc-9d2e-466abcc07fae.Date
+
+relationship 68021f70-9c4c-7053-d9e0-75b72bb9e125
+	securityFilteringBehavior: none
+	fromColumn: 'Rebel Printers'.account_id
+	toColumn: BI_SF_ACCOUNT.Id
+
+relationship 2e6f9cad-141e-65cd-4c5a-83108d524ab5
+	securityFilteringBehavior: none
+	fromColumn: 'Rebel Printers'.DateKey
+	toColumn: DIM_DATE.DateKey
+
+relationship de088ae0-6129-4a4a-a00a-1cddabc282b9
+	fromColumn: RemoteFix.SVMXC__Actual_onsite_response__c
+	toColumn: LocalDateTable_d5a956f1-5dad-4e2c-ad41-37a3de54dc4d.Date
+
+relationship fc95b3c7-0377-464f-a6cd-f56a56a01dab
+	fromColumn: RemoteFix.CreatedDate
+	toColumn: LocalDateTable_ab89ba8d-3917-4feb-9ba2-f5c87be41107.Date
+
+relationship 5a5b981d-fb9f-4a98-a0ce-4db4672ddb86
+	fromColumn: RemoteFix.LastModifiedDate
+	toColumn: LocalDateTable_8718fb62-8ff6-462f-987d-3d06ad0c878e.Date
+
+relationship 6840b759-432d-4788-9bef-eac622989a6c
+	fromColumn: RemoteFix.ClosedDate
+	toColumn: LocalDateTable_8d0c6bb1-a506-4ba6-a5fc-0e5be355c17c.Date
+
+relationship c81852d4-b09a-3173-4669-97340c1a0433
+	securityFilteringBehavior: none
+	fromColumn: RemoteFix.DateKey
+	toColumn: DIM_DATE.DateKey
+
+relationship e67c4867-1a05-c35c-403c-d0e7469013ae
+	securityFilteringBehavior: none
+	fromColumn: RemoteFix.accountid
+	toColumn: BI_SF_ACCOUNT.Id
+
+relationship 324ca1af-26e0-7a61-e4c4-ae95b1fa5a11
+	fromColumn: BI_SVTLY_ALERTS_HISTORY.DateKey
+	toColumn: DIM_DATE.DateKey
+
+relationship a87d7732-9bbb-fc0e-19b5-17f7c9618850
+	fromColumn: BI_SVTLY_PRINTER_STATES.DateKey
+	toColumn: DIM_DATE.DateKey
+
+relationship b34c041a-7ad2-28c9-7395-c2558812224f
+	fromColumn: BI_SF_ACCOUNT.Domino_Sub__c
+	toColumn: Dim_Channel.ChannelName
+
+relationship b1d105af-0d7f-1a04-4ac8-d2e4f75a299b
+	fromColumn: BI_SV_SALES_TO_INSTALL_DTL.DateKey
+	toColumn: DIM_DATE.DateKey
+
+relationship f9b6b37a-4122-961c-a38c-51c0b578eddb
+	fromColumn: BI_SF_INSTALLED_PRODUCT.SVMXC__Company__c
+	toColumn: BI_SF_ACCOUNT.Id
+
+relationship a541eaa1-3a1a-43bd-ae79-10012240515d
+	fromColumn: BI_SV_DTL_STG_SURVEY_FEEDBACK.Account__c
+	toColumn: BI_SF_ACCOUNT.Id
+
+relationship 7b5d9f61-66ae-3281-453c-85a482f05c09
+	securityFilteringBehavior: none
+	fromColumn: FTFR.AccountID
+	toColumn: BI_SF_ACCOUNT.Id
+
+relationship a22df74b-b99c-49d7-0c0c-6d140ecc7c95
+	fromColumn: BI_SF_CASE.DateKey
+	toColumn: DIM_DATE.DateKey
+
+relationship f4845585-4aa5-3c39-952b-93e070584bd7
+	fromColumn: BI_SV_SALES_TO_INSTALL_DTL.installed_product_id
+	toColumn: BI_SF_INSTALLED_PRODUCT.Id
+
+relationship 153336b0-1481-3201-87c1-01698bc215f8
+	fromColumn: BI_SVTLY_THINGS.DOMINO_SUB
+	toColumn: Dim_Channel.ChannelName
+
+relationship f59d7c0d-4158-4e96-2bee-b78cd83466ce
+	securityFilteringBehavior: none
+	fromColumn: FTFR.DateKey
+	toColumn: DIM_DATE.DateKey
+

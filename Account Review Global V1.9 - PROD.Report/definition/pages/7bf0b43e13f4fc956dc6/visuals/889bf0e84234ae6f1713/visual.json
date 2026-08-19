@@ -1,0 +1,192 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "889bf0e84234ae6f1713",
+  "position": {
+    "x": 18.440677966101696,
+    "y": 0,
+    "z": 0,
+    "height": 138.84745762711864,
+    "width": 173.5593220338983,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_SERVICE_MAINT_CONTRACT"
+                    }
+                  },
+                  "Property": "Id"
+                }
+              },
+              "queryRef": "BI_SF_SERVICE_MAINT_CONTRACT.Id",
+              "nativeQueryRef": "Id"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SF_SERVICE_MAINT_CONTRACT"
+                        }
+                      },
+                      "Property": "SVMXC__Contract_Price2__c"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(BI_SF_SERVICE_MAINT_CONTRACT.SVMXC__Contract_Price2__c)",
+              "nativeQueryRef": "SVMXC__Contract_Price2__c"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_SERVICE_MAINT_CONTRACT"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "BI_SF_SERVICE_MAINT_CONTRACT.Name",
+              "nativeQueryRef": "Name1"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "BI_SF_SERVICE_MAINT_CONTRACT"
+                        }
+                      },
+                      "Property": "SVMXC__Active__c"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(BI_SF_SERVICE_MAINT_CONTRACT.SVMXC__Active__c)",
+              "nativeQueryRef": "SVMXC__Active__c"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "BI_SF_ACCOUNT"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "BI_SF_ACCOUNT.Name",
+              "nativeQueryRef": "Name"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "BI_SF_SERVICE_MAINT_CONTRACT"
+                      }
+                    },
+                    "Property": "SVMXC__Contract_Price2__c"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3b9850136cb85a8461cd",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "BI_SF_SERVICE_MAINT_CONTRACT"
+                  }
+                },
+                "Property": "SVMXC__Active__c"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "BI_SF_SERVICE_MAINT_CONTRACT",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "b"
+                                }
+                              },
+                              "Property": "SVMXC__Active__c"
+                            }
+                          },
+                          "Function": 0
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "0L"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

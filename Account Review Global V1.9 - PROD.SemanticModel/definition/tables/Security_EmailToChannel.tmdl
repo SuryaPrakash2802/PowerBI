@@ -1,0 +1,41 @@
+table Security_EmailToChannel
+	lineageTag: a2a48647-a767-4cb6-b4fd-d427d458865c
+
+	measure 'Logged In As' = USERPRINCIPALNAME()
+		lineageTag: 298ed42d-5ad7-4c1d-8b77-0523cfa185f7
+
+	column email_pattern
+		lineageTag: cbb473c8-c0cc-4f0f-b822-2593f7e84142
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [email_pattern]
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChannelName
+		lineageTag: 535f8f2e-4833-4997-879c-17cb8303c042
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ChannelName]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Security_EmailToChannel = calculated
+		mode: import
+		source =
+				
+				DATATABLE (
+				    "email_pattern", STRING,  // what to search for in the user's UPN
+				    "ChannelName",   STRING,  // must match Dim_Channel[ChannelName] & fact [domino_sub]
+				    {
+				        {"@domino-uk.com", "Domino UK"},
+				        {"@domino-na.com", "Domino US"},
+				        {"@domino.com.cn", "Domino CN"},
+				        {"@domino.com.cn", "Domino CN CNL"},
+				        {"@domino.com.cn", "Domino CN DAPL"},
+				        {"@domino.com.cn", "Domino CN DSO"} // add more channels as you find
+				    }
+				)
+
+	annotation PBI_Id = 51127bf03efe467fbea9be2627289692
+

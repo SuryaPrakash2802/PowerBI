@@ -1,0 +1,238 @@
+table BI_SVTLY_PRINTER_STATES
+	lineageTag: 78141ef9-e25c-4416-b739-c0f12dd69de4
+
+	column ID
+		dataType: string
+		lineageTag: 91a6e487-3a38-4201-b01a-b15b001333a0
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOAD_DATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 45456674-65c3-41c1-ae71-657591600d0d
+		summarizeBy: none
+		sourceColumn: LOAD_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMPUTATIONTS
+		dataType: int64
+		formatString: 0
+		lineageTag: 91042806-0746-431d-b61c-54c78c319248
+		summarizeBy: sum
+		sourceColumn: COMPUTATIONTS
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayOFFLINE
+		dataType: int64
+		formatString: 0
+		lineageTag: c2469a9c-b7c8-49ac-8c0a-b61d444fbab1
+		summarizeBy: sum
+		sourceColumn: dayOFFLINE
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayPRINTING
+		dataType: int64
+		formatString: 0
+		lineageTag: 3189724c-d208-4e58-823d-9c8b001f9486
+		summarizeBy: sum
+		sourceColumn: dayPRINTING
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayREADY_TO_PRINT
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a6772b6-ecb3-49e3-a1db-b34dc1121513
+		summarizeBy: sum
+		sourceColumn: dayREADY_TO_PRINT
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayFAULT
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c8b154b-097a-4f96-a266-b2cfb4b7f029
+		summarizeBy: sum
+		sourceColumn: dayFAULT
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayPRINTER_IDLE
+		dataType: int64
+		formatString: 0
+		lineageTag: 166e28b1-5ff5-4d56-9389-88aff57f6683
+		summarizeBy: sum
+		sourceColumn: dayPRINTER_IDLE
+
+		annotation SummarizationSetBy = Automatic
+
+	column daySEQUENCING_ON
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a6abe34-a67e-4d42-a602-bc29ce295fc4
+		summarizeBy: sum
+		sourceColumn: daySEQUENCING_ON
+
+		annotation SummarizationSetBy = Automatic
+
+	column daySEQUENCING_OFF
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b87f84c-bb1f-462e-b621-f3f6de8a4318
+		summarizeBy: sum
+		sourceColumn: daySEQUENCING_OFF
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayJET_RUNNING
+		dataType: int64
+		formatString: 0
+		lineageTag: edba0899-e453-4e4d-b41e-857dbaa6899d
+		summarizeBy: sum
+		sourceColumn: dayJET_RUNNING
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayFAST_PAUSE
+		dataType: int64
+		formatString: 0
+		lineageTag: 18868052-440a-4127-be90-ec741c6d6283
+		summarizeBy: sum
+		sourceColumn: dayFAST_PAUSE
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayPRINTING_AND_WARNING
+		dataType: int64
+		formatString: 0
+		lineageTag: 2bd24e9e-d2a1-479c-a02f-17a9d9350e03
+		summarizeBy: sum
+		sourceColumn: dayPRINTING_AND_WARNING
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayPRINTING_AND_FAULT
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a42be42-3e44-4979-a4b7-7d29b04ab400
+		summarizeBy: sum
+		sourceColumn: dayPRINTING_AND_FAULT
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayWARNING
+		dataType: int64
+		formatString: 0
+		lineageTag: eee6f63d-9558-46ad-8b58-35e8eaad9aba
+		summarizeBy: sum
+		sourceColumn: dayWARNING
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayPOWERED_ON
+		dataType: int64
+		formatString: 0
+		lineageTag: cc58cdb1-012c-4e66-98bd-8f17690c4b64
+		summarizeBy: sum
+		sourceColumn: dayPOWERED_ON
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayUNKNOWN
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b6f8a6b-5dfa-46c3-bed5-e439596b5abe
+		summarizeBy: sum
+		sourceColumn: dayUNKNOWN
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayPRINTING_DISABLED
+		dataType: int64
+		formatString: 0
+		lineageTag: e818e856-6198-4c64-876f-fc639bc3763a
+		summarizeBy: sum
+		sourceColumn: dayPRINTING_DISABLED
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayIDLE
+		dataType: int64
+		formatString: 0
+		lineageTag: 03a25e7e-6fcc-4310-9e85-f167fc7c58fa
+		summarizeBy: sum
+		sourceColumn: dayIDLE
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayMANUAL
+		dataType: int64
+		formatString: 0
+		lineageTag: 81b9fc24-717e-4159-afd3-6c0fd0034d26
+		summarizeBy: sum
+		sourceColumn: dayMANUAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column ALEKS_available_hours
+		dataType: int64
+		formatString: 0
+		lineageTag: b10a7e50-da36-4ffc-a8e4-5e66b0a3c832
+		summarizeBy: sum
+		sourceColumn: ALEKS_available_hours
+
+		annotation SummarizationSetBy = Automatic
+
+	column ALEKS_available_plus_fault
+		dataType: int64
+		formatString: 0
+		lineageTag: 39db0c54-e074-41e0-91ac-d64bc79f7b28
+		summarizeBy: sum
+		sourceColumn: ALEKS_available_plus_fault
+
+		annotation SummarizationSetBy = Automatic
+
+	column ALEKS_uptime_percentage
+		dataType: int64
+		formatString: 0
+		lineageTag: f15dd4b7-8077-43c9-aca6-589e17caa950
+		summarizeBy: sum
+		sourceColumn: ALEKS_uptime_percentage
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey =
+			
+			VAR dt = 'BI_SVTLY_PRINTER_STATES'[LOAD_DATE]         -- replace with your column name
+			RETURN
+			    IF (
+			        ISBLANK ( dt ),              -- keep blanks blank
+			        BLANK (),
+			        YEAR ( dt ) * 10000          -- YYYY
+			        + MONTH ( dt ) * 100         --   MM
+			        + DAY ( dt )                 --     DD
+			    )
+		formatString: 0
+		lineageTag: 7cfb25d7-a3e1-4b72-aaf8-4745d12ed37d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BI_SVTLY_PRINTER_STATES = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("azwemisqldcoe.0f9aff9ccbfc.database.windows.net", "DCOE_PR_CLOUD_DATA", [Query="WITH main AS (#(lf)#(tab)SELECT #(lf)#(tab)#(tab)ID,#(lf)#(tab)#(tab)LOAD_DATE,#(lf)#(tab)#(tab)COMPUTATIONTS,#(lf)#(tab)#(tab)OFFLINE,#(lf)#(tab)#(tab)PRINTING,#(lf)#(tab)#(tab)READY_TO_PRINT,#(lf)#(tab)#(tab)FAULT,#(lf)#(tab)#(tab)PRINTER_IDLE,#(lf)#(tab)#(tab)SEQUENCING_ON,#(lf)#(tab)#(tab)SEQUENCING_OFF,#(lf)#(tab)#(tab)JET_RUNNING,#(lf)#(tab)#(tab)FAST_PAUSE,#(lf)#(tab)#(tab)PRINTING_AND_WARNING,#(lf)        PRINTING_AND_FAULT,#(lf)        STANDBY,#(lf)        WARNING,#(lf)        POWERED_ON,#(lf)        UNKNOWN,#(lf)        PRINTING_DISABLED,#(lf)        IDLE,#(lf)        MANUAL,#(lf)#(tab)#(tab)LAG(OFFLINE, 1, OFFLINE) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                           AS PreviousOFFLINE,#(lf)#(tab)#(tab)LAG(PRINTING, 1, PRINTING) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                         AS PreviousPRINTING,#(lf)#(tab)#(tab)LAG(READY_TO_PRINT, 1, READY_TO_PRINT) OVER (PARTITION BY ID ORDER BY LOAD_DATE)             AS PreviousREADY_TO_PRINT,#(lf)#(tab)#(tab)LAG(FAULT, 1, FAULT) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                               AS PreviousFAULT,#(lf)#(tab)#(tab)LAG(PRINTER_IDLE, 1, PRINTER_IDLE) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                 AS PreviousPRINTER_IDLE,#(lf)#(tab)#(tab)LAG(SEQUENCING_ON, 1, SEQUENCING_ON) OVER (PARTITION BY ID ORDER BY LOAD_DATE)               AS PreviousSEQUENCING_ON,#(lf)#(tab)#(tab)LAG(SEQUENCING_OFF, 1, SEQUENCING_OFF) OVER (PARTITION BY ID ORDER BY LOAD_DATE)             AS PreviousSEQUENCING_OFF,#(lf)#(tab)#(tab)LAG(JET_RUNNING, 1, JET_RUNNING) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                   AS PreviousJET_RUNNING,#(lf)#(tab)#(tab)LAG(FAST_PAUSE, 1, FAST_PAUSE) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                     AS PreviousFAST_PAUSE,#(lf)#(tab)#(tab)LAG(PRINTING_AND_WARNING, 1, PRINTING_AND_WARNING) OVER (PARTITION BY ID ORDER BY LOAD_DATE) AS PreviousPRINTING_AND_WARNING,#(lf)#(tab)#(tab)LAG(PRINTING_AND_FAULT, 1, PRINTING_AND_FAULT) OVER (PARTITION BY ID ORDER BY LOAD_DATE)     AS PreviousPRINTING_AND_FAULT,#(lf)#(tab)#(tab)LAG(STANDBY, 1, STANDBY) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                           AS PreviousSTANDBY,#(lf)#(tab)#(tab)LAG(WARNING, 1, WARNING) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                           AS PreviousWARNING,#(lf)#(tab)#(tab)LAG(POWERED_ON, 1, POWERED_ON) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                     AS PreviousPOWERED_ON,#(lf)#(tab)#(tab)LAG(UNKNOWN, 1, UNKNOWN) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                           AS PreviousUNKNOWN,#(lf)#(tab)#(tab)LAG(PRINTING_DISABLED, 1, PRINTING_DISABLED) OVER (PARTITION BY ID ORDER BY LOAD_DATE)       AS PreviousPRINTING_DISABLED,#(lf)#(tab)#(tab)LAG(IDLE, 1, IDLE) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                                 AS PreviousIDLE,#(lf)#(tab)#(tab)LAG(MANUAL, 1, MANUAL) OVER (PARTITION BY ID ORDER BY LOAD_DATE)                             AS PreviousMANUAL#(lf)#(tab)FROM [DCOE_PR_CLOUD_DATA].[dbo].[BI_SVTLY_THINGS_OVERALL_STATUSES_COUNTERS_ALGO_PROP]#(lf)#(tab)WHERE LOAD_DATE >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) -12, 0)#(lf)#(tab)#(tab)--AND ID = '6008912fe49b8b0001228ba1'#(lf)#(tab)),#(lf)#(lf)cte1 AS (#(lf)#(lf)#(tab)SELECT#(lf)#(tab)#(tab)ID,#(lf)#(tab)#(tab)LOAD_DATE,#(lf)#(tab)#(tab)COMPUTATIONTS,#(lf)#(tab)#(tab)(OFFLINE - PreviousOFFLINE)/3600/1000                           AS dayOFFLINE,#(lf)#(tab)#(tab)(PRINTING - PreviousPRINTING)/3600/1000                         AS dayPRINTING,#(lf)#(tab)#(tab)(READY_TO_PRINT - PreviousREADY_TO_PRINT)/3600/1000             AS dayREADY_TO_PRINT,#(lf)#(tab)#(tab)(FAULT - PreviousFAULT)/3600/1000                               AS dayFAULT,#(lf)#(tab)#(tab)(PRINTER_IDLE - PreviousPRINTER_IDLE)/3600/1000                 AS dayPRINTER_IDLE,#(lf)#(tab)#(tab)(SEQUENCING_ON - PreviousSEQUENCING_ON)/3600/1000               AS daySEQUENCING_ON,#(lf)#(tab)#(tab)(SEQUENCING_OFF - PreviousSEQUENCING_OFF)/3600/1000             AS daySEQUENCING_OFF,#(lf)#(tab)#(tab)(JET_RUNNING - PreviousJET_RUNNING)/3600/1000                   AS dayJET_RUNNING,#(lf)#(tab)#(tab)(FAST_PAUSE - PreviousFAST_PAUSE)/3600/1000                     AS dayFAST_PAUSE,#(lf)#(tab)#(tab)(PRINTING_AND_WARNING - PreviousPRINTING_AND_WARNING)/3600/1000 AS dayPRINTING_AND_WARNING,#(lf)#(tab)#(tab)(PRINTING_AND_FAULT - PreviousPRINTING_AND_FAULT)/3600/1000     AS dayPRINTING_AND_FAULT,#(lf)#(tab)#(tab)(WARNING - PreviousWARNING)/3600/1000                           AS dayWARNING,#(lf)#(tab)#(tab)(POWERED_ON - PreviousPOWERED_ON)/3600/1000                     AS dayPOWERED_ON,#(lf)#(tab)#(tab)(UNKNOWN - PreviousUNKNOWN)/3600/1000                           AS dayUNKNOWN,#(lf)#(tab)#(tab)(PRINTING_DISABLED - PreviousPRINTING_DISABLED)/3600/1000       AS dayPRINTING_DISABLED,#(lf)#(tab)#(tab)(IDLE - PreviousIDLE)/3600/1000                                 AS dayIDLE,#(lf)#(tab)#(tab)(MANUAL - PreviousMANUAL)/3600/1000                             AS dayMANUAL#(lf)#(tab)FROM main#(lf)#(tab)--ORDER BY ID, LOAD_DATE#(lf))#(lf)#(lf)SELECT #(lf)#(tab)*,#(lf)#(tab)[dayPRINTING] + [dayREADY_TO_PRINT] AS ALEKS_available_hours,#(lf)#(tab)[dayPRINTING] + [dayREADY_TO_PRINT] + [dayFAULT] AS ALEKS_available_plus_fault,#(lf)#(tab)CASE#(lf)#(tab)#(tab)WHEN [dayPRINTING] + [dayREADY_TO_PRINT] + [dayFAULT] <> 0#(lf)#(tab)#(tab)#(tab)THEN 100*([dayPRINTING] + [dayREADY_TO_PRINT] + [dayFAULT]) / ([dayPRINTING] + [dayREADY_TO_PRINT] + [dayFAULT])#(lf)#(tab)#(tab)ELSE NULL#(lf)#(tab)END AS ALEKS_uptime_percentage#(lf)FROM cte1#(lf)ORDER BY ID, LOAD_DATE", CommandTimeout=#duration(0, 0, 25, 0)])
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

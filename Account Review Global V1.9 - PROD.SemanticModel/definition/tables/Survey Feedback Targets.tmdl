@@ -1,0 +1,31 @@
+table 'Survey Feedback Targets'
+	lineageTag: 4f408f74-85bd-4779-a519-32986a9aa355
+	sourceLineageTag: 46d2f957-e943-4121-be47-98de531c49af
+
+	column KPI
+		dataType: string
+		isNullable: false
+		lineageTag: 91ca006e-4749-4349-81bf-765b69ec0385
+		sourceLineageTag: dac1aa24-6c55-4d94-a44e-331a4107d082
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: KPI
+
+		annotation SummarizationSetBy = User
+
+	column target
+		dataType: double
+		lineageTag: 5be48e43-d3f8-4603-af03-9d9fc94eee21
+		sourceLineageTag: d74b2aae-7d28-4380-98b6-b29e131d05c8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: target
+
+		annotation SummarizationSetBy = User
+
+	partition 'Survey Feedback Targets' = entity
+		mode: directQuery
+		source
+			entityName: Survey Feedback Targets
+			expressionSource: 'DirectQuery to AS - Customer 360'
+

@@ -1,0 +1,940 @@
+table BI_SF_SERVICE_MAINT_CONTRACT
+	lineageTag: c610b959-0e2e-48fa-a87a-33ca4444f71c
+
+	column 'PM Completed' =
+			
+			VAR __CurrentRowID = BI_SF_SERVICE_MAINT_CONTRACT[ID]
+			RETURN
+			COUNTROWS(
+			    FILTER(
+			        BI_SV_SALES_TO_INSTALL_DTL,AND(
+			        __CurrentRowID = BI_SV_SALES_TO_INSTALL_DTL[CONTRACT_ID],AND( BI_SV_SALES_TO_INSTALL_DTL[ACTIVITY_TYPE] = "Printer: Maintenance" , BI_SV_SALES_TO_INSTALL_DTL[LINE_TYPE] = "Printer")
+			    )
+			))
+		formatString: 0
+		lineageTag: dc32d926-f39b-4c3e-bafb-18018cdcfc5c
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: string
+		lineageTag: b8571a6b-08c9-4c7d-b6be-0d88717c0b9d
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column OwnerId
+		dataType: string
+		lineageTag: 86e403f0-61b0-4c71-99c4-b84d42ed58d1
+		summarizeBy: none
+		sourceColumn: OwnerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDeleted
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b372d9c-13ce-4bd6-923f-68d6e4e60fef
+		summarizeBy: sum
+		sourceColumn: IsDeleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 15c1cf13-f91c-4f06-94f9-075f971ae4d3
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyIsoCode
+		dataType: string
+		lineageTag: 278226cb-8810-4c69-87b1-da1d42e8763b
+		summarizeBy: none
+		sourceColumn: CurrencyIsoCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3d3aadd5-3ad7-46bf-87a8-98ed7567aa93
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedById
+		dataType: string
+		lineageTag: 00e4c9c5-7fe7-4b58-9ab2-b985983d3fcd
+		summarizeBy: none
+		sourceColumn: CreatedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 59e59db3-249d-4d96-ad53-26142f65a24b
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedById
+		dataType: string
+		lineageTag: 925a8106-ede0-4bde-ba45-3545b059b9e6
+		summarizeBy: none
+		sourceColumn: LastModifiedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column SystemModstamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1c2bd985-4730-42d2-a059-a4ed7e56225e
+		summarizeBy: none
+		sourceColumn: SystemModstamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastActivityDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e57f2b17-157e-4d93-8224-fd22b5f24757
+		summarizeBy: none
+		sourceColumn: LastActivityDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastViewedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: df91cd78-205e-433e-9bd0-51d9c1d7a097
+		summarizeBy: none
+		sourceColumn: LastViewedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastReferencedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 23ff5c16-c262-4b97-90f6-3095d069f8c2
+		summarizeBy: none
+		sourceColumn: LastReferencedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Activation_Notes__c
+		dataType: string
+		lineageTag: 7acf7080-05de-40c2-af44-6a285bd8aacf
+		summarizeBy: none
+		sourceColumn: SVMXC__Activation_Notes__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Active__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ca450a7-3dfb-44c9-a27c-9ff7c7a2af31
+		summarizeBy: sum
+		sourceColumn: SVMXC__Active__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__All_Contacts_Covered__c
+		dataType: int64
+		formatString: 0
+		lineageTag: c90c9a47-6f38-4181-a71c-327aef170e5b
+		summarizeBy: sum
+		sourceColumn: SVMXC__All_Contacts_Covered__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__All_Products_Covered__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 38a34eea-3dfd-4a70-a732-997707af1c03
+		summarizeBy: sum
+		sourceColumn: SVMXC__All_Products_Covered__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__All_Services_Covered__c
+		dataType: int64
+		formatString: 0
+		lineageTag: c565dc08-d727-4c17-a829-a6664c1f4392
+		summarizeBy: sum
+		sourceColumn: SVMXC__All_Services_Covered__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__All_Sites_Covered__c
+		dataType: int64
+		formatString: 0
+		lineageTag: b4a73f84-ac2d-4143-a068-cae29a664eed
+		summarizeBy: sum
+		sourceColumn: SVMXC__All_Sites_Covered__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Billing_Schedule__c
+		dataType: string
+		lineageTag: 64ebae8d-31fb-451f-84ea-18cb5b246013
+		summarizeBy: none
+		sourceColumn: SVMXC__Billing_Schedule__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Business_Hours__c
+		dataType: string
+		lineageTag: 5b270d94-dd44-4535-abfc-80400dc77ea5
+		summarizeBy: none
+		sourceColumn: SVMXC__Business_Hours__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Cancelation_Notes__c
+		dataType: string
+		lineageTag: fa67e325-0db9-44a3-bf3a-e4aa77394b3c
+		summarizeBy: none
+		sourceColumn: SVMXC__Cancelation_Notes__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Canceled_By__c
+		dataType: string
+		lineageTag: 715b56c3-0972-48de-9a48-2ee778300a43
+		summarizeBy: none
+		sourceColumn: SVMXC__Canceled_By__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Canceled_On__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: be490615-a30d-44c4-90a7-c01f86a61348
+		summarizeBy: none
+		sourceColumn: SVMXC__Canceled_On__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Company__c
+		dataType: string
+		lineageTag: 717cd7d1-b5b1-46be-81d3-f10af5b81a13
+		summarizeBy: none
+		sourceColumn: SVMXC__Company__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Contact__c
+		dataType: string
+		lineageTag: 9e587459-c000-4893-895f-3e6f99a28c72
+		summarizeBy: none
+		sourceColumn: SVMXC__Contact__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Contract_Price2__c
+		dataType: double
+		lineageTag: 5564b939-8e0b-4eeb-ba9b-9bd897472044
+		summarizeBy: sum
+		sourceColumn: SVMXC__Contract_Price2__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__Contract_Price__c
+		dataType: double
+		lineageTag: 8bbcde06-d67a-412b-bd59-470788520852
+		summarizeBy: sum
+		sourceColumn: SVMXC__Contract_Price__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__Default_Group_Member__c
+		dataType: string
+		lineageTag: 9b241cde-96dd-4522-b59d-fe859f7020a0
+		summarizeBy: none
+		sourceColumn: SVMXC__Default_Group_Member__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Default_Service_Group__c
+		dataType: string
+		lineageTag: 553a0a17-7b3a-4e00-9ae6-4e817344350f
+		summarizeBy: none
+		sourceColumn: SVMXC__Default_Service_Group__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Discount__c
+		dataType: double
+		lineageTag: ea6737e7-ede2-47ed-90ef-d8e65981b420
+		summarizeBy: sum
+		sourceColumn: SVMXC__Discount__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__Discounted_Price2__c
+		dataType: double
+		lineageTag: 846329a6-0c2c-494f-9a10-960b2d38b029
+		summarizeBy: sum
+		sourceColumn: SVMXC__Discounted_Price2__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__Discounted_Price__c
+		dataType: double
+		lineageTag: e4211c16-25db-4174-968d-9ff33c3b51c5
+		summarizeBy: sum
+		sourceColumn: SVMXC__Discounted_Price__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__End_Date__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: be6ddd2b-1490-4b89-a76f-b7555870f1b0
+		summarizeBy: none
+		sourceColumn: SVMXC__End_Date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__EndpointURL__c
+		dataType: string
+		lineageTag: 0d3d82f8-52c0-441f-9884-1e9a8bbe8bf8
+		summarizeBy: none
+		sourceColumn: SVMXC__EndpointURL__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Exchange_Type__c
+		dataType: string
+		lineageTag: cf3073f4-6bac-40a8-b38a-56b316aedde1
+		summarizeBy: none
+		sourceColumn: SVMXC__Exchange_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Primary_Technician__c
+		dataType: string
+		lineageTag: f72adc2d-d155-44ca-8d3b-124d2c8a409c
+		summarizeBy: none
+		sourceColumn: SVMXC__Primary_Technician__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Renewal_Date__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b3606334-d622-470a-9c31-9db82386b653
+		summarizeBy: none
+		sourceColumn: SVMXC__Renewal_Date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Renewal_Notes__c
+		dataType: string
+		lineageTag: 3ee51af1-5d5d-4aad-ae56-9bcbd1db91db
+		summarizeBy: none
+		sourceColumn: SVMXC__Renewal_Notes__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Renewal_Number__c
+		dataType: double
+		lineageTag: 0044fa58-7152-4686-b3d6-e5edce4b9370
+		summarizeBy: sum
+		sourceColumn: SVMXC__Renewal_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__Renewed_From__c
+		dataType: string
+		lineageTag: 1f355af8-d2a6-4875-9f72-87fe86fe8c09
+		summarizeBy: none
+		sourceColumn: SVMXC__Renewed_From__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__SESSION_ID__c
+		dataType: string
+		lineageTag: 022e0863-1f5b-4387-bf42-38b36f0b8695
+		summarizeBy: none
+		sourceColumn: SVMXC__SESSION_ID__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Sales_Rep__c
+		dataType: string
+		lineageTag: 0e79915c-1893-4a30-9e6e-8fdbf1cb3b6b
+		summarizeBy: none
+		sourceColumn: SVMXC__Sales_Rep__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Select__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 822c4834-9f6a-4aa5-b9ff-e4918ff9128c
+		summarizeBy: sum
+		sourceColumn: SVMXC__Select__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Service_Contract_Notes__c
+		dataType: string
+		lineageTag: 55667735-6eb3-458b-bc87-224a26e4ceb5
+		summarizeBy: none
+		sourceColumn: SVMXC__Service_Contract_Notes__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Service_Level__c
+		dataType: string
+		lineageTag: a702bb28-819b-43c2-9098-a1135099aa80
+		summarizeBy: none
+		sourceColumn: SVMXC__Service_Level__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Start_Date__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8c3ed7ce-e996-46b9-ada0-82e989a2646f
+		summarizeBy: none
+		sourceColumn: SVMXC__Start_Date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Weeks_To_Renewal__c
+		dataType: double
+		lineageTag: ebac6160-4de8-4639-a213-aee1539bae38
+		summarizeBy: sum
+		sourceColumn: SVMXC__Weeks_To_Renewal__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Account_Domino_Sub__c
+		dataType: string
+		lineageTag: eb18ef1d-4bc7-4451-bf26-9ce7171e3d51
+		summarizeBy: none
+		sourceColumn: Account_Domino_Sub__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contract_Type__c
+		dataType: string
+		lineageTag: de43a996-aa27-4657-9d11-4c0269562680
+		summarizeBy: none
+		sourceColumn: Contract_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country__c
+		dataType: string
+		lineageTag: 343cc6f6-f8f1-4ca4-aee9-945f71b8a5b4
+		summarizeBy: none
+		sourceColumn: Country__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Customers_PO__c
+		dataType: string
+		lineageTag: 0dd5b9d7-8e29-4e54-b5aa-c9d405ebefe4
+		summarizeBy: none
+		sourceColumn: Customers_PO__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Default__c
+		dataType: int64
+		formatString: 0
+		lineageTag: c2ae196d-3b23-4a39-9dbc-2c8aadfabf1d
+		summarizeBy: sum
+		sourceColumn: Default__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column First_Visit_Date__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 41c2bbfa-753b-4b91-b73f-506c97ed9ef6
+		summarizeBy: none
+		sourceColumn: First_Visit_Date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Last_Visit_Date__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 94fb2a73-d0bd-42a9-b9c8-a306496195e4
+		summarizeBy: none
+		sourceColumn: Last_Visit_Date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Local_Contract_Type__c
+		dataType: string
+		lineageTag: e1b02f59-49f6-4c7e-8cf5-00176657233a
+		summarizeBy: none
+		sourceColumn: Local_Contract_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location_Type__c
+		dataType: string
+		lineageTag: 70ed0475-bac1-42ef-9f6d-f0adfcff6c42
+		summarizeBy: none
+		sourceColumn: Location_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Monetary_Amount__c
+		dataType: double
+		lineageTag: dfd4de2d-0fc0-437a-905a-18c7db97d1cb
+		summarizeBy: sum
+		sourceColumn: Monetary_Amount__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column New_PONew_POdate_date__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7e72bda3-d1b2-41ce-9805-81eed23dc795
+		summarizeBy: none
+		sourceColumn: New_PONew_POdate_date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Number_Days_Visited__c
+		dataType: double
+		lineageTag: ce400d72-e42c-43d0-8b91-f78cd326423c
+		summarizeBy: sum
+		sourceColumn: Number_Days_Visited__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Number_PM_Printer_Visits__c
+		dataType: double
+		lineageTag: 89b2b141-cc52-4973-aa7c-9e0104458260
+		summarizeBy: sum
+		sourceColumn: Number_PM_Printer_Visits__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Number_PM_Purchased__c
+		dataType: double
+		lineageTag: be9b4334-73e1-48f0-a55d-535d1c90203c
+		summarizeBy: sum
+		sourceColumn: Number_PM_Purchased__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Number_Repair_Printer_Visits__c
+		dataType: double
+		lineageTag: f736477e-4a8e-4ce3-9e05-ae712e571d03
+		summarizeBy: sum
+		sourceColumn: Number_Repair_Printer_Visits__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Number_Repair_Purchased__c
+		dataType: double
+		lineageTag: 2e24d558-ab02-460e-839f-b58ab90b2520
+		summarizeBy: sum
+		sourceColumn: Number_Repair_Purchased__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Number_of_Repair_Visits_Purchased__c
+		dataType: double
+		lineageTag: 7fcee18c-057b-4e6a-84d4-43c228b63655
+		summarizeBy: sum
+		sourceColumn: Number_of_Repair_Visits_Purchased__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Number_of_Repair_Visits__c
+		dataType: double
+		lineageTag: 04abffc0-9851-4900-80a8-650268958a7a
+		summarizeBy: sum
+		sourceColumn: Number_of_Repair_Visits__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Oracles_Sales_Order_No__c
+		dataType: string
+		lineageTag: d52e32e0-3bae-48b2-b436-5854b5b7a2f2
+		summarizeBy: none
+		sourceColumn: Oracles_Sales_Order_No__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column UK_Data_Migrated__c
+		dataType: int64
+		formatString: 0
+		lineageTag: f1961b36-820a-4e96-bd38-90c4e7c4f067
+		summarizeBy: sum
+		sourceColumn: UK_Data_Migrated__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column US_Data_Migrated__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 89bd992f-90a0-4576-9ce2-b608fb27ddf3
+		summarizeBy: sum
+		sourceColumn: US_Data_Migrated__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Systems_Covered__c
+		dataType: double
+		lineageTag: 4f47c99b-d319-4755-8124-12cdb38448ea
+		summarizeBy: sum
+		sourceColumn: Total_Systems_Covered__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Oracle_Agreement_ID__c
+		dataType: string
+		lineageTag: ba59a6e6-1e69-4ac5-84fa-8fd72e650a86
+		summarizeBy: none
+		sourceColumn: Oracle_Agreement_ID__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contract_Term_weeks__c
+		dataType: double
+		lineageTag: c09db4d2-2578-4bee-9108-a6697a945222
+		summarizeBy: sum
+		sourceColumn: Contract_Term_weeks__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__Default_Parts_Price_Book__c
+		dataType: string
+		lineageTag: 4e4e8464-667e-43e9-add7-68a7183139a0
+		summarizeBy: none
+		sourceColumn: SVMXC__Default_Parts_Price_Book__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Default_Travel_Price__c
+		dataType: double
+		lineageTag: 2a9b01bf-ab06-459f-9b59-22a6d1c6ab4c
+		summarizeBy: sum
+		sourceColumn: SVMXC__Default_Travel_Price__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__Default_Travel_Unit__c
+		dataType: string
+		lineageTag: 96eb889e-2bcb-41ed-913f-4b33d3225115
+		summarizeBy: none
+		sourceColumn: SVMXC__Default_Travel_Unit__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Labor_Rounding_Type__c
+		dataType: string
+		lineageTag: 216c18c8-a9de-4edf-a1d1-eb8ba61bbcef
+		summarizeBy: none
+		sourceColumn: SVMXC__Labor_Rounding_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Minimum_Labor__c
+		dataType: double
+		lineageTag: f81b2048-95dc-4c81-b47d-44e3f2537fee
+		summarizeBy: sum
+		sourceColumn: SVMXC__Minimum_Labor__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__Minimum_Travel__c
+		dataType: double
+		lineageTag: 592446ee-a014-41f7-ab49-599c8728ad26
+		summarizeBy: sum
+		sourceColumn: SVMXC__Minimum_Travel__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__Round_Labor_To_Nearest__c
+		dataType: double
+		lineageTag: 3af22faf-ac19-46d7-a9dd-8751d9398915
+		summarizeBy: sum
+		sourceColumn: SVMXC__Round_Labor_To_Nearest__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__Round_Travel_To_Nearest__c
+		dataType: double
+		lineageTag: 16a3f402-58c7-4cf7-8ffa-69ecf0b20164
+		summarizeBy: sum
+		sourceColumn: SVMXC__Round_Travel_To_Nearest__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__Service_Plan__c
+		dataType: string
+		lineageTag: 780d1b6b-d8dc-412b-82bf-b7d1718dc798
+		summarizeBy: none
+		sourceColumn: SVMXC__Service_Plan__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Service_Pricebook__c
+		dataType: string
+		lineageTag: 3b219960-efbb-4962-8e43-cd463829b690
+		summarizeBy: none
+		sourceColumn: SVMXC__Service_Pricebook__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Travel_Rounding_Type__c
+		dataType: string
+		lineageTag: deb53b53-0bac-4623-b30b-77025f045864
+		summarizeBy: none
+		sourceColumn: SVMXC__Travel_Rounding_Type__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Zone__c
+		dataType: string
+		lineageTag: 9424876d-e729-4bc9-bd1a-e7a60bbb3bd5
+		summarizeBy: none
+		sourceColumn: SVMXC__Zone__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__Counter_Usages_Processed_Until__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 928a37ca-1687-487b-b75f-e8491a02fa13
+		summarizeBy: none
+		sourceColumn: SVMXC__Counter_Usages_Processed_Until__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entitlement_Notes__c
+		dataType: string
+		lineageTag: 655e35c1-7e76-48e0-87a6-d90021f4df37
+		summarizeBy: none
+		sourceColumn: Entitlement_Notes__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Opportunity__c
+		dataType: string
+		lineageTag: db486b8b-b3f6-4e3b-86d6-6cda1be77012
+		summarizeBy: none
+		sourceColumn: Opportunity__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column AR_Enabled__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d0d6693-4f13-41e5-ba63-57d3d3f884fd
+		summarizeBy: sum
+		sourceColumn: AR_Enabled__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column AR_Entitled__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 0eaded69-90a9-4d83-aed9-a8b9978f678a
+		summarizeBy: sum
+		sourceColumn: AR_Entitled__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column End_Date_1__c
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 26ff08dc-8cb1-459c-b148-d4103c1c308c
+		summarizeBy: none
+		sourceColumn: End_Date_1__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Error_Message__c
+		dataType: string
+		lineageTag: 8d97d433-71fd-4f0c-a258-1e2370e1c46f
+		summarizeBy: none
+		sourceColumn: Error_Message__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Error__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 438f2918-92db-430d-98ac-f0df4f24af03
+		summarizeBy: sum
+		sourceColumn: Error__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Old_Renewal_Number__c
+		dataType: double
+		lineageTag: 100419ed-313c-470d-b78e-2b1b652b2b3a
+		summarizeBy: sum
+		sourceColumn: Old_Renewal_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Update_Covered_Start_Date__c
+		dataType: int64
+		formatString: 0
+		lineageTag: ddded368-6951-408d-9c97-90241a105d04
+		summarizeBy: sum
+		sourceColumn: Update_Covered_Start_Date__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column SVMXC__SM_Expected_Margin__c
+		dataType: double
+		lineageTag: 42b8e4c6-fdc4-4307-9d7e-2226070f1672
+		summarizeBy: sum
+		sourceColumn: SVMXC__SM_Expected_Margin__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SVMXC__SM_Expected_Uptime__c
+		dataType: double
+		lineageTag: 697dd15f-b861-4286-9c57-eb2ea49df165
+		summarizeBy: sum
+		sourceColumn: SVMXC__SM_Expected_Uptime__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Bill_To__c
+		dataType: string
+		lineageTag: b084c213-2a76-4ecb-abfc-283bb3e6f9e3
+		summarizeBy: none
+		sourceColumn: Bill_To__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fusion_Subscription_Number__c
+		dataType: string
+		lineageTag: d7bec33a-a2df-4d5b-9f72-b8a29e25550b
+		summarizeBy: none
+		sourceColumn: Fusion_Subscription_Number__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Notification_Recipient__c
+		dataType: string
+		lineageTag: 1f696cbb-4287-4788-ac2a-36373cbc39b6
+		summarizeBy: none
+		sourceColumn: Notification_Recipient__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Repair_Service__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 04274801-1ebf-428e-97ac-278bb1f6834c
+		summarizeBy: sum
+		sourceColumn: Repair_Service__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ship_To__c
+		dataType: string
+		lineageTag: beb5c568-2537-430e-941a-f65f1198bf85
+		summarizeBy: none
+		sourceColumn: Ship_To__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Show_SLA_Clocks__c
+		dataType: int64
+		formatString: 0
+		lineageTag: 7eeb1c26-2c86-4127-b495-3fc3b3094264
+		summarizeBy: sum
+		sourceColumn: Show_SLA_Clocks__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Covered_Product_Count__c
+		dataType: double
+		lineageTag: 1095bee6-977b-4064-ba5b-6d6b8c478e5d
+		summarizeBy: sum
+		sourceColumn: Covered_Product_Count__c
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition BI_SF_SERVICE_MAINT_CONTRACT-444fcbe1-2336-4925-85cc-e0f23bc60fb7 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("azwemisqldcoe.0f9aff9ccbfc.database.windows.net"),
+				    DCOE = Source{[Name="DCOE"]}[Data],
+				    dbo_ods_sf_service_maint_contract = DCOE{[Schema="dbo",Item="ods_sf_service_maint_contract"]}[Data]
+				in
+				    dbo_ods_sf_service_maint_contract
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

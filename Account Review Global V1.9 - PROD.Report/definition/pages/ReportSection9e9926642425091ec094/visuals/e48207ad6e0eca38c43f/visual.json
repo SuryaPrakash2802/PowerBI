@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "e48207ad6e0eca38c43f",
+  "position": {
+    "x": 16,
+    "y": 16,
+    "z": 1000,
+    "height": 95.999999999999986,
+    "width": 512,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Looking at historical monthly trends shows peak months. Based on Historical and Last Years trend the following months are identified as key for Preventative Maintenance to reduce spike in breakdowns: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#003b5c"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

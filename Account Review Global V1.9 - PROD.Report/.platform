@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Account Review Global V1.9 - PROD"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fdef2964-0775-4189-8e96-dc953cccb1dd"
+  }
+}

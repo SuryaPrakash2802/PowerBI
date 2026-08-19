@@ -1,0 +1,628 @@
+table 'RemoteFix Measures'
+	lineageTag: adf5cf42-6ceb-437d-908b-60828cbd0717
+	sourceLineageTag: 7c0cdfb9-9f65-45bb-81e2-127dc5afad52
+
+	measure TodaysDate = EXTERNALMEASURE("TodaysDate", DATETIME, "DirectQuery to AS - Customer 360 3")
+		formatString: General Number
+		lineageTag: c4374228-ef71-483c-8a57-f60ba38114c3
+		sourceLineageTag: 1567076d-22d5-4df5-9365-77474fd84dfb
+		dataCategory: Uncategorized
+
+	measure CurrentMonth = EXTERNALMEASURE("CurrentMonth", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: a557600a-7496-446d-b9dd-1d462991e38b
+		sourceLineageTag: 7539d74d-9c7f-40a9-9e9b-7f8cbd40c79e
+		dataCategory: Uncategorized
+
+	measure CurrentYear = EXTERNALMEASURE("CurrentYear", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: a98890a1-2b9d-48ac-915b-3299e31a43bf
+		sourceLineageTag: f3dfa04a-0043-40c8-9f17-015b506a847c
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix Count' = EXTERNALMEASURE("RemoteFix Count", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 7b6ad42d-aac7-4fce-872d-b1781e3bdff1
+		sourceLineageTag: e106f1b0-6898-4edc-aa99-7d4a581caf14
+		dataCategory: Uncategorized
+
+	measure 'AR Count' = EXTERNALMEASURE("AR Count", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 0313c0b5-0e5b-450d-a8d4-4d4daaae374e
+		sourceLineageTag: 170c6b71-03f8-4739-b62c-33cf3438a67b
+		dataCategory: Uncategorized
+
+	measure 'KMS Count' = EXTERNALMEASURE("KMS Count", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 161e9414-b9f1-456d-8cda-ed991e89b3d7
+		sourceLineageTag: a23101d1-c7d0-4922-b438-b6e7f6358fb7
+		dataCategory: Uncategorized
+
+	measure 'Cloud Count' = EXTERNALMEASURE("Cloud Count", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: d197e882-25ed-453f-bd5d-c59bff2889a6
+		sourceLineageTag: 81cf81f4-ca40-46b7-96f9-4b33f59efe59
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix PY' = EXTERNALMEASURE("RemoteFix PY", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 71fcf576-7a4c-4443-ab15-3fe52608d757
+		sourceLineageTag: f416771c-469d-4bf5-904f-05fd7db4c7ad
+		dataCategory: Uncategorized
+
+	measure 'Remote Fix Filters' = EXTERNALMEASURE("Remote Fix Filters", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: eb1f3a0b-bd9e-4c42-9f32-52fa2624f0e7
+		sourceLineageTag: 1381ce08-2890-452b-9e90-3acd175b4f16
+		dataCategory: Uncategorized
+
+	measure 'Survey Feedback Filters' = EXTERNALMEASURE("Survey Feedback Filters", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: a01a2737-ce59-4a12-bab9-373c54cf8d49
+		sourceLineageTag: 8b58eda3-7dcf-4330-a80c-9f8c24bb667c
+		dataCategory: Uncategorized
+
+	measure 'AR Percent' = EXTERNALMEASURE("AR Percent", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: ad5bb968-405f-4465-84ae-b32d0fb06f40
+		sourceLineageTag: 3b27cb04-1cf9-415e-bcfd-8976eaf172de
+		dataCategory: Uncategorized
+
+	measure 'Cloud Percent' = EXTERNALMEASURE("Cloud Percent", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 81575fc0-26a3-4f57-b2ab-c2bbf67e4bc6
+		sourceLineageTag: b44c5ab3-fb51-4fe1-890c-bb8759a409c8
+		dataCategory: Uncategorized
+
+	measure 'KMS Percent' = EXTERNALMEASURE("KMS Percent", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b35adf42-d644-45d5-a76a-a1b37db8ec9f
+		sourceLineageTag: 298ab88d-70ec-4dbe-941a-e7e2f233ded5
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix Target' = EXTERNALMEASURE("RemoteFix Target", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 3fae1449-50bd-4a66-a59b-fd86e67fdafb
+		sourceLineageTag: 37e3997d-9d8a-4833-9445-77ea20bbbdc8
+		dataCategory: Uncategorized
+
+	measure 'Gauge with Outline' = EXTERNALMEASURE("Gauge with Outline", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: b22d664a-2a4a-4d64-b5ed-a1c2b27c569f
+		sourceLineageTag: 4f463c5a-431a-404d-af93-96d563bc4657
+		dataCategory: ImageUrl
+
+	measure RemoteFixCustomerRank = EXTERNALMEASURE("RemoteFixCustomerRank", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: b7d9639f-7926-4a90-85f3-e669a0c8c36e
+		sourceLineageTag: 88df7974-6873-4303-b007-e37fb6936e48
+		dataCategory: Uncategorized
+
+	measure RemoteFixProductRank = EXTERNALMEASURE("RemoteFixProductRank", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: da35742b-2eb6-46c1-929d-b5c29d3f8afe
+		sourceLineageTag: cf186cec-1ecb-483c-9a0e-24691c211362
+		dataCategory: Uncategorized
+
+	measure RemoteFixAccountOwnerRank = EXTERNALMEASURE("RemoteFixAccountOwnerRank", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: e39702c5-813d-4fa6-84dc-73de206d0836
+		sourceLineageTag: 79f2bdd8-0719-4bb3-8db9-64b4e78aa144
+		dataCategory: Uncategorized
+
+	measure 'KMS Count Formatted' = EXTERNALMEASURE("KMS Count Formatted", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: a6547d57-d38a-4c41-b4f0-3f950be7eb53
+		sourceLineageTag: bed84e36-d472-46c8-b44c-80dc8f6ca749
+		dataCategory: Uncategorized
+
+	measure 'AR Count Formatted' = EXTERNALMEASURE("AR Count Formatted", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 76882ed8-01a1-483e-a39a-25223c6bd7ed
+		sourceLineageTag: 99968fc9-27c7-48a0-b44d-db188139387f
+		dataCategory: Uncategorized
+
+	measure 'Cloud Count Formatted' = EXTERNALMEASURE("Cloud Count Formatted", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 328e3d1b-4d32-449c-afe1-e90b90c901dd
+		sourceLineageTag: a3323ef9-c9f6-4434-9f71-3031e01d690d
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix Count Formatted' = EXTERNALMEASURE("RemoteFix Count Formatted", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 3e8b4a2e-f847-4258-b3ee-3e48e4e9f50a
+		sourceLineageTag: 8c106ffb-8c42-4c7d-959a-52cdb3053b5f
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix Count Percent' = EXTERNALMEASURE("RemoteFix Count Percent", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 37b0e004-9bdc-458b-b1bb-ac2bc1a73472
+		sourceLineageTag: 74588b34-0b52-4f62-bee4-712b50191e0d
+		dataCategory: Uncategorized
+
+	measure 'Cases Count Formatted' = EXTERNALMEASURE("Cases Count Formatted", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 01cdda5d-b2e3-43bd-8229-85eb67edd38e
+		sourceLineageTag: dfeb6753-3627-4b27-9ca0-306f7462dd69
+		dataCategory: Uncategorized
+
+	measure 'Cases Count' = EXTERNALMEASURE("Cases Count", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 03969871-3617-4133-950d-6f5003e7d5cd
+		sourceLineageTag: f510b9cd-f435-4b6c-8f73-4c9f3cab0266
+		dataCategory: Uncategorized
+
+	measure 'Cases Count PY' = EXTERNALMEASURE("Cases Count PY", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 1d21d1fd-9a11-4ff3-9c1c-25e67e4fbadf
+		sourceLineageTag: 635782ee-f26b-4575-8035-ae667e5d13a2
+		dataCategory: Uncategorized
+
+	measure RepairtypeCount = EXTERNALMEASURE("RepairtypeCount", INTEGER, "DirectQuery to AS - Customer 360 3")
+		lineageTag: d21e6a08-8245-45cd-84aa-193865ccf1e6
+		sourceLineageTag: 0238c03b-1e8e-420f-9c60-b1dd15e0170c
+		dataCategory: Uncategorized
+
+	measure Measure = EXTERNALMEASURE("Measure", INTEGER, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 45d7e88e-eef5-4476-864c-295c126766da
+		sourceLineageTag: 1e14dc8b-9e93-4430-9cc0-3ad3ca5f6ce5
+		dataCategory: Uncategorized
+
+	measure 'Return visit Customer request Count' = EXTERNALMEASURE("Return visit Customer request Count", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: d826bd4b-a1fc-4978-8620-dbf8f98405ed
+		sourceLineageTag: 02995f3a-b13a-4138-9548-213268f10879
+		dataCategory: Uncategorized
+
+	measure 'Return visit - engineer request Count' = EXTERNALMEASURE("Return visit - engineer request Count", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0.0
+		lineageTag: 9e837dd6-25df-422e-bcfb-c138bee03eed
+		sourceLineageTag: ea0853c1-1cc8-497b-b530-f2ecd9206c2e
+		dataCategory: Uncategorized
+
+	measure 'Phone Count' = EXTERNALMEASURE("Phone Count", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 615de575-19ec-46f0-99db-4d1f01b489ff
+		sourceLineageTag: 87cfba08-1910-41f5-990d-39272c5cb4b5
+		dataCategory: Uncategorized
+
+	measure 'Cases Count KPI' = EXTERNALMEASURE("Cases Count KPI", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 04ea2e19-5f7b-4e70-b160-1195aebf8690
+		sourceLineageTag: c95a512e-09ea-4e43-b311-7027cdf097df
+		dataCategory: Uncategorized
+
+	measure 'Cases Count KPI Colour' = EXTERNALMEASURE("Cases Count KPI Colour", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: e8cc6e5d-9c80-4b08-b113-810a27f67b18
+		sourceLineageTag: 6b542bc7-b987-4712-94e4-6e2df151ce25
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix Count KPI' = EXTERNALMEASURE("RemoteFix Count KPI", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 89db98ac-099b-41b3-8976-2bb9ebf0c875
+		sourceLineageTag: f00e264c-fdd3-4421-b734-f69e1f6bb5f6
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix Count KPI Colour' = EXTERNALMEASURE("RemoteFix Count KPI Colour", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 5934b788-7f14-48e2-a3f8-30fcabd95344
+		sourceLineageTag: 2cdeb9f0-9a22-4250-9613-ef3cb1522cf3
+		dataCategory: Uncategorized
+
+	measure 'Visit Count KPI' = EXTERNALMEASURE("Visit Count KPI", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 0f81f731-761b-42dd-93c0-7acb1cd223ef
+		sourceLineageTag: 829e3bcc-8a36-4901-af7a-8829e5fffc89
+		dataCategory: Uncategorized
+
+	measure 'Visit Count' = EXTERNALMEASURE("Visit Count", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: dfcebc0a-74e5-4cb3-93d1-c2322ea7e774
+		sourceLineageTag: 55753ade-681f-4635-81a6-f8241e45a9f3
+		dataCategory: Uncategorized
+
+	measure 'Visit Count KPI Colour' = EXTERNALMEASURE("Visit Count KPI Colour", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: d5fb4d86-7e5c-451e-a037-3201ed46661a
+		sourceLineageTag: 6082fa3d-911b-4acc-84a5-0f37a2dc001a
+		dataCategory: Uncategorized
+
+	measure 'Cases Count CY vs LY' = EXTERNALMEASURE("Cases Count CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: e3c46f84-8da5-4f04-a093-94eabab2035c
+		sourceLineageTag: a193e446-6943-483a-b014-f204cd2e29f7
+		dataCategory: Uncategorized
+
+	measure 'Cases Count Variance' = EXTERNALMEASURE("Cases Count Variance", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: baf2615e-32d7-4fef-999f-30abfd070c2a
+		sourceLineageTag: 4674ad57-39d9-42ed-883e-b85a62bf70a4
+		dataCategory: Uncategorized
+
+	measure 'RemoteFIx Count CY vs LY' = EXTERNALMEASURE("RemoteFIx Count CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: cd0524f8-670b-4caf-a6ef-15aa7ff42fc1
+		sourceLineageTag: d837a51b-700c-4ec0-844a-94de8eb9def5
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix Variance' = EXTERNALMEASURE("RemoteFix Variance", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 2b590325-1cda-4cfd-a6c3-85fe6537ec0e
+		sourceLineageTag: 44665c7b-8adc-48b4-b830-d7d84b61bfdf
+		dataCategory: Uncategorized
+
+	measure 'Visit PY' = EXTERNALMEASURE("Visit PY", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 86f90bbf-88f2-4976-bed2-4ae534d965ce
+		sourceLineageTag: ed1d20ee-ed73-47fa-ba0a-968065e952ab
+		dataCategory: Uncategorized
+
+	measure 'Visit Count CY vs LY' = EXTERNALMEASURE("Visit Count CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 4a119f2c-bd5f-4c7d-81b9-a432aedc63bd
+		sourceLineageTag: 5c7d321a-1e67-4162-9374-9f6f5e60c45b
+		dataCategory: Uncategorized
+
+	measure 'Visit Variance' = EXTERNALMEASURE("Visit Variance", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 76e3d275-a39a-4cdb-ac2b-741c0954cadf
+		sourceLineageTag: 80289aaf-7645-4a9b-b37e-b034aa985068
+		dataCategory: Uncategorized
+
+	measure 'Open Cases Count' = EXTERNALMEASURE("Open Cases Count", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 6dc50fce-20b0-4173-9c10-1c36c9518c04
+		sourceLineageTag: 54516640-908c-44d7-953f-3123239f3e89
+		dataCategory: Uncategorized
+
+	measure 'Open Cases Count Formatted' = EXTERNALMEASURE("Open Cases Count Formatted", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: fa3ff591-e545-433a-9062-f91051bdf671
+		sourceLineageTag: 4a030b8c-319f-49b7-97f6-d6c1201d6070
+		dataCategory: Uncategorized
+
+	measure 'Open Cases Percent' = EXTERNALMEASURE("Open Cases Percent", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 5eff58ce-a4e6-4c5a-9c1e-08b742d1fbda
+		sourceLineageTag: 818d27a3-9ba6-41b8-918c-6cb0a91c684b
+		dataCategory: Uncategorized
+
+	measure 'Closed Cases Count' = EXTERNALMEASURE("Closed Cases Count", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 59ea0af9-1f00-4d2d-bcce-7f9d8c64bf0b
+		sourceLineageTag: 2ee88824-6f23-447f-9932-1071209bff90
+		dataCategory: Uncategorized
+
+	measure 'Closed Cases Count Formatted' = EXTERNALMEASURE("Closed Cases Count Formatted", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 86426c09-725b-48aa-afaa-acaf56fe4fd3
+		sourceLineageTag: 7aa6eee6-b197-4782-a371-b7c4b9c57cf6
+		dataCategory: Uncategorized
+
+	measure 'Closed Cases Percent' = EXTERNALMEASURE("Closed Cases Percent", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 44efb2b7-5301-4110-a7a7-a792ec54385d
+		sourceLineageTag: 9d769218-3c36-4ffa-a651-7685c208741b
+		dataCategory: Uncategorized
+
+	measure 'AR %' = EXTERNALMEASURE("AR %", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: a9a1956c-6569-448a-821c-c8ef079c0673
+		sourceLineageTag: fca071b6-8cae-4879-8b7b-37a2d4c5d8fd
+		dataCategory: Uncategorized
+
+	measure 'kms %' = EXTERNALMEASURE("kms %", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 09252d82-5736-4299-9eab-4f4362ecd13f
+		sourceLineageTag: b76976ae-9f54-47b9-ad2e-4074ecb31140
+		dataCategory: Uncategorized
+
+	measure 'Cloud %' = EXTERNALMEASURE("Cloud %", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 0043cee8-a88b-4f8b-b508-953574230d47
+		sourceLineageTag: ee160a77-6efe-4d52-b8c9-b661510f369a
+		dataCategory: Uncategorized
+
+	measure 'Phone Count Formatted' = EXTERNALMEASURE("Phone Count Formatted", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 2875f24a-b4c0-4fbe-96a1-17720b793fb3
+		sourceLineageTag: 8f6b96ae-787f-44bf-9dc5-c26eec80d190
+		dataCategory: Uncategorized
+
+	measure 'Phone %' = EXTERNALMEASURE("Phone %", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 63aaff81-1d6c-4f6a-a182-1843727c5140
+		sourceLineageTag: 2ad3ba92-ceb0-4dd4-aebb-2d0466762f22
+		dataCategory: Uncategorized
+
+	measure 'Repairtype Count Formatted' = EXTERNALMEASURE("Repairtype Count Formatted", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: f727e360-3559-4f50-860a-f6c90b094faa
+		sourceLineageTag: 138135e1-a529-41fa-9165-1a4950c51e08
+		dataCategory: Uncategorized
+
+	measure 'Repair %' = EXTERNALMEASURE("Repair %", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 48e20d4d-bb75-4df9-80f7-41e5fb913c10
+		sourceLineageTag: 9eb58478-fb9e-453d-8959-5333401bd9f4
+		dataCategory: Uncategorized
+
+	measure 'Return Visit Engineer request Count Formatted' = EXTERNALMEASURE("Return Visit Engineer request Count Formatted", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 12cfcb8d-b874-449c-95bf-c0a5adf6c3d6
+		sourceLineageTag: abd006ca-b0ad-47ae-a659-6ebcc4509e10
+		dataCategory: Uncategorized
+
+	measure 'Return Visit Custmer Request Count %' = EXTERNALMEASURE("Return Visit Custmer Request Count %", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 93f7b59a-392e-4358-97c7-a9ce68834641
+		sourceLineageTag: fa949c21-3ab9-47a5-8d13-66a2e184fceb
+		dataCategory: Uncategorized
+
+	measure 'Return Visit Engineer Request Count %' = EXTERNALMEASURE("Return Visit Engineer Request Count %", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 734c234f-f641-4cc4-8013-5bd380a80b3d
+		sourceLineageTag: 7e7f9ad2-45ca-422d-8161-6c3011c9898e
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix Percent' = EXTERNALMEASURE("RemoteFix Percent", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 76351f22-ca48-4bb4-92a6-44afc2f1c58a
+		sourceLineageTag: ae5a73c2-0e25-4996-ae38-1f8ddddb2f4b
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix PY Percent' = EXTERNALMEASURE("RemoteFix PY Percent", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 07827ef4-1ed2-4290-9f22-33208259ba68
+		sourceLineageTag: 8962525f-0447-4b4d-875d-bfb59e0d4785
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix % CY vs LY' = EXTERNALMEASURE("RemoteFix % CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 35928d22-b52b-48c7-8ebe-f0966cafd26b
+		sourceLineageTag: 5d3df4a6-133c-45e8-a778-50526adc0d4f
+		dataCategory: Uncategorized
+
+	measure 'Visit Percent' = EXTERNALMEASURE("Visit Percent", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 642d422e-b986-4e96-a7eb-867d814a93fb
+		sourceLineageTag: 500dae4e-0f86-4059-b956-f0504e7561d0
+		dataCategory: Uncategorized
+
+	measure 'Visit PY Percent' = EXTERNALMEASURE("Visit PY Percent", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 09e516c3-aa87-4af3-9802-47604ac7ec5b
+		sourceLineageTag: a3c1f506-dcc4-4b62-8cc5-295dd58740b0
+		dataCategory: Uncategorized
+
+	measure 'Visit Percent CY vs LY' = EXTERNALMEASURE("Visit Percent CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 1cb6eba1-c3df-4adf-9138-b88b971513dc
+		sourceLineageTag: 9ba7e8a6-8e8d-46b5-9725-48c76c05bd89
+		dataCategory: Uncategorized
+
+	measure 'Visit % CY vs LY' = EXTERNALMEASURE("Visit % CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: c5581a86-ca72-4ee3-833f-0c6e3e1aa56b
+		sourceLineageTag: 0ae24a4e-1372-4edc-872b-3a610247527d
+		dataCategory: Uncategorized
+
+	measure CasesCustomerRank = EXTERNALMEASURE("CasesCustomerRank", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 07757e8c-5e77-46e6-a797-913769a3d24d
+		sourceLineageTag: 9ac5b4f7-3517-4a6e-8bb3-b1eac7644e71
+		dataCategory: Uncategorized
+
+	measure 'Cases Customer Count Percent' = EXTERNALMEASURE("Cases Customer Count Percent", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0%;-0%;0%
+		lineageTag: 8f0d8e33-b663-4e45-9b26-3547fb011ac4
+		sourceLineageTag: e24e14b6-12a0-4d04-95af-05138a6bfdfc
+		dataCategory: Uncategorized
+
+	measure 'Customer Count' = EXTERNALMEASURE("Customer Count", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: fb6cb7fc-df42-4477-9887-426301cfd819
+		sourceLineageTag: 6790362a-4e7e-4920-bcf8-aa5ca041bcf4
+		dataCategory: Uncategorized
+
+	measure 'Customer Count PY' = EXTERNALMEASURE("Customer Count PY", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 0d012fea-cc2f-4177-88af-9edc449b0fce
+		sourceLineageTag: 754fde14-bee5-4072-a1cb-9d14f1979145
+		dataCategory: Uncategorized
+
+	measure 'Customer Count CY vs LY' = EXTERNALMEASURE("Customer Count CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 98750017-0d60-4108-a3c2-58c5e8be640a
+		sourceLineageTag: 93d29b85-68cc-458b-a494-6f4cd52204cb
+		dataCategory: Uncategorized
+
+	measure 'Customer Count Variance' = EXTERNALMEASURE("Customer Count Variance", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 7142e293-39de-4988-bd36-7bedcd3218cd
+		sourceLineageTag: c2c9fe2d-8d46-4758-b9c3-4b8da7e94ac7
+		dataCategory: Uncategorized
+
+	measure 'RemoteFIx Count CY vs Target' = EXTERNALMEASURE("RemoteFIx Count CY vs Target", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: cc95f0a4-ee05-443e-b738-7937a96787a6
+		sourceLineageTag: 039caf16-b957-4d45-b2ea-83e9d2cf43a0
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix Target Month' = EXTERNALMEASURE("RemoteFix Target Month", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: e932bebe-ca83-4d4c-a14a-32ce3cdcc836
+		sourceLineageTag: 7dce47d4-cd6d-4001-9341-39c5f496f084
+		dataCategory: Uncategorized
+
+	measure 'Cases Count BadDQ' = EXTERNALMEASURE("Cases Count BadDQ", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 71e6492b-e6ce-4a7d-8fc3-51cafe64212b
+		sourceLineageTag: e632afff-3396-4eea-95c9-8359ecbadf3a
+		dataCategory: Uncategorized
+
+	measure 'Cases Count BadDQ PY' = EXTERNALMEASURE("Cases Count BadDQ PY", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 16ad8705-8b71-4742-ab66-9bd21bfe83b2
+		sourceLineageTag: e9e7ce76-259a-4ccf-be43-96b7139f6353
+		dataCategory: Uncategorized
+
+	measure 'Cases Count BadDQ  CY vs LY' = EXTERNALMEASURE("Cases Count BadDQ  CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 9aa4b680-9941-43d9-9edd-7de774a03109
+		sourceLineageTag: cf683bcc-d970-4369-81e3-965d74c5342d
+		dataCategory: Uncategorized
+
+	measure 'Cases Count Bad DQ %' = EXTERNALMEASURE("Cases Count Bad DQ %", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 810b93a1-315c-48c7-b29a-c622c63a1917
+		sourceLineageTag: 782bdb4b-1a67-45c6-866a-c08d676ff69d
+		dataCategory: Uncategorized
+
+	measure 'Cases Count BadDQ PY %' = EXTERNALMEASURE("Cases Count BadDQ PY %", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 33c58094-47c4-40ba-bef1-32982d2199b7
+		sourceLineageTag: 731642e6-0ba6-48c5-9b23-b1eafce7aff4
+		dataCategory: Uncategorized
+
+	measure 'Cases Count BadDQ % CY vs LY' = EXTERNALMEASURE("Cases Count BadDQ % CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 265d039a-6644-4a0d-816d-547dfb4cc3ea
+		sourceLineageTag: b3b6155f-934b-4a41-8517-f43d93fc5892
+		dataCategory: Uncategorized
+
+	measure 'Cases Count BadDQ Variance' = EXTERNALMEASURE("Cases Count BadDQ Variance", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 80dcff10-bf7a-44dc-9d76-b7e5335cb0d2
+		sourceLineageTag: 5d2d6aab-aeb0-4190-a7a0-9178ad57cb43
+		dataCategory: Uncategorized
+
+	measure BurdenCost = EXTERNALMEASURE("BurdenCost", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: bb5b7ade-4628-442b-8392-063a90f9b344
+		sourceLineageTag: f5fcb7d3-ef0a-4b5b-a5ac-3a1b9c8b5d23
+		dataCategory: Uncategorized
+
+	measure 'Burden Cost PY' = EXTERNALMEASURE("Burden Cost PY", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 1c403c13-d587-47b9-80ba-0d4ff1d983de
+		sourceLineageTag: 102d2066-c65f-42ba-81df-326c256a4088
+		dataCategory: Uncategorized
+
+	measure 'Burden Cost CFY vs PFY' = EXTERNALMEASURE("Burden Cost CFY vs PFY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: a3b4d738-e56b-4e6f-b053-effd6163e96e
+		sourceLineageTag: 9b6f2421-57b4-4ecc-904e-66f64c071b4c
+		dataCategory: Uncategorized
+
+	measure 'Burden Cost Variance' = EXTERNALMEASURE("Burden Cost Variance", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 15d2b75b-b795-4467-a933-cb606f4874d8
+		sourceLineageTag: aa38ef1d-516b-41dc-8fec-916e78d1ddd2
+		dataCategory: Uncategorized
+
+	measure LastRefresh = EXTERNALMEASURE("LastRefresh", DATETIME, "DirectQuery to AS - Customer 360 3")
+		formatString: Short Date
+		lineageTag: 3659dc0d-017e-49e1-b078-609e09008237
+		sourceLineageTag: e3f2b00c-7d9c-4c52-b031-78366196692d
+		dataCategory: Uncategorized
+
+	measure LastRefreshText = EXTERNALMEASURE("LastRefreshText", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: f3073bef-3538-4b81-b03d-85929f3d3b1f
+		sourceLineageTag: 61c7d4c4-3752-4e38-b14b-97a5195dd75f
+		dataCategory: Uncategorized
+
+	measure 'AR Count PY' = EXTERNALMEASURE("AR Count PY", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 769651ba-0db7-4ec0-a42f-2d6cf592bb55
+		sourceLineageTag: 83613a64-114d-4342-9c23-6f8055c99839
+		dataCategory: Uncategorized
+
+	measure 'AR % PY' = EXTERNALMEASURE("AR % PY", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 8c697d0b-e64b-4c94-a080-ed127f7efe34
+		sourceLineageTag: 921513b5-6af9-4605-adad-8ba9342ee26c
+		dataCategory: Uncategorized
+
+	measure 'AR Variance' = EXTERNALMEASURE("AR Variance", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 5331ab87-4b70-4352-8c71-c2f10128b40d
+		sourceLineageTag: 96332010-eba9-4e25-9125-7ec2b4b4b798
+		dataCategory: Uncategorized
+
+	measure 'AR CY vs LY' = EXTERNALMEASURE("AR CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: f9d66ca2-b6af-4828-88b2-f988542ad187
+		sourceLineageTag: c2b6c7f8-ba23-4784-a79b-d3e868fb3552
+		dataCategory: Uncategorized
+
+	measure 'AR %CY vs LY' = EXTERNALMEASURE("AR %CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 5c453b53-bc04-4785-9cb3-c14748adead2
+		sourceLineageTag: 5cca42e2-d9f7-408e-9ad0-fbe9ad8f560b
+		dataCategory: Uncategorized
+
+	measure 'KMS Count PY' = EXTERNALMEASURE("KMS Count PY", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: d85065a5-b4f9-4119-9bfc-3e9823525519
+		sourceLineageTag: ebcd3a49-1885-4821-9eea-c9da0d206579
+		dataCategory: Uncategorized
+
+	measure 'KMS % PY' = EXTERNALMEASURE("KMS % PY", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 975ed193-e929-47b3-b846-d1fe70f4a18d
+		sourceLineageTag: caf34901-5a5b-4905-816c-d3a3c405a517
+		dataCategory: Uncategorized
+
+	measure 'KMS %CY vs LY' = EXTERNALMEASURE("KMS %CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: fe19b774-bd1b-4b0c-ae5a-f60648d79b7b
+		sourceLineageTag: 1f930680-20f2-4806-b405-1f59e21967d8
+		dataCategory: Uncategorized
+
+	measure 'KMS Variance' = EXTERNALMEASURE("KMS Variance", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 93e35d1e-dc14-4737-8762-0ee5fdc1dded
+		sourceLineageTag: 434566a0-87e8-4017-8ad7-81ac91d9f829
+		dataCategory: Uncategorized
+
+	measure 'KMS CY vs LY' = EXTERNALMEASURE("KMS CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 2e7669b7-c467-44a4-9eed-cbfe270eec28
+		sourceLineageTag: 707e76ba-b5da-474c-a90e-77ec4ecfd38f
+		dataCategory: Uncategorized
+
+	measure 'Cloud % PY' = EXTERNALMEASURE("Cloud % PY", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 6373c718-4d02-4521-b40f-135bb2c210b1
+		sourceLineageTag: affb9cba-4d95-4aaa-af33-6b4da3e97c0b
+		dataCategory: Uncategorized
+
+	measure 'Cloud %CY vs LY' = EXTERNALMEASURE("Cloud %CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 99a2d6e7-dc61-4c19-8380-9370727b1f1d
+		sourceLineageTag: ff48eb7d-bd46-4479-9a85-7fc1296385bb
+		dataCategory: Uncategorized
+
+	measure 'Cloud Count PY' = EXTERNALMEASURE("Cloud Count PY", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 2fc2be20-3b69-4bf7-8a79-be1d6c06abdc
+		sourceLineageTag: f2465aa0-7d9a-4c63-96cb-0c52222ca003
+		dataCategory: Uncategorized
+
+	measure 'Cloud CY vs LY' = EXTERNALMEASURE("Cloud CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: f483da8a-e75b-4745-947a-4f63549d2c2e
+		sourceLineageTag: 63f6a868-3103-47fc-b924-d7f306e443c5
+		dataCategory: Uncategorized
+
+	measure 'Cloud Variance' = EXTERNALMEASURE("Cloud Variance", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 2c68269a-00b1-4112-8ad0-13af96b1a70d
+		sourceLineageTag: 6bf7e402-d9dd-4150-9190-bebe6d09c8ec
+		dataCategory: Uncategorized
+
+	measure 'Phone % PY' = EXTERNALMEASURE("Phone % PY", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 1e37df4a-5737-4360-95dc-3b931bb91678
+		sourceLineageTag: a2983082-60c5-48a8-82de-f27a81087298
+		dataCategory: Uncategorized
+
+	measure 'Phone %CY vs LY' = EXTERNALMEASURE("Phone %CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 43bbc0e9-9081-40fc-9e44-b47b207d9038
+		sourceLineageTag: 505e8438-1b94-44c4-873e-d019e27f7fe1
+		dataCategory: Uncategorized
+
+	measure 'Phone Count PY' = EXTERNALMEASURE("Phone Count PY", INTEGER, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 1d0cc5a8-1dc6-4cbf-9c12-87c7e185f1fd
+		sourceLineageTag: decdfdf7-dcdd-4eb3-86df-84a1cfd388d2
+		dataCategory: Uncategorized
+
+	measure 'Phone CY vs LY' = EXTERNALMEASURE("Phone CY vs LY", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 25b0e5ec-6c76-492e-aaf2-8a674aee5d30
+		sourceLineageTag: f1782750-fa2e-4f0d-bfd9-c52d6e339475
+		dataCategory: Uncategorized
+
+	measure 'Phone Variance' = EXTERNALMEASURE("Phone Variance", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: ec179947-3f3e-47c2-9cb3-7e66981a3294
+		sourceLineageTag: 98c47719-26ea-4345-88cd-1ec1a3202fdb
+		dataCategory: Uncategorized
+
+	measure 'RemoteFix Target YTD Variance' = EXTERNALMEASURE("RemoteFix Target YTD Variance", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: abfa3de4-0425-4930-8657-5692cb6bce9a
+		sourceLineageTag: d59dc09a-0baa-492d-b4b8-3366fe94e166
+		dataCategory: Uncategorized
+
+	measure 'Remotefix Target MTD' = EXTERNALMEASURE("Remotefix Target MTD", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		formatString: 0
+		lineageTag: 84872b96-afa0-464c-8ba7-98e8ee975397
+		sourceLineageTag: 263fccc2-477d-4051-9803-3c64823f58b0
+		dataCategory: Uncategorized
+
+	measure 'Remotefix target variance' = EXTERNALMEASURE("Remotefix target variance", DOUBLE, "DirectQuery to AS - Customer 360 3")
+		lineageTag: b6a0fc13-719b-4a71-827e-de42115e907d
+		sourceLineageTag: b4c2d36f-fc65-4bf5-81d9-ffde088b77e1
+		dataCategory: Uncategorized
+
+	measure Blank = EXTERNALMEASURE("Blank", STRING, "DirectQuery to AS - Customer 360 3")
+		lineageTag: 0298fb0c-20ec-4031-8863-4387df988d05
+		sourceLineageTag: e2249303-8030-41a2-81e0-8a491a4c9dec
+		dataCategory: Uncategorized
+
+	partition 'RemoteFix Measures' = entity
+		mode: directQuery
+		source
+			entityName: RemoteFix Measures
+			expressionSource: 'DirectQuery to AS - Customer 360 3'
+
